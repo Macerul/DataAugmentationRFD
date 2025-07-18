@@ -1,9 +1,10 @@
 import pandas as pd
 import re
+import os
 
-def create_rfd_csv_with_header_from_dataset(dataset_csv_path,rfd_txt_path,output_csv_path):
+def create_rfd_csv_with_header_from_dataset(dataset_path,rfd_txt_path,output_csv_path):
     # Leggi header dal dataset
-    dataset_df = pd.read_csv(dataset_csv_path, sep=',', nrows=0)
+    dataset_df = pd.read_csv(dataset_path, sep=',', nrows=0)
     attributes = list(dataset_df.columns)
 
     rows = []
@@ -54,4 +55,10 @@ def create_rfd_csv_with_header_from_dataset(dataset_csv_path,rfd_txt_path,output
     df = pd.DataFrame(rows)
     df.to_csv(output_csv_path, index=False, sep=';')
 
-create_rfd_csv_with_header_from_dataset('C:/Users\gianp\Downloads/vehicle0_1.csv',"C:/Users\gianp\Downloads\RFD12_E0.0_vehicle0_1.txt", './output_rfd2.csv')
+
+dataset = "vehicle0_1_test"
+thr = "RFD12"
+rfds_aug = dataset + "_min_aug"
+
+create_rfd_csv_with_header_from_dataset(f"./imbalanced_datasets/{dataset}.csv",f"./discovered_rfds/{thr}_E0.0_{dataset}.txt", f'./discovered_rfds/parsed_rfds/{thr}_E0.0_{dataset}.csv')
+create_rfd_csv_with_header_from_dataset(f"./imbalanced_datasets/{dataset}.csv",f"./discovered_rfds/rfds_after_augmentation/{thr}_E0.0_{rfds_aug}.txt", f'./discovered_rfds/rfds_after_augmentation/parsed_rfds/{thr}_E0.0_{rfds_aug}.csv')
