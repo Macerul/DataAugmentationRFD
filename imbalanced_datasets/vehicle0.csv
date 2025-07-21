@@ -1,4 +1,4 @@
-Compactness,Circularity,Distance_circularity,Radius_ratio,Praxis_aspect_ratio,Max_length_aspect_ratio,Scatter_ratio,Elongatedness,Praxis_rectangular,Length_rectangular,Major_variance,Minor_variance,Gyration_radius,Major_skewness,Minor_skewness,Minor_kurtosis,Major_kurtosis,Hollows_ratio,class
+Attr0,Attr1,Attr2,Attr3,Attr4,Attr5,Attr6,Attr7,Attr8,Attr9,Attr10,Attr11,Attr12,Attr13,Attr14,Attr15,Attr16,Attr17,class
 108,52,109,182,55,12,216,31,24,171,229,687,214,72,10,28,189,201,0
 89,36,77,172,62,8,157,42,19,125,174,367,126,63,5,22,198,205,0
 91,49,86,195,63,8,177,37,21,156,203,473,201,67,7,5,192,198,0

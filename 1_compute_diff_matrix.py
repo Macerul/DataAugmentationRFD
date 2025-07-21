@@ -8,7 +8,7 @@ n! / (k! * (n-k)!) coppie
 """
 
 DIFF_MATRIX_PATH = 'diff_matrices'
-IMBALANCE_DATASET = 'imbalanced_datasets/vehicle0_1.csv'
+IMBALANCE_DATASET = 'imbalanced_datasets/vehicle0_min.csv'
 
 
 if not os.path.exists("diff_matrices"):

@@ -3,7 +3,7 @@ import os
 
 
 DIFF_PATH = 'diff_matrices/pw_diff_mx_vehicle0_1.csv'
-ORIGINAL_PATH = 'imbalanced_datasets/vehicle0_1.csv'
+ORIGINAL_PATH = 'imbalanced_datasets/vehicle0_min.csv'
 
 orig_df = pd.read_csv(ORIGINAL_PATH)
 diff_df = pd.read_csv(DIFF_PATH)
@@ -93,7 +93,7 @@ os.makedirs(output_dir, exist_ok=True)
 result_df = transform_pairwise(orig_df, diff_df, 12)
 result_df.to_csv(os.path.join(output_dir, f'diff_tuples_{basename}'), index=False)
 
-#df_cluster = pd.read_csv('tuples_vis_clusters/vehicle0_1.csv')
+#df_cluster = pd.read_csv('tuples_vis_clusters/vehicle0_min.csv')
 
 # frequency of each pair across attributes
 freq_df = (result_df
