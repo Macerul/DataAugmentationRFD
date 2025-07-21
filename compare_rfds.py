@@ -56,7 +56,7 @@ def create_rfd_csv_with_header_from_dataset(dataset_path,rfd_txt_path,output_csv
     df.to_csv(output_csv_path, index=False, sep=';')
 
 
-dataset = "vehicle0_1_test"
+dataset = "vehicle0_min"
 thr = "RFD12"
 rfds_aug = dataset + "_min_aug"
 

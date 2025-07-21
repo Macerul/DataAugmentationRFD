@@ -27,5 +27,5 @@ df_augmented = df_min.head(ovs_source)
 
 df_oversampled = pd.concat([df, df_augmented], ignore_index=True)
 df_min_oversampled = pd.concat([df_min, df_augmented], ignore_index=True)
-df_oversampled.to_csv(os.path.join(OVERSAMPLED_DATASET_PATH, f'{df_basename}_augmented.csv'), index = False)
-df_min_oversampled.to_csv(os.path.join(OVERSAMPLED_DATASET_PATH, f'{df_basename_min}_augmented.csv'), index = False)
+df_oversampled.to_csv(os.path.join(OVERSAMPLED_DATASET_PATH, f'{df_basename}_aug.csv'), index = False)
+df_min_oversampled.to_csv(os.path.join(OVERSAMPLED_DATASET_PATH, f'{df_basename_min}_aug.csv'), index = False)
