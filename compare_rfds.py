@@ -1938,11 +1938,11 @@ def create_json(oracle, rfdsfile):
 
     RFDMap2 ={
         "comparison_datasets": nomedataset,
-        "found": type2[3]["name"].split(": ")[1],
-        "not found": type2[4]["name"].split(": ")[1],
-        "specialized": type2[0]["name"].split(": ")[1],
-        "generalized": type2[1]["name"].split(": ")[1],
-        "new rfds": type2[2]["name"].split(": ")[1]
+        "found": float(type2[3]["name"].split(": ")[1]),
+        "not found": float(type2[4]["name"].split(": ")[1]),
+        "specialized": float(type2[0]["name"].split(": ")[1]),
+        "generalized": float(type2[1]["name"].split(": ")[1]),
+        "new rfds": float(type2[2]["name"].split(": ")[1])
     }
     #print(str(RFDMap2))
 
