@@ -3,13 +3,27 @@ import random
 import os
 
 
-PAIRS_PATH = 'diff_tuples/all_attr_common_pairs_vehicle0_1.csv'
-ATTR_PATH = 'diff_tuples/diff_tuples_vehicle0_1.csv'
+PAIRS_PATH = 'diff_tuples/all_attr_common_pairs_vehicle0_min.csv'
+ATTR_PATH = 'diff_tuples/diff_tuples_vehicle0_min.csv'
 basename = os.path.basename(ATTR_PATH)
 pairs_df = pd.read_csv(PAIRS_PATH)
 common_pairs = pairs_df[pairs_df['in_all_attrs']==True]
+print("Number of common_pairs: ", len(common_pairs))
 #limited_pairs = pairs_df.head(100)
 attrs_df = pd.read_csv(ATTR_PATH)
+
+
+
+# TODO
+"""
+Step 1 - Implementare la parte dove si fa il controllo su se la tupla inserita viola allora si scarta
+quindi validare e inserire solo quelle che non violano, tramite g1 measure
+(entropia logica, paper measuring AFD: a comparative study).
+
+Step 2 - Implementare la parte dove se lo step 1 consente di effettuare un oversampling
+non sufficiente allora va a bilanciare rimuovendo i campioni della classe
+maggioritaria (stripped)
+"""
 
 
 def get_attr_row(attr, i1, i2):
