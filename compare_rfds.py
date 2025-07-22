@@ -1645,6 +1645,16 @@ def create_json(oracle, rfdsfile):
         "RFD non trovate" : RFDnontrovate,
     }
 
+    print(RFDnontrovate)
+    tuple_for_NF =[]
+    with open("./discovered_rfds/"+nomedataset+"_NF.txt", 'w') as file:
+        for elem in RFDnontrovate:
+            #print(elem["RHS"])
+            #print(elem["LHS"])
+            tupla = (elem["LHS"],elem["RHS"])
+            file.write(f"{tupla}\n")
+
+
 
     with open("./discovered_rfds/comparison_results/results/result_comparison_rfds_"+nomedataset+".json", "w") as outfile:
         json.dump(RFDMap, outfile)
@@ -1949,7 +1959,7 @@ def create_json(oracle, rfdsfile):
 
 
     with open("./discovered_rfds/comparison_results/statistics/statistics_comparison_rfds_"+nomedataset+".json", "w") as outfile:
-        json.dump(RFDMap2, outfile)
+        son.dump(RFDMap2, outfile)
 
 dataset = "vehicle0_min"
 thr = "RFD12"
