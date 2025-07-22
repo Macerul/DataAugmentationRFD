@@ -12,6 +12,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import roc_auc_score, f1_score, confusion_matrix, accuracy_score
 from imblearn.metrics import geometric_mean_score
+from imblearn.over_sampling import SMOTE
 
 
 
@@ -52,17 +53,21 @@ def plot_confusion_matrix(cm: pd.DataFrame, classes: list, title: str, filename:
 
 def main():
     # Parameters
-    data_path = 'imbalanced_datasets/vehicle0.csv'
+    data_path = 'oversampled_datasets/vehicle0_aug.csv'
     basename = os.path.basename(data_path)
     dname = os.path.splitext(basename)[0]
     target_col = 'class'
     test_size = 0.3
     random_state = 42
 
-    # Load data
     df = load_data(data_path)
+    print(df.shape)
     X = df.drop(target_col, axis=1)
     y = df[target_col]
+
+    smote = SMOTE(random_state=42)
+
+
 
     X_train, X_test, y_train, y_test = train_test_split(
         X, y,
@@ -71,10 +76,15 @@ def main():
         random_state=random_state
     )
 
+
     # Feature scaling
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
+
+
+    # Fit SMOTE on the training data
+    X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
 
 
     models = {
@@ -110,7 +120,7 @@ def main():
             cm,
             classes=[f'Class {c}' for c in sorted(df[target_col].unique())],
             title=f'{name} Confusion Matrix',
-            filename=os.path.join(cm_dir, f"{name.replace(' ', '_')}_cm_{dname}.png")
+            filename=os.path.join(cm_dir, f"{name.replace(' ', '_')}_cm_{dname}_aug.png")
         )
 
         metrics.append({
