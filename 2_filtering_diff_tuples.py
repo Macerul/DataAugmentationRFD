@@ -1,9 +1,10 @@
 import pandas as pd
 import os
+import re
 
 
-DIFF_PATH = 'diff_matrices/pw_diff_mx_vehicle0_min.csv'
-ORIGINAL_PATH = 'imbalanced_datasets/vehicle0_min.csv'
+DIFF_PATH = 'diff_matrices/pw_diff_mx_shuttle-c2-vs-c4_min.csv'
+ORIGINAL_PATH = 'imbalanced_datasets/shuttle-c2-vs-c4_min.csv'
 
 orig_df = pd.read_csv(ORIGINAL_PATH)
 diff_df = pd.read_csv(DIFF_PATH)
@@ -35,10 +36,11 @@ def transform_pairwise(orig_df: pd.DataFrame,
 output_dir = 'diff_tuples'
 os.makedirs(output_dir, exist_ok=True)
 
-result_df = transform_pairwise(orig_df, diff_df, 12)
+'''                             
+                SET THR
+'''
+result_df = transform_pairwise(orig_df, diff_df, 4)
 result_df.to_csv(os.path.join(output_dir, f'diff_tuples_{basename}'), index=False)
-
-#df_cluster = pd.read_csv('tuples_vis_clusters/vehicle0_min.csv')
 
 # frequency of each pair tx,ty across attributes
 freq_df = (result_df

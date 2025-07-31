@@ -1959,10 +1959,10 @@ def create_json(oracle, rfdsfile):
 
 
     with open("./discovered_rfds/comparison_results/statistics/statistics_comparison_rfds_"+nomedataset+".json", "w") as outfile:
-        son.dump(RFDMap2, outfile)
+        json.dump(RFDMap2, outfile)
 
-dataset = "vehicle0_min"
-thr = "RFD12"
+dataset = "shuttle-c2-vs-c4_min"
+thr = "RFD4"
 rfds_aug = dataset + "_aug"
 
 create_rfd_csv_with_header_from_dataset(f"./imbalanced_datasets/{dataset}.csv",f"./discovered_rfds/{thr}_E0.0_{dataset}.txt", f'./discovered_rfds/parsed_rfds/{thr}_E0.0_{dataset}.csv')
