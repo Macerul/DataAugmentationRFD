@@ -1,0 +1,40 @@
+****** DISCOVERED RFDs *******
+ -> Attr3@2.0
+Attr1@2.0, -> Attr0@2.0 Key Dependency
+Attr1@2.0, -> Attr2@2.0 Key Dependency
+Attr1@2.0, -> Attr4@2.0 Key Dependency
+Attr1@2.0, -> Attr5@2.0 Key Dependency
+Attr1@2.0, -> Attr6@2.0 Key Dependency
+Attr1@2.0, -> Attr7@2.0 Key Dependency
+Attr1@2.0, -> Attr8@2.0 Key Dependency
+Attr7@2.0, -> Attr4@2.0
+Attr4@2.0, -> Attr7@2.0
+Attr8@2.0, -> Attr6@2.0
+Attr6@2.0, -> Attr8@2.0
+Attr6@2.0, -> Attr2@2.0
+Attr4@2.0, -> Attr0@2.0
+Attr0@2.0, -> Attr4@2.0
+Attr5@2.0, -> Attr2@2.0
+Attr0@2.0, -> Attr2@2.0
+Attr8@2.0, -> Attr0@2.0
+Attr0@2.0, -> Attr8@2.0
+Attr6@2.0, -> Attr4@2.0
+Attr4@2.0, -> Attr6@2.0
+Attr7@2.0, -> Attr2@2.0
+Attr8@2.0, -> Attr7@2.0
+Attr7@2.0, -> Attr8@2.0
+Attr8@2.0, -> Attr2@2.0
+Attr7@2.0, -> Attr0@2.0
+Attr0@2.0, -> Attr7@2.0
+Attr7@2.0, -> Attr6@2.0
+Attr6@2.0, -> Attr7@2.0
+Attr4@2.0, -> Attr2@2.0
+Attr8@2.0, -> Attr4@2.0
+Attr4@2.0, -> Attr8@2.0
+Attr6@2.0, -> Attr0@2.0
+Attr0@2.0, -> Attr6@2.0
+Attr5@2.0,Attr8@2.0, -> Attr1@2.0 Key Dependency
+Attr4@2.0,Attr5@2.0, -> Attr1@2.0 Key Dependency
+Attr5@2.0,Attr7@2.0, -> Attr1@2.0 Key Dependency
+Attr0@2.0,Attr5@2.0, -> Attr1@2.0 Key Dependency
+Attr5@2.0,Attr6@2.0, -> Attr1@2.0 Key Dependency

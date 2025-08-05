@@ -13,16 +13,20 @@ for dataset_file in os.listdir(DATASET_PATH):
     if not dataset_file.endswith('_min.csv'):
         continue
 
-    base_name = dataset_file.split('_')[0]
+    #base_name = dataset_file.split('_')[0]
+    base_name = os.path.basename(dataset_file).split('.')[0]
+    print(base_name)
     df = pd.read_csv(os.path.join(DATASET_PATH, dataset_file))
     attrs = df.columns.tolist()
 
     for rfd_file in os.listdir(DISCOVERED_RFDs_PATH):
-        if not rfd_file.endswith(f'{base_name}_min.txt'):
+        if '_min' not in rfd_file:
             continue
 
         in_path = os.path.join(DISCOVERED_RFDs_PATH, rfd_file)
+        print(in_path)
         out_path = os.path.join(DISCOVERED_RFDs_PROCESSED_PATH, rfd_file)
+        print(out_path)
 
         with open(in_path, 'r') as f:
             lines = f.readlines()
