@@ -179,10 +179,15 @@ class RFDAwareAugmenter:
         self.both_attrs = lhs_attrs & rhs_attrs
         self.all_attrs = sorted(self.attrs_df['attribute'].unique(),
                                 key=lambda x: int(x.replace('Attr', '')))
+        # Attributes not found in any dependency
+        self.dependency_attrs = lhs_attrs | rhs_attrs
+        self.no_dependency_attrs = set(self.all_attrs) - self.dependency_attrs
+
 
         print(f"Analyzing {len(self.dependencies)} RFDs")
         print(f"All attributes: {self.all_attrs}")
         print(f"Attributes in both LHS and RHS: {sorted(self.both_attrs)}")
+        print(f"Attributes not in any dependency: {sorted(self.no_dependency_attrs)}")
 
     def _get_top_pairs(self):
         """Get tuple pairs that appear across all 'both' attributes."""
@@ -214,11 +219,24 @@ class RFDAwareAugmenter:
             i1, i2: Tuple indices
             use_decimal: If True, generate decimal values to avoid duplicates
         """
+
         # Try to find the tuple pair data for this attribute
         row = self.attrs_df[(self.attrs_df['attribute'] == attr) &
                             ((self.attrs_df['idx1'] == i1) & (self.attrs_df['idx2'] == i2))]
 
         if not row.empty:
+            # If attr not in any rfd, generate a value random(0, diff)
+            if attr in self.no_dependency_attrs:
+                r = row.iloc[0]
+                val1, val2 = r['val1'], r['val2']
+                min_val = min(val1, val2)
+                diff_val = abs(val1 - val2)
+                if isinstance(min_val, (int, np.integer)):
+                    random_val = min_val + random.randint(0, int(diff_val))
+                else:
+                    random_val = min_val + random.uniform(0, float(diff_val))
+                print(f"  {attr}: No dependency, min={min_val}, diff={diff_val}, generating: {random_val:.2f}")
+                return round(random_val, 2)
             r = row.iloc[0]
             val1, val2 = r['val1'], r['val2']
             diff = abs(val1 - val2)
