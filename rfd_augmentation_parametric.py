@@ -168,9 +168,11 @@ class RFDAwareAugmenter:
         lhs_attrs = set()
         rhs_attrs = set()
 
+
         for lhs_list, rhs_attr in self.dependencies:
             lhs_attrs.update(lhs_list)
             rhs_attrs.add(rhs_attr)
+
 
         self.lhs_attrs = lhs_attrs
         self.rhs_attrs = rhs_attrs
@@ -185,7 +187,13 @@ class RFDAwareAugmenter:
     def _get_top_pairs(self):
         """Get tuple pairs that appear across all 'both' attributes."""
         # Filter to attributes that appear in both LHS and RHS
-        relevant_df = self.attrs_df[self.attrs_df['attribute'].isin(self.both_attrs)]
+        if len( self.both_attrs) != 0:
+            total_both_attrs = len(self.both_attrs)
+            relevant_df = self.attrs_df[self.attrs_df['attribute'].isin(self.both_attrs)]
+        else:
+            print("No attribute is present in both LHS and RHS, considering only LHS attributes...")
+            total_both_attrs = len(self.lhs_attrs)
+            relevant_df = self.attrs_df[self.attrs_df['attribute'].isin(self.lhs_attrs)]
 
         # Count how many attributes each tuple pair covers
         freq_df = (relevant_df
@@ -193,7 +201,6 @@ class RFDAwareAugmenter:
                    .agg(attribute_count=('attribute', 'nunique'))
                    .reset_index())
 
-        total_both_attrs = len(self.both_attrs)
         freq_df['covers_all_both'] = freq_df['attribute_count'] == total_both_attrs
 
         return freq_df[freq_df['covers_all_both']]
@@ -238,7 +245,7 @@ class RFDAwareAugmenter:
                         if isinstance(min_val, (int, np.integer)) and isinstance(max_val, (int, np.integer)):
                             generated_val = random.randint(int(min_val), int(max_val))
                         else:
-                            generated_val = random.uniform(min_val, max_val)
+                            generated_val = round(random.uniform(min_val, max_val), 2)
                         print(f"    → Similar values, generating: {generated_val}")
                         return generated_val
             else:
@@ -270,7 +277,7 @@ class RFDAwareAugmenter:
 
         if use_decimal:
             # Add random decimal component to ensure uniqueness
-            decimal_component = random.random()  # 0.0 to 1.0
+            decimal_component = round(random.random(), 2)  # 0.0 to 1.0
             safe_value = safe_base + decimal_component
             print(f"    → Safe fallback with decimal: {safe_value:.2f}")
             return safe_value
@@ -444,8 +451,8 @@ class RFDAwareAugmenter:
         """
 
         # Calculate required oversampling
-        minority_count = len(self.imbalance_df[self.imbalance_df['class'] == 1])
-        majority_count = len(self.imbalance_df[self.imbalance_df['class'] == 0])
+        #minority_count = len(self.imbalance_df[self.imbalance_df['class'] == 1])
+        #majority_count = len(self.imbalance_df[self.imbalance_df['class'] == 0])
         #oversampling_quantity = majority_count - minority_count
         oversampling_quantity=self.oversampling_quantity
 
