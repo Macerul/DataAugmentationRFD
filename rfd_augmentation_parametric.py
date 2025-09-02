@@ -1,7 +1,6 @@
 import re
 import random
 import os
-import ast
 import numpy as np
 import pandas as pd
 from itertools import combinations
@@ -12,7 +11,7 @@ class RFDAwareAugmenter:
                   rfd_file_path,  oversampling,
                   threshold=4, max_iter=100, selected_rfds=None):
         """
-        Initialize the RFD-aware data augmenter.
+        Initialization
 
         Args:
             imbalance_dataset_path: Path to the imbalanced dataset
@@ -24,25 +23,20 @@ class RFDAwareAugmenter:
             selected_rfds: List of specific RFDs to respect (None = all RFDs)
         """
 
-        # Initialize output directory
+        # Create output directory
         self.output_dir = 'augmentation_results'
         os.makedirs(self.output_dir, exist_ok=True)
-
         self.output_diff_dir = 'diff_matrices'
         os.makedirs(self.output_diff_dir, exist_ok=True)
-
         self.output_diff_tuples_dir = 'diff_tuples'
         os.makedirs( self.output_diff_tuples_dir, exist_ok=True)
-
         self.imbalance_dir = 'imbalanced_datasets'
 
-
+        # Initialize parameters
         self.threshold = threshold
         self.max_iter = max_iter
         self.oversampling_quantity = oversampling
         self.selected_rfds = selected_rfds
-
-
 
         # Load datasets
         self.imbalance_dataset_path = imbalance_dataset_path
@@ -72,6 +66,13 @@ class RFDAwareAugmenter:
         # Parse RFDs
         self.dependencies = self._parse_rfds(rfd_file_path)
         self._analyze_attributes()
+
+    def check_bool_attr(self, attr):
+        if self.imbalance_df_min[attr].isin([0, 1]).all():
+            print(f"{attr} is a boolean attribute")
+            return True
+        else:
+            return False
 
 
 
@@ -227,6 +228,7 @@ class RFDAwareAugmenter:
         if not row.empty:
             # If attr not in any rfd, generate a value random(0, diff)
             if attr in self.no_dependency_attrs:
+                print(f'{attr} not in any rfd, generate a value random(0, diff)')
                 r = row.iloc[0]
                 val1, val2 = r['val1'], r['val2']
                 min_val = min(val1, val2)
@@ -253,6 +255,10 @@ class RFDAwareAugmenter:
                     # Identical values - must preserve exact value
                     print(f"    → Identical values, using {val1}")
                     return val1
+                if diff == 1 and self.check_bool_attr(attr): # verify if attr is bool and return random(0,1)
+                    generated_val = random.randrange(min_val, max_val+1)
+                    print(f"    → Boolean attribute, assigning random value 0/1:{generated_val}")
+                    return generated_val
                 else:
                     # Similar values - generate within range
                     if use_decimal:
@@ -316,7 +322,7 @@ class RFDAwareAugmenter:
         """
         # Start from previous matrix or empty
 
-        print('New tuple values:\n', new_tuple_values)
+        #print('New tuple values:\n', new_tuple_values)
         print('current_df:\n', current_df)
 
 
