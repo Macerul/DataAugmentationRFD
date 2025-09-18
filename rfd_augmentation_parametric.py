@@ -1,6 +1,7 @@
 import re
 import random
 import os
+import sys
 import numpy as np
 import pandas as pd
 from itertools import combinations
@@ -37,6 +38,9 @@ class RFDAwareAugmenter:
         self.max_iter = max_iter
         self.oversampling_quantity = oversampling
         self.selected_rfds = selected_rfds
+        #self.last_safe_value = sys.maxsize - self.threshold - 1
+        self.last_safe_value = {}
+
 
         # Load datasets
         self.imbalance_dataset_path = imbalance_dataset_path
@@ -46,6 +50,15 @@ class RFDAwareAugmenter:
         self.out_min_path = os.path.join(self.imbalance_dir, f'{self.base}_min.csv')
         self.dataset_min.to_csv(self.out_min_path, index=False)
 
+        # Calcola statistiche classe maggioritaria per ogni attributo
+        self.majority_stats = {}
+        majority_class = self.imbalance_df[self.imbalance_df['class'] == 0]
+        for attr in self.imbalance_df.columns:
+            self.majority_stats[attr] = {
+                'mean': majority_class[attr].mean(),
+                'min': majority_class[attr].min(),
+                'max': majority_class[attr].max()
+            }
 
         self.imbalance_df_min =  pd.read_csv(self.out_min_path)
         print(f'LETTURA DATASET INIZIALE:\n{self.imbalance_df_min.head()}')
@@ -66,6 +79,25 @@ class RFDAwareAugmenter:
         # Parse RFDs
         self.dependencies = self._parse_rfds(rfd_file_path)
         self._analyze_attributes()
+
+    def order_attributes(self):
+        """
+        Ordina gli attributi mettendo prima quelli non-booleani
+        (con più di due valori possibili), poi i booleani.
+        All'interno di ciascun gruppo li ordina per indice numerico.
+        """
+        #attrs = self.attrs_df['attribute'].unique()
+        attrs = self.attrs_df['attribute'].unique()
+        print('Attributes: \n', attrs)
+
+        ordered = sorted(
+            attrs,
+            key=lambda x: (
+                1 if self.check_bool_attr(x) else 0,  # 0 = non booleani, 1 = booleani
+                int(x.replace('Attr', ''))  # ordinamento numerico
+            )
+        )
+        return ordered
 
     def check_bool_attr(self, attr):
         if self.imbalance_df_min[attr].isin([0, 1]).all():
@@ -178,8 +210,8 @@ class RFDAwareAugmenter:
         self.lhs_attrs = lhs_attrs
         self.rhs_attrs = rhs_attrs
         self.both_attrs = lhs_attrs & rhs_attrs
-        self.all_attrs = sorted(self.attrs_df['attribute'].unique(),
-                                key=lambda x: int(x.replace('Attr', '')))
+        #self.all_attrs = sorted(self.attrs_df['attribute'].unique(),  key=lambda x: int(x.replace('Attr', '')))
+        self.all_attrs = self.order_attributes()
         # Attributes not found in any dependency
         self.dependency_attrs = lhs_attrs | rhs_attrs
         self.no_dependency_attrs = set(self.all_attrs) - self.dependency_attrs
@@ -188,6 +220,7 @@ class RFDAwareAugmenter:
         print(f"Analyzing {len(self.dependencies)} RFDs")
         print(f"All attributes: {self.all_attrs}")
         print(f"Attributes in both LHS and RHS: {sorted(self.both_attrs)}")
+        print(f"Attributes in LHS only: {sorted(self.lhs_attrs)}")
         print(f"Attributes not in any dependency: {sorted(self.no_dependency_attrs)}")
 
     def _get_top_pairs(self):
@@ -196,6 +229,7 @@ class RFDAwareAugmenter:
         if len( self.both_attrs) != 0:
             total_both_attrs = len(self.both_attrs)
             relevant_df = self.attrs_df[self.attrs_df['attribute'].isin(self.both_attrs)]
+            #print('Top pairs:\n',relevant_df.head())
         else:
             print("No attribute is present in both LHS and RHS, considering only LHS attributes...")
             total_both_attrs = len(self.lhs_attrs)
@@ -211,7 +245,7 @@ class RFDAwareAugmenter:
 
         return freq_df[freq_df['covers_all_both']]
 
-    def _get_attr_value(self, attr, i1, i2, use_decimal=False):
+    def _get_attr_value(self, attr, i1, i2, use_decimal=False, generated_values=None):
         """
         Get attribute value for generation following RFD-aware logic.
 
@@ -232,7 +266,7 @@ class RFDAwareAugmenter:
                 r = row.iloc[0]
                 val1, val2 = r['val1'], r['val2']
                 min_val = min(val1, val2)
-                diff_val = abs(val1 - val2)
+                diff_val = r['diff']
                 if isinstance(min_val, (int, np.integer)):
                     random_val = min_val + random.randint(0, int(diff_val))
                 else:
@@ -241,7 +275,7 @@ class RFDAwareAugmenter:
                 return round(random_val, 2)
             r = row.iloc[0]
             val1, val2 = r['val1'], r['val2']
-            diff = abs(val1 - val2)
+            diff = r['diff']
 
             print(f"  {attr}: val1={val1}, val2={val2}, diff={diff}, threshold={self.threshold}")
 
@@ -255,10 +289,28 @@ class RFDAwareAugmenter:
                     # Identical values - must preserve exact value
                     print(f"    → Identical values, using {val1}")
                     return val1
-                if diff == 1 and self.check_bool_attr(attr): # verify if attr is bool and return random(0,1)
-                    generated_val = random.randrange(min_val, max_val+1)
-                    print(f"    → Boolean attribute, assigning random value 0/1:{generated_val}")
-                    return generated_val
+                if diff == 1:
+                    try:
+                        if generated_values and len(generated_values) > 0:
+                            # consider only attributes already generated (exclude current attr)
+                            keys = [k for k in generated_values.keys() if k != attr and k in self.all_attrs]
+                            if len(keys) > 0:
+                                vec_generated = np.array([float(generated_values[k]) for k in keys])
+                                vec_i1 = np.array([float(self.imbalance_df_min.at[i1, k]) for k in keys])
+                                vec_i2 = np.array([float(self.imbalance_df_min.at[i2, k]) for k in keys])
+                                d1 = np.linalg.norm(vec_generated - vec_i1)
+                                d2 = np.linalg.norm(vec_generated - vec_i2)
+                                chosen = val1 if d1 <= d2 else val2
+                                print(f"    → diff==1: euclidean d1={d1:.2f}, d2={d2:.2f}, choosing: {chosen}")
+                                return chosen
+                    except Exception as e:
+                        # fallback in case of unexpected numeric issues
+                        print(f"    → Warning computing euclidean distance: {e}")
+
+                        # Fallback: if no generated_values yet or error, choose random
+                    chosen = random.randrange(min_val, max_val+1)
+                    print(f"    → diff==1 no generated_values yet or error: {chosen}")
+                    return chosen
                 else:
                     # Similar values - generate within range
                     if use_decimal:
@@ -284,6 +336,53 @@ class RFDAwareAugmenter:
     def _get_safe_fallback_value(self, attr, use_decimal=False):
         """
         Generate a safe fallback value that won't trigger unwanted dependencies.
+        Uses majority class statistics to decide direction.
+        """
+        # Statistiche classe minoritaria (quella attuale)
+        minority_min = self.imbalance_df_min[attr].min()
+        minority_max = self.imbalance_df_min[attr].max()
+
+        # Media classe maggioritaria
+        majority_mean = self.majority_stats[attr]['mean']
+
+        print(f"  {attr}: minority_min={minority_min}, minority_max={minority_max}")
+        print(f"  {attr}: majority_mean={majority_mean}")
+
+        # Decisione: se media maggioritaria > max minoritaria → scendi sotto min minoritaria
+        # altrimenti → sali sopra max minoritaria
+        if majority_mean > minority_max:
+            # Scendi sotto il minimo minoritario
+            safe_base = minority_min - self.threshold - 1
+            print(f"  → Majority mean > minority max, going below: {safe_base}")
+        else:
+            # Sali sopra il massimo minoritario
+            safe_base = minority_max + self.threshold + 1
+            print(f"  → Majority mean <= minority max, going above: {safe_base}")
+
+        if attr in self.last_safe_value:
+            if majority_mean > minority_max:
+                # Se stiamo scendendo, continua a scendere
+                safe_base = min(safe_base, self.last_safe_value[attr] - self.threshold - 1)
+            else:
+                # Se stiamo salendo, continua a salire
+                safe_base = max(safe_base, self.last_safe_value[attr] + self.threshold + 1)
+
+            # Salva il valore per questo attributo
+        self.last_safe_value[attr] = safe_base
+
+        if use_decimal:
+            decimal_component = round(random.random(), 2)
+            safe_value = safe_base + decimal_component
+            print(f"    → Safe fallback with decimal: {safe_value:.2f}")
+            return safe_value
+        else:
+            print(f"    → Safe fallback: {safe_base}")
+            return safe_base
+
+    '''   
+    def _get_safe_fallback_value(self, attr, use_decimal=False):
+        """
+        Generate a safe fallback value that won't trigger unwanted dependencies.
 
         Args:
             attr: Attribute name
@@ -293,11 +392,14 @@ class RFDAwareAugmenter:
         attr_rows = self.imbalance_df_min[attr]
         print(' rows for this attribute and find the global maximum:\n', attr_rows )
 
-        overall_max = attr_rows.max()
+        overall_max = attr_rows.max() + self.threshold + 1  # per non attivare o violare dipendenze per gli attributi i cui pattern sono posti a 0, genero valori fuori range
+        #overall_max = self.last_safe_value - self.threshold - 1
         print('Overall max:', overall_max)
 
+        self.last_safe_value = overall_max
+
         # Generate safe value: max + threshold + 1 (+ decimal if requested)
-        safe_base = overall_max + self.threshold + 1
+        safe_base = overall_max
 
         if use_decimal:
             # Add random decimal component to ensure uniqueness
@@ -308,6 +410,7 @@ class RFDAwareAugmenter:
         else:
             print(f"    → Safe fallback: {safe_base}")
             return safe_base
+    '''
 
     def _update_distance_matrix(self, new_tuple_values, current_df, prev_matrix=None):
         """
@@ -323,7 +426,7 @@ class RFDAwareAugmenter:
         # Start from previous matrix or empty
 
         #print('New tuple values:\n', new_tuple_values)
-        print('current_df:\n', current_df)
+        #print('current_df:\n', current_df)
 
 
         if prev_matrix is None or prev_matrix.empty:
@@ -350,7 +453,7 @@ class RFDAwareAugmenter:
 
             # Add new row
             updated.loc[pair_name] = distances
-        print('Matrice aggiornata:\n',updated)
+        #print('Matrice aggiornata:\n',updated)
         return updated
 
 
@@ -364,20 +467,30 @@ class RFDAwareAugmenter:
         Returns:
             True if violations found, False otherwise
         """
+        violations_found = False
         for lhs, rhs in self.dependencies:
-            # Check if all required columns exist
             missing_cols = [col for col in lhs + [rhs] if col not in distance_matrix.columns]
             if missing_cols:
+                print(f"    Warning: Missing columns {missing_cols} for dependency {lhs} -> {rhs}")
                 continue
 
-            # Find violations: LHS diffs <= threshold and RHS diff > threshold
-            mask = (distance_matrix[lhs] <= self.threshold).all(axis=1) & \
-                   (distance_matrix[rhs] > self.threshold)
+            # Trova violazioni: LHS simili ma RHS dissimili
+            lhs_similar = (distance_matrix[lhs] <= self.threshold).all(axis=1)
+            rhs_dissimilar = (distance_matrix[rhs] > self.threshold)
+            violations = lhs_similar & rhs_dissimilar
 
-            if mask.any():
-                return True
+            if violations.any():
+                violation_pairs = distance_matrix.index[violations].tolist()
+                print(f"    → Violation in dependency {lhs} -> {rhs}")
+                print(f"      Violating pairs: {violation_pairs}")
+                violations_found = True
+                for pair in violation_pairs[:3]:
+                    lhs_diffs = [distance_matrix.loc[pair, attr] for attr in lhs]
+                    rhs_diff = distance_matrix.loc[pair, rhs]
+                    print(
+                        f"        {pair}: LHS diffs {lhs_diffs} ≤ {self.threshold}, RHS diff {rhs_diff} > {self.threshold}")
 
-        return False
+        return violations_found
 
     def _is_duplicate_tuple(self, new_tuple_data, current_df):
         """
@@ -409,8 +522,194 @@ class RFDAwareAugmenter:
 
         return False
 
+    def get_safe_value_ranges(self, attr):
+        """
+        Calcola i range di valori 'sicuri' per un attributo che non attivino dipendenze indesiderate.
 
-    def _generate_single_tuple(self, i1, i2, current_df ,use_decimal=False):
+        Args:
+            attr: Nome dell'attributo
+
+        Returns:
+            List of tuples: [(min_safe, max_safe), ...] range sicuri
+        """
+        # Prendi tutti i valori esistenti per questo attributo
+        existing_values = sorted(self.imbalance_df_min[attr].unique())
+
+        # Trova gli intervalli sicuri (distanza > threshold dai valori esistenti)
+        safe_ranges = []
+
+        for i in range(len(existing_values)):
+            current_val = existing_values[i]
+
+            # Range prima del valore corrente
+            if i == 0:
+                # Prima del primo valore
+                range_start = current_val - self.threshold - 5  # buffer extra
+                range_end = current_val - self.threshold - 1
+                if range_start < range_end:
+                    safe_ranges.append((range_start, range_end))
+
+            # Range dopo il valore corrente
+            if i == len(existing_values) - 1:
+                # Dopo l'ultimo valore
+                range_start = current_val + self.threshold + 1
+                range_end = current_val + self.threshold + 10  # buffer extra
+                safe_ranges.append((range_start, range_end))
+            else:
+                # Tra valori consecutivi
+                next_val = existing_values[i + 1]
+                range_start = current_val + self.threshold + 1
+                range_end = next_val - self.threshold - 1
+
+                if range_start < range_end:
+                    safe_ranges.append((range_start, range_end))
+
+        print(f"  {attr} safe ranges: {safe_ranges}")
+        return safe_ranges
+
+    def generate_safe_value(self, attr, avoid_similarity=True):
+        """
+        Genera un valore sicuro per un attributo che non attivi dipendenze.
+
+        Args:
+            attr: Nome dell'attributo
+            avoid_similarity: Se evitare similarità con valori esistenti
+
+        Returns:
+            Valore sicuro per l'attributo
+        """
+        if avoid_similarity:
+            safe_ranges = self.get_safe_value_ranges(attr)
+
+            if safe_ranges:
+                # Scegli un range casuale
+                chosen_range = random.choice(safe_ranges)
+                min_val, max_val = chosen_range
+
+                # Genera valore nel range
+                if isinstance(min_val, (int, np.integer)) and isinstance(max_val, (int, np.integer)):
+                    safe_val = random.randint(int(min_val), int(max_val))
+                else:
+                    safe_val = round(random.uniform(min_val, max_val), 2)
+
+                print(f"    Generated safe value for {attr}: {safe_val} in range {chosen_range}")
+                return safe_val
+
+        # Fallback: usa il metodo esistente
+        return self._get_safe_fallback_value(attr, use_decimal=True)
+
+    def repair_violation(self, row_data, violated_dependency, current_df, distance_matrix):
+        """
+        Ripara una violazione specifica modificando strategicamente i valori della tupla.
+
+        Args:
+            row_data: Dati della tupla che viola
+            violated_dependency: (lhs_list, rhs_attr) della dipendenza violata
+            current_df: Dataset corrente
+            distance_matrix: Matrice delle distanze
+
+        Returns:
+            row_data modificato o None se impossibile riparare
+        """
+        lhs_list, rhs_attr = violated_dependency
+        print(f"    Riparazione violazione: {lhs_list} -> {rhs_attr}")
+
+        # Strategia 1: Modifica RHS per renderlo simile (se non crea altre violazioni)
+        print("    Tentativo 1: Aggiustamento RHS")
+        original_rhs = row_data[rhs_attr]
+
+        # Trova il valore RHS target dalla tupla più simile negli attributi LHS
+        last_pair = distance_matrix.index[-1]  # L'ultima coppia aggiunta
+        existing_idx = int(last_pair.split(',')[0][1:])  # Estrai l'indice della tupla esistente
+
+        # Usa il valore RHS della tupla simile
+        target_rhs = current_df.iloc[existing_idx][rhs_attr]
+
+        # Prova piccole variazioni attorno al target
+        for variation in [0, 0.1, -0.1, 0.5, -0.5, 1, -1]:
+            test_rhs = target_rhs + variation
+            row_data_test = row_data.copy()
+            row_data_test[rhs_attr] = test_rhs
+
+            # Verifica se questa modifica risolve la violazione senza crearne altre
+            temp_df = pd.concat([current_df, pd.DataFrame([row_data_test])], ignore_index=True)
+            temp_matrix = self._update_distance_matrix(row_data_test, temp_df, distance_matrix.copy())
+
+            if not self._check_violations(temp_matrix):
+                print(f"      ✓ RHS riparato: {original_rhs} -> {test_rhs}")
+                return row_data_test
+
+        # Strategia 2: Modifica LHS per rompere la similarità
+        print("    Tentativo 2: Rottura similarità LHS")
+
+        # Prova a modificare un attributo LHS per volta
+        for lhs_attr in lhs_list:
+            original_lhs = row_data[lhs_attr]
+
+            # Genera un valore che rompa la similarità
+            safe_val = self.generate_safe_value(lhs_attr, avoid_similarity=True)
+
+            row_data_test = row_data.copy()
+            row_data_test[lhs_attr] = safe_val
+
+            # Verifica se risolve la violazione
+            temp_df = pd.concat([current_df, pd.DataFrame([row_data_test])], ignore_index=True)
+            temp_matrix = self._update_distance_matrix(row_data_test, temp_df, distance_matrix.copy())
+
+            if not self._check_violations(temp_matrix):
+                print(f"      ✓ LHS riparato: {lhs_attr} {original_lhs} -> {safe_val}")
+                return row_data_test
+            else:
+                print(f"      ✗ Modifica {lhs_attr} non risolve")
+
+        # Strategia 3: Modifica multipla LHS
+        print("    Tentativo 3: Modifica multipla LHS")
+        row_data_test = row_data.copy()
+
+        for lhs_attr in lhs_list:
+            safe_val = self.generate_safe_value(lhs_attr, avoid_similarity=True)
+            row_data_test[lhs_attr] = safe_val
+
+        temp_df = pd.concat([current_df, pd.DataFrame([row_data_test])], ignore_index=True)
+        temp_matrix = self._update_distance_matrix(row_data_test, temp_df, distance_matrix.copy())
+
+        if not self._check_violations(temp_matrix):
+            print(f"      ✓ Modifica multipla LHS riuscita")
+            return row_data_test
+
+        print("    ✗ Impossibile riparare la violazione")
+        return None
+
+    def identify_violated_dependencies(self, distance_matrix):
+        """
+        Identifica quali dipendenze sono violate nella matrice delle distanze.
+
+        Args:
+            distance_matrix: Matrice delle distanze aggiornata
+
+        Returns:
+            List di (dependency, violating_pairs) per le dipendenze violate
+        """
+        violated_deps = []
+
+        for lhs, rhs in self.dependencies:
+            missing_cols = [col for col in lhs + [rhs] if col not in distance_matrix.columns]
+            if missing_cols:
+                continue
+
+            # Trova violazioni: LHS simili ma RHS dissimili
+            lhs_similar = (distance_matrix[lhs] <= self.threshold).all(axis=1)
+            rhs_dissimilar = (distance_matrix[rhs] > self.threshold)
+            violations = lhs_similar & rhs_dissimilar
+
+            if violations.any():
+                violating_pairs = distance_matrix.index[violations].tolist()
+                violated_deps.append(((lhs, rhs), violating_pairs))
+
+        return violated_deps
+
+
+    def _generate_single_tuple(self, i1, i2, current_df ,use_decimal=False, max_repair_attempts=3):
         """
         Generate a single tuple following RFD-aware logic.
 
@@ -429,7 +728,7 @@ class RFDAwareAugmenter:
 
             # Generate values for all attributes following RFD-aware logic
             for attr in self.all_attrs:
-                row_data[attr] = self._get_attr_value(attr, i1, i2, use_decimal)
+                row_data[attr] = self._get_attr_value(attr, i1, i2, use_decimal, generated_values=row_data)
 
             # Add class column
             row_data['class'] = 1
@@ -454,17 +753,287 @@ class RFDAwareAugmenter:
             # Update distance matrix and check violations
             self.original_diff_matrix = self._update_distance_matrix(row_data, temp_df, self.original_diff_matrix)
 
-
-            if not self._check_violations(self.original_diff_matrix):
+            violated_deps = self.identify_violated_dependencies(self.original_diff_matrix)
+            if not violated_deps:
                 print(f"    ✓ Valid tuple generated on attempt {attempt + 1}")
                 self.original_diff_matrix.to_csv(self.out_diff_path)
-                #temp_df.to_csv(updated_df_path, index=False)
                 return row_data
             else:
-                print(f"    ✗ Violation detected on attempt {attempt + 1}, retrying...")
+                print(f"    ⚠ Violations detected, attempting repair...")
+
+                # Trying repairing strategy
+                repaired_data = row_data.copy()
+                repair_successful = True
+
+                for dep_info, violating_pairs in violated_deps:
+                    print(f"      Repairing violation: {dep_info}")
+                    repaired_data = self.repair_violation(repaired_data, dep_info, current_df, self.original_diff_matrix)
+
+                    if repaired_data is None:
+                        repair_successful = False
+                        break
+
+                if repair_successful and repaired_data is not None:
+                    # Verify that the repairing was successful
+                    temp_df_repaired = pd.concat([current_df, pd.DataFrame([repaired_data])], ignore_index=True)
+                    final_matrix = self._update_distance_matrix(repaired_data, temp_df_repaired,
+                                                                self.original_diff_matrix.copy())
+
+                    if not self._check_violations(final_matrix):
+                        print(f"    ✓ Tuple successfully repaired on attempt {attempt + 1}")
+                        self.original_diff_matrix = final_matrix
+                        self.original_diff_matrix.to_csv(self.out_diff_path)
+                        return repaired_data
+                    else:
+                        print(f"    ✗ Repair failed, still has violations")
+                else:
+                    print(f"    ✗ Could not repair violations on attempt {attempt + 1}")
 
         print(f"    Failed to generate valid tuple after {self.max_iter} attempts")
         return None
+
+
+    def get_pairs_for_dependency(self, lhs_list, rhs_attr):
+        """
+        Trova le coppie di tuple che hanno valori <= threshold per tutti gli attributi
+        coinvolti in una specifica dipendenza (LHS + RHS).
+
+        Args:
+            lhs_list: Lista degli attributi LHS della dipendenza
+            rhs_attr: Attributo RHS della dipendenza
+
+        Returns:
+            DataFrame con le coppie valide per questa dipendenza
+        """
+        # Tutti gli attributi coinvolti nella dipendenza
+        all_dependency_attrs = lhs_list + [rhs_attr]
+
+        # Filtra per gli attributi di questa dipendenza
+        relevant_df = self.attrs_df[self.attrs_df['attribute'].isin(all_dependency_attrs)]
+
+        if relevant_df.empty:
+            print(f"Nessuna coppia trovata per la dipendenza {lhs_list} -> {rhs_attr}")
+            return pd.DataFrame()
+
+        # Conta quanti attributi della dipendenza ogni coppia di tuple copre
+        freq_df = (relevant_df
+                   .groupby(['idx1', 'idx2'])
+                   .agg(attribute_count=('attribute', 'nunique'))
+                   .reset_index())
+
+        # Mantieni solo le coppie che coprono TUTTI gli attributi della dipendenza
+        required_attrs = len(all_dependency_attrs)
+        valid_pairs = freq_df[freq_df['attribute_count'] == required_attrs]
+
+        print(f"Dipendenza {lhs_list} -> {rhs_attr}: {len(valid_pairs)} coppie valide")
+        return valid_pairs
+
+    def sort_dependencies_by_complexity(self):
+        """
+        Ordina le dipendenze per complessità (numero di attributi coinvolti) in ordine decrescente.
+        Le dipendenze con più attributi vengono prioritizzate.
+
+        Returns:
+            Lista di dipendenze ordinate per complessità
+        """
+        dependency_complexity = []
+
+        for lhs_list, rhs_attr in self.dependencies:
+            total_attrs = len(lhs_list) + 1  # +1 per RHS
+            dependency_complexity.append((total_attrs, lhs_list, rhs_attr))
+
+        # Ordina per numero di attributi (decrescente)
+        dependency_complexity.sort(key=lambda x: x[0], reverse=True)
+
+        sorted_deps = [(lhs, rhs) for _, lhs, rhs in dependency_complexity]
+
+        print("Dipendenze ordinate per complessità:")
+        for i, (lhs, rhs) in enumerate(sorted_deps):
+            total_attrs = len(lhs) + 1
+            print(f"  {i + 1}. {lhs} -> {rhs} ({total_attrs} attributi)")
+
+        return sorted_deps
+
+    def generate_tuple_for_dependency(self, i1, i2, lhs_list, rhs_attr, current_df, use_decimal=False):
+        """
+        Genera una nuova tupla partendo da una tupla base e modificando solo gli attributi
+        coinvolti in una specifica dipendenza.
+
+        Args:
+            i1, i2: Indici delle tuple base
+            lhs_list: Attributi LHS della dipendenza
+            rhs_attr: Attributo RHS della dipendenza
+            current_df: Dataset corrente
+            use_decimal: Se usare valori decimali
+
+        Returns:
+            Dictionary con i valori della nuova tupla o None se fallisce
+        """
+        # Attributi coinvolti nella dipendenza
+        dependency_attrs = set(lhs_list + [rhs_attr])
+
+        for attempt in range(self.max_iter):
+            print(f"    Tentativo {attempt + 1}: Generazione per dipendenza {lhs_list} -> {rhs_attr}")
+
+            # Parti dalla prima tupla come base
+            base_tuple = self.imbalance_df_min.iloc[i1].copy()
+            row_data = base_tuple.to_dict()
+
+            # Rimuovi tuple_id se presente
+            if 'tuple_id' in row_data:
+                del row_data['tuple_id']
+
+            # Modifica solo gli attributi coinvolti nella dipendenza
+            generated_values = {}
+            for attr in dependency_attrs:
+                if attr in self.all_attrs:  # Assicurati che l'attributo esista
+                    new_val = self._get_attr_value(attr, i1, i2, use_decimal, generated_values=generated_values)
+                    row_data[attr] = new_val
+                    generated_values[attr] = new_val
+                    print(f"      {attr}: {base_tuple[attr]} -> {new_val}")
+
+            # Mantieni la classe come 1
+            row_data['class'] = 1
+
+            print(f'Nuova tupla (dipendenza {lhs_list} -> {rhs_attr}): modificati {len(dependency_attrs)} attributi')
+
+            # Verifica duplicati
+            if self._is_duplicate_tuple(row_data, current_df):
+                print(f"    → Tupla duplicata rilevata")
+                if not use_decimal:
+                    print(f"    → Passaggio a modalità decimale")
+                    use_decimal = True
+                    continue
+                else:
+                    print(f"    → Duplicato anche in modalità decimale, riprova...")
+                    continue
+
+            # Crea dataframe temporaneo e verifica violazioni
+            temp_df = pd.concat([current_df, pd.DataFrame([row_data])], ignore_index=True)
+            temp_distance_matrix = self._update_distance_matrix(row_data, temp_df, self.original_diff_matrix.copy())
+
+            violated_deps = self.identify_violated_dependencies(temp_distance_matrix)
+
+            if not violated_deps:
+                print(f"    ✓ Tupla valida generata al tentativo {attempt + 1}")
+                self.original_diff_matrix = temp_distance_matrix
+                self.original_diff_matrix.to_csv(self.out_diff_path)
+                return row_data
+            else:
+                print(f"    ⚠ Violazioni rilevate, tentativo di riparazione...")
+
+                # Prova a riparare
+                repaired_data = row_data.copy()
+                repair_successful = True
+
+                for dep_info, violating_pairs in violated_deps:
+                    repaired_data = self.repair_violation(repaired_data, dep_info, current_df, temp_distance_matrix)
+                    if repaired_data is None:
+                        repair_successful = False
+                        break
+
+                if repair_successful and repaired_data is not None:
+                    # Verifica riparazione
+                    temp_df_repaired = pd.concat([current_df, pd.DataFrame([repaired_data])], ignore_index=True)
+                    final_matrix = self._update_distance_matrix(repaired_data, temp_df_repaired,
+                                                                self.original_diff_matrix.copy())
+
+                    if not self._check_violations(final_matrix):
+                        print(f"    ✓ Tupla riparata con successo al tentativo {attempt + 1}")
+                        self.original_diff_matrix = final_matrix
+                        self.original_diff_matrix.to_csv(self.out_diff_path)
+                        return repaired_data
+                    else:
+                        print(f"    ✗ Riparazione fallita")
+                else:
+                    print(f"    ✗ Impossibile riparare le violazioni")
+
+        print(f"    Impossibile generare tupla valida dopo {self.max_iter} tentativi")
+        return None
+
+    def augment_dataset_by_dependency(self):
+        """
+        Metodo di augmentazione alternativo che lavora dipendenza per dipendenza.
+
+        Returns:
+            Dataset aumentato
+        """
+        oversampling_quantity = self.oversampling_quantity
+        print(f"Generazione di {oversampling_quantity} nuovi campioni (metodo per dipendenza)")
+
+        # Ordina le dipendenze per complessità
+        sorted_dependencies = self.sort_dependencies_by_complexity()
+        print('SORTED DEPENDENCIES:\n', sorted_dependencies)
+
+        current_df = self.imbalance_df_min.copy()
+        new_rows = []
+        generated_count = 0
+
+        # Itera sulle dipendenze in ordine di complessità
+        for dep_idx, (lhs_list, rhs_attr) in enumerate(sorted_dependencies):
+            if generated_count >= oversampling_quantity:
+                break
+
+            print(f"\n=== Dipendenza {dep_idx + 1}/{len(sorted_dependencies)}: {lhs_list} -> {rhs_attr} ===")
+
+            # Trova le coppie valide per questa dipendenza
+            valid_pairs = self.get_pairs_for_dependency(lhs_list, rhs_attr)
+
+            if valid_pairs.empty:
+                print(f"Nessuna coppia valida per questa dipendenza, continua...")
+                continue
+
+            # Calcola quante tuple generare per questa dipendenza
+            remaining_needed = oversampling_quantity - generated_count
+            pairs_count = len(valid_pairs)
+
+            # Distribuisci equamente tra le dipendenze rimanenti
+            remaining_deps = len(sorted_dependencies) - dep_idx
+            target_for_this_dep = min(remaining_needed // remaining_deps + 1, pairs_count * 2)
+
+            print(f"Target per questa dipendenza: {target_for_this_dep}")
+
+            # Genera tuple per ogni coppia valida
+            tuples_generated_this_dep = 0
+            for _, pair in valid_pairs.iterrows():
+                if generated_count >= oversampling_quantity or tuples_generated_this_dep >= target_for_this_dep:
+                    break
+
+                i1, i2 = pair['idx1'], pair['idx2']
+                print(f"\nGenerazione per coppia ({i1}, {i2})")
+
+                new_tuple = self.generate_tuple_for_dependency(i1, i2, lhs_list, rhs_attr, current_df)
+
+                if new_tuple is not None:
+                    new_rows.append(new_tuple)
+                    current_df = pd.concat([current_df, pd.DataFrame([new_tuple])], ignore_index=True)
+                    generated_count += 1
+                    tuples_generated_this_dep += 1
+                    print(f"    Generato campione {generated_count}/{oversampling_quantity}")
+
+            print(f"Dipendenza completata: {tuples_generated_this_dep} tuple generate")
+
+        # Crea il dataset finale
+        if new_rows:
+            new_df = pd.DataFrame(new_rows, columns=self.all_attrs + ['class'])
+
+            # Taglia alla quantità esatta richiesta
+            if len(new_df) > oversampling_quantity:
+                new_df = new_df.sample(n=oversampling_quantity, random_state=42).reset_index(drop=True)
+
+            new_df.to_csv(f'augmentation_results/{self.base}_new_tuples_by_dependency.csv', index=False)
+
+            # Combina con il dataset originale
+            augmented_df = pd.concat([self.imbalance_df_min, new_df], ignore_index=True)
+            print(f"\nGenerazione completata: {len(new_df)} nuovi campioni")
+            print(f"Forma dataset finale: {augmented_df.shape}")
+
+            return new_df
+        else:
+            print("Nessuna tupla valida generata!")
+            return self.imbalance_df
+
+
 
     def augment_dataset(self):
         """
@@ -480,16 +1049,18 @@ class RFDAwareAugmenter:
         #oversampling_quantity = majority_count - minority_count
         oversampling_quantity=self.oversampling_quantity
 
-
         print(f"Need to generate {oversampling_quantity} new samples")
 
-        # Get top tuple pairs
-        top_pairs = self._get_top_pairs()
-        print(f"Found {len(top_pairs)} suitable tuple pairs")
 
-        if len(top_pairs) == 0:
-            print("No suitable tuple pairs found!")
-            return self.imbalance_df
+        # Get tuple pairs where all the values for both LHS and RHS attributes are <= thr or where all the LHS attributes are <= thr
+        if self._get_top_pairs() is not None:
+            top_pairs = self._get_top_pairs()
+            print(f"Found {len(top_pairs)} suitable tuple pairs")
+
+        else:
+            print("No suitable tuple pairs found, generating tuples by dependency!")
+            self.augment_dataset_by_dependency()
+
 
         # Calculate oversampling factor
         oversampling_factor = max(1, (oversampling_quantity // len(top_pairs)) + 1)
@@ -531,6 +1102,10 @@ class RFDAwareAugmenter:
             if len(new_df) > oversampling_quantity:
                 new_df = new_df.sample(n=oversampling_quantity, random_state=42).reset_index(drop=True)
             #basename_min = os.path.basename(updated_df_path).split('.')[0]
+            sorted_cols = sorted(new_df.columns,
+                                 key=lambda c: (0, int(re.search(r'\d+', c).group())) if re.search(r'Attr(\d+)$', c)
+                                 else (2, 0) if c == 'class' else (1, c))
+            new_df = new_df[sorted_cols]
             new_df.to_csv(f'augmentation_results/{self.base}_new_tuples.csv', index=False)
             # Combine with original dataset
             augmented_df = pd.concat([self.imbalance_df_min, new_df], ignore_index=True)
@@ -542,51 +1117,3 @@ class RFDAwareAugmenter:
         else:
             print("No valid tuples could be generated!")
             return self.imbalance_df
-
-'''
-# Usage example
-def run_augmentation():
-    """Example of how to use the RFDAwareAugmenter."""
-
-    # Define file paths
-    IMBALANCE_DATASET_PATH = 'imbalanced_datasets/wisconsin.csv'
-    IMBALANCE_DATASET_PATH_MIN = 'imbalanced_datasets/wisconsin_min.csv'
-    ATTR_PATH_DIFF = 'diff_tuples/diff_tuples_wisconsin_min.csv'
-    RFD_FILE = 'discovered_rfds/discovered_rfds_processed/RFD12_E0.0_wisconsin_min.txt'
-    DIFF_MATRIX_PATH = 'diff_matrices/pw_diff_mx_wisconsin_min.csv'
-
-
-    # Optional: specify which RFDs to respect
-    selected_rfds = [
-        'Attr0 -> Attr1',
-        'Attr1 -> Attr0',
-        'Attr7 -> Attr4'
-        # Add more as needed
-    ]
-
-    # Create augmenter instance
-    augmenter = RFDAwareAugmenter(
-        imbalance_dataset_path=IMBALANCE_DATASET_PATH,
-        #imbalance_dataset_path_min = IMBALANCE_DATASET_PATH_MIN,
-        #attr_diff_path=ATTR_PATH_DIFF,
-        rfd_file_path=RFD_FILE,
-        #diff_matrix_path=DIFF_MATRIX_PATH,
-        threshold=12,  # RFD similarity threshold
-        max_iter=5,  # Maximum attempts per tuple generation
-        selected_rfds=None  # Use None for all RFDs, or specify list
-    )
-
-    # Run augmentation
-    augmented_dataset = augmenter.augment_dataset()
-
-    # Save results
-    output_path = os.path.join(augmenter.output_dir, 'augmented_dataset.csv')
-    augmented_dataset.to_csv(output_path, index=False)
-    print(f"Augmented dataset saved to: {output_path}")
-
-    return augmented_dataset
-'''
-
-
-# Uncomment to run
-#augmented_data = run_augmentation()
