@@ -38,8 +38,8 @@ class RFDAwareAugmenter:
         self.max_iter = max_iter
         self.oversampling_quantity = oversampling
         self.selected_rfds = selected_rfds
-        #self.last_safe_value = sys.maxsize - self.threshold - 1
-        self.last_safe_value = {}
+        self.last_safe_value = sys.maxsize - self.threshold - 1     # quando la strategia è sys.max (sys.max - thr - 1)
+        #self.last_safe_value = {}  # quando la strategia è max value della colonna + thr + 1 (incrementale)
 
 
         # Load datasets
@@ -63,6 +63,12 @@ class RFDAwareAugmenter:
         self.imbalance_df_min =  pd.read_csv(self.out_min_path)
         print(f'LETTURA DATASET INIZIALE:\n{self.imbalance_df_min.head()}')
 
+        self.integer_attrs = set()
+        for attr in self.imbalance_df_min.columns:
+            if (self.imbalance_df_min[attr].dtype in ['int64', 'int32'] or
+                    np.issubdtype(self.imbalance_df_min[attr].dtype, np.integer)):
+                self.integer_attrs.add(attr)
+                print(f"{attr} è un attributo intero")
 
 
         self.out_diff_path = os.path.join(self.output_diff_dir, f'pw_diff_mx_{self.base}_min.csv')
@@ -80,6 +86,7 @@ class RFDAwareAugmenter:
         self.dependencies = self._parse_rfds(rfd_file_path)
         self._analyze_attributes()
 
+
     def order_attributes(self):
         """
         Ordina gli attributi mettendo prima quelli non-booleani
@@ -87,7 +94,8 @@ class RFDAwareAugmenter:
         All'interno di ciascun gruppo li ordina per indice numerico.
         """
         #attrs = self.attrs_df['attribute'].unique()
-        attrs = self.attrs_df['attribute'].unique()
+        #attrs = self.attrs_df['attribute'].unique()
+        attrs = self.dataset_min.columns[:-1]
         print('Attributes: \n', attrs)
 
         ordered = sorted(
@@ -105,7 +113,6 @@ class RFDAwareAugmenter:
             return True
         else:
             return False
-
 
 
     def _parse_rfds(self, rfd_file_path):
@@ -245,7 +252,7 @@ class RFDAwareAugmenter:
 
         return freq_df[freq_df['covers_all_both']]
 
-    def _get_attr_value(self, attr, i1, i2, use_decimal=False, generated_values=None):
+    def _get_attr_value(self, attr, i1, i2, use_decimal=False, generated_values=None, missing_attrs=None):
         """
         Get attribute value for generation following RFD-aware logic.
 
@@ -253,7 +260,12 @@ class RFDAwareAugmenter:
             attr: Attribute name
             i1, i2: Tuple indices
             use_decimal: If True, generate decimal values to avoid duplicates
+            missing_attrs: attribute set which needs to use sys.max to avoid alterate patterns
         """
+
+        if missing_attrs and attr in missing_attrs:
+            print(f"  {attr}: Missing in pair coverage, using sys.max strategy")
+            return self._get_safe_fallback_value(attr, use_decimal)
 
         # Try to find the tuple pair data for this attribute
         row = self.attrs_df[(self.attrs_df['attribute'] == attr) &
@@ -318,11 +330,12 @@ class RFDAwareAugmenter:
                         print(f"    → Similar values, generating decimal: {generated_val:.2f}")
                         return round(generated_val, 2)
                     else:
-                        if isinstance(min_val, (int, np.integer)) and isinstance(max_val, (int, np.integer)):
+                        if attr in self.integer_attrs: #and isinstance(min_val, (int, np.integer)) and isinstance(max_val, (int, np.integer)):
                             generated_val = random.randint(int(min_val), int(max_val))
+                            print(f"    → Integer attribute {attr}, generating integer in range: {generated_val}")
                         else:
                             generated_val = round(random.uniform(min_val, max_val), 2)
-                        print(f"    → Similar values, generating: {generated_val}")
+                            print(f"    → Float/decimal attribute {attr}, generating decimal: {generated_val}")
                         return generated_val
             else:
                 # Values are dissimilar - use safe fallback to avoid unwanted dependencies
@@ -333,6 +346,10 @@ class RFDAwareAugmenter:
             print(f"  {attr}: No tuple pair data, using fallback")
             return self._get_safe_fallback_value(attr, use_decimal)
 
+    '''
+        # quando la strategia è max value della colonna + thr + 1 (incrementale) 
+    '''
+    '''
     def _get_safe_fallback_value(self, attr, use_decimal=False):
         """
         Generate a safe fallback value that won't trigger unwanted dependencies.
@@ -378,8 +395,10 @@ class RFDAwareAugmenter:
         else:
             print(f"    → Safe fallback: {safe_base}")
             return safe_base
+    '''
 
-    '''   
+
+    #'''
     def _get_safe_fallback_value(self, attr, use_decimal=False):
         """
         Generate a safe fallback value that won't trigger unwanted dependencies.
@@ -389,16 +408,15 @@ class RFDAwareAugmenter:
             use_decimal: If True, add decimal component
         """
         # Get all rows for this attribute and find the global maximum
-        attr_rows = self.imbalance_df_min[attr]
-        print(' rows for this attribute and find the global maximum:\n', attr_rows )
+        #attr_rows = self.imbalance_df_min[attr]
+        #print(' rows for this attribute and find the global maximum:\n', attr_rows )
 
-        overall_max = attr_rows.max() + self.threshold + 1  # per non attivare o violare dipendenze per gli attributi i cui pattern sono posti a 0, genero valori fuori range
-        #overall_max = self.last_safe_value - self.threshold - 1
+        #overall_max = attr_rows.max() + self.threshold + 1
+        overall_max = self.last_safe_value - self.threshold - 1  # per non attivare o violare dipendenze per gli attributi i cui pattern sono posti a 0, genero valori fuori range
         print('Overall max:', overall_max)
 
         self.last_safe_value = overall_max
 
-        # Generate safe value: max + threshold + 1 (+ decimal if requested)
         safe_base = overall_max
 
         if use_decimal:
@@ -410,7 +428,7 @@ class RFDAwareAugmenter:
         else:
             print(f"    → Safe fallback: {safe_base}")
             return safe_base
-    '''
+    #'''
 
     def _update_distance_matrix(self, new_tuple_values, current_df, prev_matrix=None):
         """
@@ -615,7 +633,7 @@ class RFDAwareAugmenter:
         print(f"    Riparazione violazione: {lhs_list} -> {rhs_attr}")
 
         # Strategia 1: Modifica RHS per renderlo simile (se non crea altre violazioni)
-        print("    Tentativo 1: Aggiustamento RHS")
+        print("    Tentativo 1: Riparazione RHS")
         original_rhs = row_data[rhs_attr]
 
         # Trova il valore RHS target dalla tupla più simile negli attributi LHS
@@ -709,7 +727,7 @@ class RFDAwareAugmenter:
         return violated_deps
 
 
-    def _generate_single_tuple(self, i1, i2, current_df ,use_decimal=False, max_repair_attempts=3):
+    def _generate_single_tuple(self, i1, i2, current_df ,use_decimal=False, max_repair_attempts=5, missing_attrs=None):
         """
         Generate a single tuple following RFD-aware logic.
 
@@ -717,6 +735,7 @@ class RFDAwareAugmenter:
             i1, i2: Base tuple indices
             current_df: Current dataset
             use_decimal: If True, use decimal values to avoid duplicates
+            missing_attrs: attrs not covered by couple (i1,i2)
 
         Returns:
             Dictionary with new tuple values, or None if failed
@@ -728,7 +747,7 @@ class RFDAwareAugmenter:
 
             # Generate values for all attributes following RFD-aware logic
             for attr in self.all_attrs:
-                row_data[attr] = self._get_attr_value(attr, i1, i2, use_decimal, generated_values=row_data)
+                row_data[attr] = self._get_attr_value(attr, i1, i2, use_decimal, generated_values=row_data, missing_attrs=missing_attrs)
 
             # Add class column
             row_data['class'] = 1
@@ -1050,18 +1069,17 @@ class RFDAwareAugmenter:
         oversampling_quantity=self.oversampling_quantity
 
         print(f"Need to generate {oversampling_quantity} new samples")
+        top_pairs = self._get_top_pairs()
+        #top_pairs = self._get_top_pairs_flexible(min_coverage_ratio=0.7)
 
-
+        '''
         # Get tuple pairs where all the values for both LHS and RHS attributes are <= thr or where all the LHS attributes are <= thr
-        if self._get_top_pairs() is not None:
-            top_pairs = self._get_top_pairs()
-            print(f"Found {len(top_pairs)} suitable tuple pairs")
-
-        else:
+        if len(top_pairs)==0:
             print("No suitable tuple pairs found, generating tuples by dependency!")
             self.augment_dataset_by_dependency()
+        '''
 
-
+        print(f"Found {len(top_pairs)} suitable tuple pairs")
         # Calculate oversampling factor
         oversampling_factor = max(1, (oversampling_quantity // len(top_pairs)) + 1)
         print(f"Oversampling factor: {oversampling_factor}")
@@ -1079,12 +1097,23 @@ class RFDAwareAugmenter:
             i1, i2 = pair['idx1'], pair['idx2']
             print(f"\nGenerating tuples for pair ({i1}, {i2})")
 
+            # Identifica attributi mancanti per questa coppia
+            covered_attrs = set(self.attrs_df[
+                                    (self.attrs_df['idx1'] == i1) & (self.attrs_df['idx2'] == i2)
+                                    ]['attribute'].unique())
+
+            missing_attrs = self.both_attrs - covered_attrs
+
+            if missing_attrs:
+                print(f"  Pair ({i1},{i2}) missing attrs: {missing_attrs} -> using sys.max")
+
             for iteration in range(oversampling_factor):
                 if generated_count >= oversampling_quantity:
                     break
 
                 print(f"  Iteration {iteration + 1}/{oversampling_factor}")
-                new_tuple = self._generate_single_tuple(i1, i2, current_df)
+                #new_tuple = self._generate_single_tuple(i1, i2, current_df)
+                new_tuple = self._generate_single_tuple(i1, i2, current_df,missing_attrs=missing_attrs)
 
                 if new_tuple is not None:
                     new_rows.append(new_tuple)
@@ -1106,7 +1135,7 @@ class RFDAwareAugmenter:
                                  key=lambda c: (0, int(re.search(r'\d+', c).group())) if re.search(r'Attr(\d+)$', c)
                                  else (2, 0) if c == 'class' else (1, c))
             new_df = new_df[sorted_cols]
-            new_df.to_csv(f'augmentation_results/{self.base}_new_tuples.csv', index=False)
+            new_df.to_csv(f'augmentation_results/{self.base}_new_tuples_{self.threshold}.csv', index=False)
             # Combine with original dataset
             augmented_df = pd.concat([self.imbalance_df_min, new_df], ignore_index=True)
 
