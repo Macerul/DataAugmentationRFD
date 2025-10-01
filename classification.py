@@ -53,7 +53,7 @@ def plot_confusion_matrix(cm: pd.DataFrame, classes: list, title: str, filename:
 
 def main():
     # Parameters
-    data_path = 'imbalanced_datasets/wisconsin.csv'
+    data_path = 'imbalance_datasets_SMOTE/wisconsin.csv'
     RFD_FILE = 'discovered_rfds/discovered_rfds_processed/RFD12_E0.0_wisconsin_min.txt'
     basename = os.path.basename(data_path)
     dname = os.path.splitext(basename)[0]

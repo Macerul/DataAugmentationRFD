@@ -2,7 +2,7 @@ import pandas as pd
 import argparse
 import os
 
-DF_ORIG_PATH = '../imbalanced_datasets/wisconsin.csv'
+DF_ORIG_PATH = '../imbalance_datasets_SMOTE/wisconsin.csv'
 DF_ORIG_MIN_PATH = '../imbalanced_datasets/wisconsin_min.csv'
 GENERATED_TUPLES_PATH = 'augmentation_results/generated_diff_tuples_shuttle-c2-vs-c4_min.csv'
 OVERSAMPLED_DATASET_PATH = '../oversampled_datasets'

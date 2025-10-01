@@ -1,8 +1,0 @@
-Model,AUC,F1-score,Precision,Recall,G-mean,Accuracy
-Logistic Regression,0.99,0.96,0.97,0.94,0.96,0.97
-Naive Bayes,0.99,0.95,0.93,0.97,0.97,0.97
-SVM,0.99,0.96,0.96,0.96,0.97,0.97
-KNN,1.00,0.96,0.99,0.93,0.96,0.97
-Random Forest,1.00,0.96,0.99,0.94,0.97,0.98
-Decision Tree,0.96,0.95,0.97,0.93,0.96,0.97
-XGBoost,0.99,0.96,0.96,0.96,0.97,0.97
