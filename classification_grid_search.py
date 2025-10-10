@@ -186,9 +186,11 @@ def perform_grid_search(model, param_grid, X_train, y_train, cv=3, scoring='f1')
 
 
 def main():
+
+    thrs = 2
     # Parameters
-    data_path = 'imbalanced_datasets/pima.csv'
-    RFD_FILE = 'discovered_rfds/discovered_rfds_processed/RFD2_E0.0_pima_min.txt'
+    data_path = 'imbalance_datasets_SMOTE/Stroke.csv'
+    RFD_FILE = f'discovered_rfds/discovered_rfds_processed/RFD{thrs}_E0.0_Stroke_no_key_min.txt'
     m = re.search(r'RFD(\d+)_', RFD_FILE)
     if m:
         thr = int(m.group(1))
@@ -218,16 +220,17 @@ def main():
     #print('Test data shape:', X_test.shape)
     #print('Test positive samples shape:', y_test.value_counts())
 
+    #'''
     # CONFIGURE AUGMENTER PARAMETERS
     augmenter = RFDAwareAugmenter(
         imbalance_dataset_path=data_path,
         rfd_file_path=RFD_FILE,
         oversampling=required_train_samples,
-        threshold=2,  # RFD similarity threshold
+        threshold=thrs,  # RFD similarity threshold
         max_iter=5,  # Maximum attempts per tuple generation
         selected_rfds=None  # Use None for all RFDs, or specify list of rfds to be considered
     )
-
+    
     # Run augmentation with
     X_train_new_pos = augmenter.augment_dataset()
     print('Shape df delle nuove tuple aggiunte:', X_train_new_pos.shape)
@@ -243,6 +246,7 @@ def main():
     # TRAIN DATA RISULTANTI DOPO AVER APPLICATO LA STRATEGIA DI DATA AUGMENTATION
     X_train_augmented = pd.concat([X_train, X_train_new_pos], ignore_index=True)
     y_train_augmented = pd.concat([y_train, y_train_new_pos], ignore_index=True)
+    #'''
 
     # Get models and hyperparameters
     models_params = get_models_and_params()

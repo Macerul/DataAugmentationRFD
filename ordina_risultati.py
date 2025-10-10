@@ -3,7 +3,7 @@ import shutil
 
 # cartelle da personalizzare
 cartella_dataset = "./imbalance_datasets_SMOTE"
-cartella_risultati = "./classification_results_SMOTE"
+cartella_risultati = "./classification_results_SMOTECDNN"
 
 # cartelle speciali (già esistenti)
 cartella_new_tuples = os.path.join(cartella_risultati, "new_tuples")
