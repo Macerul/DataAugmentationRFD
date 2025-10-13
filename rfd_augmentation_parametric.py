@@ -46,7 +46,10 @@ class RFDAwareAugmenter:
         self.imbalance_dataset_path = imbalance_dataset_path
         self.base = os.path.basename(self.imbalance_dataset_path).split('.')[0]
         self.imbalance_df = pd.read_csv(imbalance_dataset_path)
-        self.dataset_min = self.imbalance_df[self.imbalance_df['class']==1]
+        ###### IDENTIFY IMB CLASS ######
+        counts = self.imbalance_df['class'].value_counts()
+        min_class = counts.idxmin()
+        self.dataset_min = self.imbalance_df[self.imbalance_df['class']== min_class]
         self.out_min_path = os.path.join(self.imbalance_dir, f'{self.base}_min.csv')
         self.dataset_min.to_csv(self.out_min_path, index=False)
 
@@ -616,6 +619,43 @@ class RFDAwareAugmenter:
         # Fallback: usa il metodo esistente
         return self._get_safe_fallback_value(attr, use_decimal=True)
 
+    def repair_violation_with_fallback(self, row_data, violated_dependency, current_df, distance_matrix):
+        """
+        Prova prima la riparazione normale, poi usa safe_fallback per tutti gli attributi coinvolti.
+        """
+        lhs_list, rhs_attr = violated_dependency
+
+        # Tentativo 1-3: Usa la strategia normale di riparazione
+        repaired = self.repair_violation(row_data, violated_dependency, current_df, distance_matrix)
+
+        if repaired is not None:
+            return repaired
+
+        # Strategia 4: ULTIMA RISORSA - Usa safe_fallback per tutti gli attributi della dipendenza
+        print(" Safe fallback per tutti gli attributi della dipendenza")
+        row_data_test = row_data.copy()
+
+        # Applica safe_fallback a TUTTI gli attributi coinvolti nella dipendenza
+        all_dep_attrs = lhs_list + [rhs_attr]
+
+        for attr in all_dep_attrs:
+            old_val = row_data_test[attr]
+            safe_val = self._get_safe_fallback_value(attr, use_decimal=True)
+            row_data_test[attr] = safe_val
+            print(f"      {attr}: {old_val} -> {safe_val} (safe fallback)")
+
+        # Verifica se funziona
+        temp_df = pd.concat([current_df, pd.DataFrame([row_data_test])], ignore_index=True)
+        temp_matrix = self._update_distance_matrix(row_data_test, temp_df, distance_matrix.copy())
+
+        if not self._check_violations(temp_matrix):
+            print(f"      ✓ Riparazione con safe fallback riuscita")
+            return row_data_test
+
+        print("    ✗ Anche safe fallback non risolve")
+        return None
+
+
     def repair_violation(self, row_data, violated_dependency, current_df, distance_matrix):
         """
         Ripara una violazione specifica modificando strategicamente i valori della tupla.
@@ -786,7 +826,10 @@ class RFDAwareAugmenter:
 
                 for dep_info, violating_pairs in violated_deps:
                     print(f"      Repairing violation: {dep_info}")
-                    repaired_data = self.repair_violation(repaired_data, dep_info, current_df, self.original_diff_matrix)
+                    #repaired_data = self.repair_violation(repaired_data, dep_info, current_df, self.original_diff_matrix)
+                    repaired_data = self.repair_violation_with_fallback(
+                        repaired_data, dep_info, current_df, self.original_diff_matrix
+                    )
 
                     if repaired_data is None:
                         repair_successful = False
@@ -1070,6 +1113,20 @@ class RFDAwareAugmenter:
 
         print(f"Need to generate {oversampling_quantity} new samples")
         top_pairs = self._get_top_pairs()
+        if len(top_pairs) == 0:
+            print("No complete top pairs found, using ALL available pairs from attrs_df")
+            # Estrai tutte le coppie uniche da attrs_df
+            all_pairs = self.attrs_df[['idx1', 'idx2']].drop_duplicates().reset_index(drop=True)
+            print(f"Found {len(all_pairs)} total pairs in attrs_df")
+
+            if len(all_pairs) == 0:
+                print("No pairs available at all, using dependency method!")
+                return self.augment_dataset_by_dependency()
+
+            top_pairs = all_pairs
+        else:
+            print(f"Found {len(top_pairs)} complete top pairs")
+
         #top_pairs = self._get_top_pairs_flexible(min_coverage_ratio=0.7)
 
         '''
@@ -1102,7 +1159,8 @@ class RFDAwareAugmenter:
                                     (self.attrs_df['idx1'] == i1) & (self.attrs_df['idx2'] == i2)
                                     ]['attribute'].unique())
 
-            missing_attrs = self.both_attrs - covered_attrs
+            #missing_attrs = self.both_attrs - covered_attrs
+            missing_attrs = set(self.all_attrs) - covered_attrs
 
             if missing_attrs:
                 print(f"  Pair ({i1},{i2}) missing attrs: {missing_attrs} -> using sys.max")

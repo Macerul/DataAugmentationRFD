@@ -1,0 +1,26 @@
+Dataset: vowel0_min.csv
+Comparison: 8.0
+Extent: 0.0
+ApproximateG3Error: true
+ImputeColumnType: false
+#load(...): in 10,72ms
+#construct(...): in 178,28ms
+#run(...): ... in 74,95ms
+
+RFDs:
+->	Attr0@8.0
+->	Attr2@8.0
+->	Attr3@8.0
+->	Attr4@8.0
+->	Attr6@8.0
+->	Attr7@8.0
+->	Attr9@8.0
+->	Attr10@8.0
+->	Attr11@8.0
+->	Attr12@8.0
+->	class@8.0
+
+Time limit: false
+Out of memory: false
+Memory consumption: 57MB
+RFDs count: 11

@@ -1,0 +1,25 @@
+Dataset: Obesity_onevsrest_1_min.csv
+Comparison: 2.0
+Extent: 0.0
+ApproximateG3Error: true
+ImputeColumnType: false
+#load(...): in 24,76ms
+#construct(...): in 150,54ms
+#run(...): ... in 706,90ms
+
+RFDs:
+->	Attr0@2.0
+->	Attr2@2.0
+->	Attr4@2.0
+->	Attr5@2.0
+->	Attr6@2.0
+->	Attr9@2.0
+->	Attr10@2.0
+->	Attr11@2.0
+->	Attr13@2.0
+->	class@2.0
+
+Time limit: false
+Out of memory: false
+Memory consumption: 96MB
+RFDs count: 10

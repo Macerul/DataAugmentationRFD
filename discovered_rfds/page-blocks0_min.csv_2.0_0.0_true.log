@@ -1,0 +1,23 @@
+Dataset: page-blocks0_min.csv
+Comparison: 2.0
+Extent: 0.0
+ApproximateG3Error: true
+ImputeColumnType: false
+#load(...): in 18,50ms
+#construct(...): in 519,21ms
+#run(...): ... in 1,45s
+
+RFDs:
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr7@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr8@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr8@2.0	->	Attr1@2.0
+->	Attr4@2.0
+->	Attr5@2.0
+->	class@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	->	Attr3@2.0
+
+Time limit: false
+Out of memory: false
+Memory consumption: 150MB
+RFDs count: 8

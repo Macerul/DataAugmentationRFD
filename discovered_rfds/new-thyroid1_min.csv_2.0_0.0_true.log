@@ -1,0 +1,18 @@
+Dataset: new-thyroid1_min.csv
+Comparison: 2.0
+Extent: 0.0
+ApproximateG3Error: true
+ImputeColumnType: false
+#load(...): in 14,63ms
+#construct(...): in 83,23ms
+#run(...): ... in 98,35ms
+
+RFDs:
+->	Attr3@2.0
+->	Attr4@2.0
+->	class@2.0
+
+Time limit: false
+Out of memory: false
+Memory consumption: 57MB
+RFDs count: 3

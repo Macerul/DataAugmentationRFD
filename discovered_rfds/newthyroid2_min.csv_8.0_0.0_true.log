@@ -1,0 +1,19 @@
+Dataset: newthyroid2_min.csv
+Comparison: 8.0
+Extent: 0.0
+ApproximateG3Error: true
+ImputeColumnType: false
+#load(...): in 7,44ms
+#construct(...): in 82,94ms
+#run(...): ... in 84,19ms
+
+RFDs:
+Attr0@8.0	->	Attr2@8.0
+->	Attr3@8.0
+->	Attr4@8.0
+->	class@8.0
+
+Time limit: false
+Out of memory: false
+Memory consumption: 57MB
+RFDs count: 4

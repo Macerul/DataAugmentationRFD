@@ -1,0 +1,2637 @@
+Dataset: vehicle0_min.csv
+Comparison: 2.0
+Extent: 0.0
+ApproximateG3Error: true
+ImputeColumnType: false
+#load(...): in 18,19ms
+#construct(...): in 152,12ms
+#run(...): ... in 16,67s
+
+RFDs:
+Attr1@2.0	Attr4@2.0	Attr16@2.0	->	Attr8@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr1@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr5@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr1@2.0
+Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr0@2.0	Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr11@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr11@2.0	Attr13@2.0	->	Attr6@2.0
+Attr6@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr13@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr5@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr6@2.0
+Attr4@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr8@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr6@2.0	Attr13@2.0	->	Attr7@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr3@2.0
+Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr14@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr14@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr6@2.0
+Attr0@2.0	Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	->	Attr5@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr6@2.0	Attr12@2.0	->	Attr5@2.0
+Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr0@2.0	Attr1@2.0	Attr9@2.0	Attr10@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr15@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr14@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr1@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr4@2.0	Attr7@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr15@2.0
+Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr12@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr11@2.0	Attr14@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr14@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr7@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr7@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr15@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr9@2.0	Attr13@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	->	Attr10@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr11@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	->	Attr4@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr3@2.0
+Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr10@2.0	Attr11@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr7@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr4@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	->	Attr5@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	->	Attr6@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	->	Attr13@2.0
+Attr0@2.0	Attr5@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	->	Attr6@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	->	Attr5@2.0
+Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr7@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr15@2.0	->	Attr5@2.0
+Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr10@2.0	Attr11@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr1@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr4@2.0	Attr7@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr15@2.0
+Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr0@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr5@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr15@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr12@2.0
+Attr2@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	->	Attr4@2.0
+Attr1@2.0	Attr3@2.0	Attr16@2.0	->	Attr8@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr17@2.0
+Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	->	Attr5@2.0
+Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr9@2.0
+Attr2@2.0	Attr6@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr17@2.0
+Attr1@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	->	Attr17@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr13@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	->	Attr6@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	->	Attr4@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr9@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr2@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr7@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr16@2.0	Attr17@2.0	->	Attr8@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr1@2.0	Attr5@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr12@2.0
+Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr4@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr8@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr16@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	->	Attr1@2.0
+Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr5@2.0	Attr9@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr6@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr6@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr15@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr8@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr15@2.0	->	Attr5@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	->	Attr1@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr1@2.0	Attr15@2.0	->	Attr8@2.0
+Attr0@2.0	Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr15@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr5@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr11@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr15@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr1@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr1@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	->	Attr5@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	->	Attr1@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr1@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr11@2.0
+Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	->	Attr4@2.0
+Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr5@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr6@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr11@2.0	->	Attr17@2.0
+Attr3@2.0	Attr11@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr14@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr12@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	->	Attr5@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr9@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr14@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr5@2.0	Attr16@2.0	->	Attr8@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr15@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	->	Attr7@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr3@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	->	Attr17@2.0
+Attr6@2.0	Attr16@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr1@2.0
+Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr10@2.0
+Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	->	Attr13@2.0
+Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	->	Attr17@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr4@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr3@2.0	Attr6@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr1@2.0
+Attr1@2.0	Attr3@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr1@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr7@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr1@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr13@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr8@2.0
+Attr1@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr11@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr6@2.0	Attr12@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr13@2.0	->	Attr8@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	->	Attr5@2.0
+Attr0@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr17@2.0	->	Attr4@2.0
+Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr10@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr1@2.0
+Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr3@2.0	Attr7@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr6@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr1@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr17@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr1@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	->	Attr6@2.0
+Attr0@2.0	Attr6@2.0	Attr10@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr16@2.0	->	Attr13@2.0
+Attr3@2.0	Attr5@2.0	Attr14@2.0	->	Attr8@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr9@2.0	Attr11@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	->	Attr4@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	->	Attr5@2.0
+Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr1@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr17@2.0	->	Attr4@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr1@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	->	Attr6@2.0
+Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr1@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr7@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	->	Attr5@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr12@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr1@2.0	Attr4@2.0	Attr5@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr3@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	->	Attr7@2.0
+Attr1@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr7@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr0@2.0	Attr1@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr11@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr1@2.0	Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr10@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	->	Attr4@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr16@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr1@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr3@2.0	Attr12@2.0	->	Attr8@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr17@2.0	->	Attr1@2.0
+Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr13@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr7@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr3@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr3@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	->	Attr7@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr5@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr15@2.0
+Attr0@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr10@2.0
+Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr8@2.0
+Attr1@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr1@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	->	Attr1@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr6@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr7@2.0	->	Attr8@2.0
+Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr9@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr9@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr14@2.0
+Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr2@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr9@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	->	Attr5@2.0
+Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	->	Attr5@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr9@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr12@2.0
+->	class@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	->	Attr1@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr4@2.0	Attr5@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr3@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr3@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr1@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr1@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr1@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr11@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr9@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr9@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr17@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr1@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr0@2.0	Attr12@2.0	->	Attr8@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr12@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr3@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr15@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr6@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr6@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr11@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr15@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr5@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr16@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr4@2.0	Attr15@2.0	Attr17@2.0	->	Attr8@2.0
+Attr0@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr12@2.0
+Attr0@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr7@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr15@2.0	->	Attr17@2.0
+Attr4@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr6@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	->	Attr4@2.0
+Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr5@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr12@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr4@2.0	Attr12@2.0	->	Attr8@2.0
+Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr2@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr4@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr11@2.0	Attr13@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr9@2.0	->	Attr8@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr1@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr4@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr3@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr15@2.0
+Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr6@2.0	Attr13@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr6@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr4@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr15@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr1@2.0	Attr14@2.0	Attr16@2.0	->	Attr8@2.0
+Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr5@2.0	Attr13@2.0	->	Attr8@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+Attr2@2.0	Attr11@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr5@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr1@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr3@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	->	Attr5@2.0
+Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr11@2.0	Attr14@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr11@2.0	Attr14@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr11@2.0	Attr14@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr11@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr11@2.0	Attr14@2.0	->	Attr17@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr1@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr14@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr5@2.0	Attr14@2.0	Attr15@2.0	->	Attr8@2.0
+Attr0@2.0	Attr2@2.0	Attr5@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr1@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr6@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr10@2.0	->	Attr7@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr9@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr15@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr15@2.0
+Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr8@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr8@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr4@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr1@2.0	Attr12@2.0	->	Attr8@2.0
+Attr1@2.0	Attr4@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr2@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr6@2.0	Attr10@2.0	Attr12@2.0	->	Attr5@2.0
+Attr0@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr17@2.0	->	Attr4@2.0
+Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr4@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr4@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr10@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr1@2.0	Attr4@2.0	Attr13@2.0	->	Attr8@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr3@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr12@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr5@2.0
+Attr1@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	->	Attr1@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr1@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr7@2.0
+Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr1@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr8@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr5@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr1@2.0
+Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr4@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr2@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr2@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr14@2.0
+Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr12@2.0	->	Attr5@2.0
+Attr3@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr3@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr6@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr11@2.0	Attr13@2.0	->	Attr6@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr1@2.0
+Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr2@2.0
+Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr4@2.0
+Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr17@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr1@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr5@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr6@2.0
+Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr15@2.0
+Attr0@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	->	Attr5@2.0
+Attr1@2.0	Attr11@2.0	Attr13@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr11@2.0	Attr13@2.0	->	Attr5@2.0
+Attr3@2.0	Attr11@2.0	Attr13@2.0	->	Attr6@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr2@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr3@2.0
+Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr15@2.0
+Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr12@2.0	->	Attr7@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr17@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr12@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr7@2.0
+Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	->	Attr5@2.0
+Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr2@2.0	Attr7@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	->	Attr5@2.0
+Attr5@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr15@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr1@2.0
+Attr1@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr7@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr12@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr15@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr11@2.0	->	Attr7@2.0
+Attr11@2.0	->	Attr8@2.0
+Attr1@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr4@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr4@2.0	Attr11@2.0	Attr15@2.0	->	Attr6@2.0
+Attr1@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr0@2.0	Attr1@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr16@2.0	->	Attr8@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr5@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr6@2.0
+Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr16@2.0	->	Attr7@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	->	Attr1@2.0
+Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr4@2.0
+Attr4@2.0	Attr11@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr5@2.0	Attr9@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr9@2.0	Attr11@2.0	Attr13@2.0	->	Attr5@2.0
+Attr9@2.0	Attr11@2.0	Attr13@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr6@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr13@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	->	Attr6@2.0
+Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	->	Attr6@2.0
+Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	->	Attr17@2.0
+Attr7@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr15@2.0	->	Attr8@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr2@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr3@2.0	Attr4@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	->	Attr15@2.0
+Attr1@2.0	Attr7@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr6@2.0	Attr9@2.0	Attr13@2.0	->	Attr7@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr7@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr14@2.0
+Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr12@2.0	->	Attr7@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr10@2.0
+Attr3@2.0	Attr6@2.0	->	Attr7@2.0
+Attr6@2.0	->	Attr8@2.0
+Attr1@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr12@2.0
+Attr1@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	->	Attr13@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr4@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr13@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr4@2.0	Attr6@2.0	->	Attr7@2.0
+Attr0@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr13@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr14@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr12@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr16@2.0	->	Attr17@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	->	Attr5@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr15@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr0@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr17@2.0	->	Attr1@2.0
+Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	->	Attr11@2.0
+Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	->	Attr5@2.0
+Attr3@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr8@2.0
+Attr3@2.0	Attr4@2.0	Attr7@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr13@2.0	Attr16@2.0	Attr17@2.0	->	Attr8@2.0
+Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr1@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr13@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr1@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr7@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr6@2.0
+Attr10@2.0	Attr11@2.0	Attr13@2.0	->	Attr6@2.0
+Attr2@2.0	Attr4@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr5@2.0	Attr17@2.0	->	Attr8@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr12@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr15@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr16@2.0	->	Attr7@2.0
+Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr16@2.0	->	Attr7@2.0
+Attr7@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr5@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr15@2.0
+Attr0@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr8@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr2@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr7@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	->	Attr8@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	->	Attr4@2.0
+Attr2@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr1@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	->	Attr1@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr16@2.0	Attr17@2.0	->	Attr8@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr1@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr3@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr15@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr7@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr16@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr5@2.0	Attr14@2.0	->	Attr8@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr1@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	->	Attr0@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr1@2.0
+Attr1@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr5@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr0@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr1@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr9@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr11@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr14@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr3@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr5@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr5@2.0
+Attr1@2.0	Attr17@2.0	->	Attr8@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr17@2.0	->	Attr6@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr9@2.0
+Attr0@2.0	Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	->	Attr13@2.0
+Attr1@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr11@2.0
+Attr4@2.0	Attr7@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr12@2.0
+Attr1@2.0	Attr3@2.0	Attr13@2.0	->	Attr8@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr14@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	->	Attr7@2.0
+Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr16@2.0	->	Attr5@2.0
+Attr4@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr8@2.0
+Attr1@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	->	Attr7@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr1@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr12@2.0
+Attr1@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr4@2.0
+Attr2@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr6@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr1@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr7@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr14@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr7@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr6@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr7@2.0	Attr12@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr14@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr11@2.0	Attr17@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	->	Attr7@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr6@2.0	Attr13@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr5@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr16@2.0	->	Attr1@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr17@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr15@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr5@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr1@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr7@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr15@2.0	Attr17@2.0	->	Attr8@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr5@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr4@2.0
+Attr0@2.0	Attr5@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr16@2.0	->	Attr17@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr11@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr12@2.0	->	Attr1@2.0
+Attr1@2.0	Attr13@2.0	Attr14@2.0	->	Attr8@2.0
+Attr1@2.0	Attr11@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr9@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	->	Attr6@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr17@2.0	->	Attr1@2.0
+Attr1@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr15@2.0
+Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr16@2.0	->	Attr7@2.0
+Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr0@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr2@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr1@2.0	Attr4@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr5@2.0	Attr6@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	->	Attr6@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr16@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr10@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr10@2.0	Attr12@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr17@2.0
+Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr15@2.0
+Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr4@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr9@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr4@2.0	Attr7@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr11@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr11@2.0	Attr15@2.0	->	Attr6@2.0
+Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr0@2.0
+Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr2@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	->	Attr5@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	->	Attr7@2.0
+Attr2@2.0	Attr5@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr4@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	->	Attr4@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr6@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	->	Attr1@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr17@2.0
+Attr7@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr17@2.0	->	Attr1@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr1@2.0
+Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr14@2.0
+Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr8@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	->	Attr13@2.0
+Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr5@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr4@2.0	Attr6@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	->	Attr3@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr13@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	->	Attr17@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr0@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr17@2.0	->	Attr1@2.0
+Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr17@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr2@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr5@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr2@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr15@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr7@2.0
+Attr1@2.0	Attr6@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr5@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr1@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr6@2.0	Attr10@2.0	Attr14@2.0	->	Attr7@2.0
+Attr2@2.0	Attr6@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr2@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr16@2.0	->	Attr1@2.0
+Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr10@2.0
+Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr6@2.0	Attr12@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr3@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr2@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr4@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr6@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr4@2.0	Attr13@2.0	Attr16@2.0	->	Attr8@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr6@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr5@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr11@2.0	->	Attr6@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr15@2.0	->	Attr5@2.0
+Attr6@2.0	Attr10@2.0	Attr13@2.0	->	Attr7@2.0
+Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr16@2.0	->	Attr7@2.0
+Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr3@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr6@2.0
+Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr5@2.0	Attr11@2.0	Attr12@2.0	Attr17@2.0	->	Attr1@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr11@2.0	Attr15@2.0	->	Attr6@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr1@2.0
+Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr5@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr12@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr15@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr7@2.0
+Attr3@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	->	Attr7@2.0
+Attr1@2.0	Attr4@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	->	Attr5@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr1@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	->	Attr5@2.0
+Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr4@2.0
+Attr5@2.0	Attr12@2.0	->	Attr8@2.0
+Attr0@2.0	Attr4@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr3@2.0	Attr4@2.0	Attr5@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr14@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr11@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr11@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr4@2.0
+Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr10@2.0
+Attr1@2.0	Attr3@2.0	Attr6@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr17@2.0
+Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr12@2.0	->	Attr5@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr0@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr6@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr11@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr1@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr12@2.0
+Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr16@2.0	->	Attr3@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr6@2.0	Attr9@2.0	Attr13@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	->	Attr5@2.0
+Attr3@2.0	Attr5@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr1@2.0	Attr7@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr4@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr16@2.0	->	Attr17@2.0
+Attr0@2.0	Attr2@2.0	Attr7@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	->	Attr5@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr13@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	->	Attr17@2.0
+Attr2@2.0	Attr6@2.0	Attr10@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr4@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr1@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr7@2.0
+Attr3@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr6@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr10@2.0
+Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr11@2.0
+Attr2@2.0	Attr4@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr7@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr5@2.0
+Attr8@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr4@2.0	Attr6@2.0	Attr15@2.0	Attr16@2.0	->	Attr5@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr3@2.0	Attr10@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr3@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr11@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr9@2.0	Attr15@2.0	Attr17@2.0	->	Attr14@2.0
+Attr0@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr1@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr1@2.0	Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr1@2.0
+Attr12@2.0	Attr14@2.0	->	Attr8@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr9@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr7@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr5@2.0	->	Attr8@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	->	Attr7@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr17@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr2@2.0
+Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr7@2.0	Attr10@2.0	Attr15@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr14@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr4@2.0	Attr10@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr5@2.0	Attr15@2.0	Attr16@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr7@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr5@2.0
+Attr1@2.0	Attr3@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr7@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr12@2.0
+Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr17@2.0	->	Attr16@2.0
+Attr3@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr1@2.0	Attr5@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr2@2.0
+Attr0@2.0	Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr11@2.0
+Attr4@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr1@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr17@2.0	->	Attr5@2.0
+Attr1@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr0@2.0
+Attr1@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr4@2.0
+Attr0@2.0	Attr1@2.0	Attr3@2.0	Attr12@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr13@2.0	Attr15@2.0	->	Attr5@2.0
+Attr0@2.0	Attr1@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr2@2.0	Attr4@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr3@2.0	Attr5@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr4@2.0
+Attr0@2.0	Attr2@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr5@2.0
+Attr0@2.0	Attr5@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr14@2.0	->	Attr7@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr0@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr12@2.0	->	Attr17@2.0
+Attr3@2.0	Attr7@2.0	Attr9@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr4@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	->	Attr1@2.0
+Attr0@2.0	Attr3@2.0	Attr10@2.0	Attr12@2.0	->	Attr7@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr3@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr0@2.0	Attr4@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	Attr16@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr14@2.0
+Attr3@2.0	Attr9@2.0	Attr11@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr13@2.0	Attr17@2.0	->	Attr8@2.0
+Attr10@2.0	->	Attr8@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr9@2.0	Attr13@2.0	->	Attr7@2.0
+Attr1@2.0	Attr6@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr9@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr3@2.0	Attr6@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr4@2.0	Attr12@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr10@2.0	Attr13@2.0	Attr17@2.0	->	Attr5@2.0
+Attr2@2.0	Attr3@2.0	Attr4@2.0	Attr6@2.0	Attr10@2.0	Attr14@2.0	Attr17@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr15@2.0	->	Attr7@2.0
+Attr9@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr11@2.0	Attr12@2.0	Attr16@2.0	->	Attr17@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr0@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr13@2.0
+Attr3@2.0	Attr11@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr16@2.0
+Attr0@2.0	Attr9@2.0	Attr12@2.0	Attr16@2.0	Attr17@2.0	->	Attr7@2.0
+Attr5@2.0	Attr6@2.0	Attr12@2.0	Attr14@2.0	->	Attr7@2.0
+Attr4@2.0	Attr6@2.0	Attr9@2.0	Attr10@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	Attr17@2.0	->	Attr0@2.0
+Attr4@2.0	Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr14@2.0	Attr16@2.0	->	Attr0@2.0
+Attr0@2.0	Attr4@2.0	Attr10@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	->	Attr16@2.0
+Attr2@2.0	Attr6@2.0	Attr9@2.0	Attr12@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr10@2.0
+Attr0@2.0	Attr5@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr1@2.0
+Attr0@2.0	Attr5@2.0	Attr11@2.0	Attr12@2.0	Attr15@2.0	Attr16@2.0	->	Attr10@2.0
+Attr1@2.0	Attr2@2.0	Attr4@2.0	Attr10@2.0	Attr13@2.0	->	Attr7@2.0
+Attr0@2.0	Attr9@2.0	Attr10@2.0	Attr14@2.0	Attr15@2.0	Attr17@2.0	->	Attr1@2.0
+Attr9@2.0	Attr10@2.0	Attr11@2.0	Attr13@2.0	Attr15@2.0	Attr17@2.0	->	Attr12@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr5@2.0	Attr9@2.0	Attr13@2.0	Attr15@2.0	->	Attr7@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr3@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr6@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr11@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr13@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr16@2.0
+Attr0@2.0	Attr2@2.0	Attr9@2.0	Attr12@2.0	Attr14@2.0	Attr15@2.0	->	Attr17@2.0
+Attr0@2.0	Attr1@2.0	Attr2@2.0	Attr3@2.0	Attr5@2.0	Attr9@2.0	Attr14@2.0	Attr16@2.0	->	Attr10@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr5@2.0
+Attr2@2.0	Attr9@2.0	Attr10@2.0	Attr12@2.0	Attr16@2.0	->	Attr7@2.0
+
+Time limit: false
+Out of memory: false
+Memory consumption: 2835MB
+RFDs count: 2622
