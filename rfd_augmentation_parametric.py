@@ -1120,12 +1120,12 @@ class RFDAwareAugmenter:
             print(f"Found {len(all_pairs)} total pairs in attrs_df")
 
             if len(all_pairs) == 0:
-                print("No pairs available at all, using dependency method!")
+                print("No top-pairs available at all, using dependency method!")
                 return self.augment_dataset_by_dependency()
 
             top_pairs = all_pairs
         else:
-            print(f"Found {len(top_pairs)} complete top pairs")
+            print(f"Found {len(top_pairs)} suitable top-pairs")
 
         #top_pairs = self._get_top_pairs_flexible(min_coverage_ratio=0.7)
 
@@ -1136,7 +1136,7 @@ class RFDAwareAugmenter:
             self.augment_dataset_by_dependency()
         '''
 
-        print(f"Found {len(top_pairs)} suitable tuple pairs")
+        #print(f"Found {len(top_pairs)} suitable tuple pairs")
         # Calculate oversampling factor
         oversampling_factor = max(1, (oversampling_quantity // len(top_pairs)) + 1)
         print(f"Oversampling factor: {oversampling_factor}")
