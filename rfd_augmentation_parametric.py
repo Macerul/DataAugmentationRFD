@@ -48,8 +48,8 @@ class RFDAwareAugmenter:
         self.imbalance_df = pd.read_csv(imbalance_dataset_path)
         ###### IDENTIFY IMB CLASS ######
         counts = self.imbalance_df['class'].value_counts()
-        min_class = counts.idxmin()
-        self.dataset_min = self.imbalance_df[self.imbalance_df['class']== min_class]
+        self.min_class = counts.idxmin()
+        self.dataset_min = self.imbalance_df[self.imbalance_df['class']== self.min_class]
         self.out_min_path = os.path.join(self.imbalance_dir, f'{self.base}_min.csv')
         self.dataset_min.to_csv(self.out_min_path, index=False)
 
@@ -790,7 +790,7 @@ class RFDAwareAugmenter:
                 row_data[attr] = self._get_attr_value(attr, i1, i2, use_decimal, generated_values=row_data, missing_attrs=missing_attrs)
 
             # Add class column
-            row_data['class'] = 1
+            row_data['class'] = self.min_class
 
             print('Nuova tupla inserita: \n', row_data)
 
