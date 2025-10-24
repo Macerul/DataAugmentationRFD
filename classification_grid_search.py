@@ -172,14 +172,14 @@ def perform_grid_search(model, param_grid, X_train, y_train, cv=3, scoring='f1')
 
 def main():
     # Parameters
-    thr = 8
+    thr = 2
     '''"kddcup-guess_passwd_vs_satan","Migraine_onevsrest_0","Migraine_onevsrest_1",
                 "Migraine_onevsrest_2","Migraine_onevsrest_3","Migraine_onevsrest_4",
                 "Migraine_onevsrest_5","new-thyroid1","newthyroid2","Obesity_onevsrest_0",
                 "Obesity_onevsrest_1",'''
 
     # grandi: "abalone19",
-    datasets = ["page-blocks-1-3_vs_4"]
+    datasets = ["abalone19"]
     for ds in datasets:
         data_path = f'imbalanced_datasets/{ds}.csv'
         RFD_FILE = f'discovered_rfds/discovered_rfds_processed/RFD{thr}_E0.0_{ds}_min.txt'

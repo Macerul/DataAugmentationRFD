@@ -106,7 +106,9 @@ def collect_metrics(root_dir, output_csv):
         "classification_results_casTGAN",
         "classification_results_SMOTE",
         "classification_results_SMOTECDNN",
-        "classification_results_system"
+        "classification_results_SYRFD_thr2",
+        "classification_results_SYRFD_thr4",
+        "classification_results_SYRFD_thr8"
     ]
     for method_folder in method_dirs:
         method_path = os.path.join(root_dir, method_folder)
@@ -127,11 +129,11 @@ def collect_metrics(root_dir, output_csv):
                     "dataset": dataset,
                     "method": method,
                     "model": row.get("Model"),
-                    "precision": row.get("Precision"),
-                    "recall": row.get("Recall"),
+                    "Precision": row.get("Precision"),
+                    "Recall": row.get("Recall"),
                     "F1-Score": row.get("F1-score"),
-                    "g_mean": row.get("G-mean"),
-                    "balanced_accuracy": row.get("Balanced-Accuracy")
+                    "G mean": row.get("G-mean"),
+                    "Balanced Accuracy": row.get("Balanced-Accuracy")
                 }
                 records.append(rec)
     out_df = pd.DataFrame(records)
@@ -139,7 +141,7 @@ def collect_metrics(root_dir, output_csv):
     return out_df
 
 if __name__ == "__main__":
-    root = r"C:/Users/Utente/Desktop/lavoro/github/DataAugmentationRFD"
+    root = r"C:/Users/gianp/Desktop/Codes/github/DataAugmentationRFD"
     output = "aggregated.csv"
     df = collect_metrics(root, output)
     print("Aggregated CSV saved at:", output)

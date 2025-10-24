@@ -1,0 +1,7 @@
+metodo;Silhouette;Davies-Bouldin;Compactness_class_0;Compactness_class_1
+SMOTE;0.171 \pm 0.154;2.692 \pm 1.409;13.882 \pm 8.199;8.834 \pm 6.406
+SMOTECDNN;0.174 \pm 0.154;2.678 \pm 1.4;13.903 \pm 8.323;8.823 \pm 6.531
+casTGAN;0.185 \pm 0.157;2.799 \pm 1.362;13.318 \pm 8.851;14.921 \pm 13.652
+SYRFD_thr2;0.221 \pm 0.136;2.207 \pm 0.816;12.986 \pm 9.511;10.108 \pm 6.373
+SYRFD_thr4;0.197 \pm 0.137;2.432 \pm 0.957;14.174 \pm 10.052;9.012 \pm 4.987
+SYRFD_thr8;0.192 \pm 0.141;2.545 \pm 1.077;14.283 \pm 10.017;9.158 \pm 5.454

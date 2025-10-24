@@ -1,0 +1,1513 @@
+dataset;method;model;Precision;Recall;F1-Score;G mean;Balanced Accuracy
+abalone9-18;casTGAN;KNN;0.08;0.23;0.12;0.44;0.54
+abalone9-18;casTGAN;Random Forest;0.29;0.15;0.2;0.39;0.56
+abalone9-18;casTGAN;Decision Tree;0.18;0.23;0.2;0.46;0.58
+abalone9-18;casTGAN;XGBoost;0.25;0.23;0.24;0.47;0.59
+abalone9-18;casTGAN;AdaBoost;0.3;0.23;0.26;0.47;0.6
+abalone9-18;casTGAN;Gradient Boosting;0.33;0.23;0.27;0.47;0.6
+abalone9-18;casTGAN;Extra Trees;0.33;0.08;0.12;0.28;0.53
+abalone9-18;casTGAN;Neural Network (MLP);0.2;0.31;0.24;0.53;0.62
+abalone9-18;casTGAN;Logistic Regression;0.25;0.08;0.12;0.28;0.53
+cleveland-0_vs_4;casTGAN;KNN;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;casTGAN;Random Forest;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;casTGAN;Decision Tree;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;casTGAN;XGBoost;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;casTGAN;AdaBoost;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;casTGAN;Logistic Regression;0.0;0.0;0.0;0.0;0.5
+dermatology-6;casTGAN;KNN;0.07;0.83;0.13;0.56;0.6
+dermatology-6;casTGAN;Random Forest;0.1;0.17;0.12;0.39;0.54
+dermatology-6;casTGAN;Decision Tree;0.17;0.67;0.27;0.73;0.74
+dermatology-6;casTGAN;XGBoost;0.03;0.17;0.05;0.33;0.4
+dermatology-6;casTGAN;AdaBoost;0.25;1.0;0.4;0.91;0.91
+dermatology-6;casTGAN;Gradient Boosting;0.12;0.17;0.14;0.39;0.55
+dermatology-6;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.48
+dermatology-6;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.4
+dermatology-6;casTGAN;Logistic Regression;0.04;0.17;0.07;0.36;0.48
+ecoli-0_vs_1;casTGAN;KNN;0.67;0.98;0.79;0.29;0.53
+ecoli-0_vs_1;casTGAN;Random Forest;0.66;1.0;0.8;0.21;0.52
+ecoli-0_vs_1;casTGAN;Decision Tree;0.67;0.98;0.79;0.29;0.53
+ecoli-0_vs_1;casTGAN;XGBoost;0.67;0.98;0.79;0.29;0.53
+ecoli-0_vs_1;casTGAN;AdaBoost;0.65;1.0;0.79;0.0;0.5
+ecoli-0_vs_1;casTGAN;Gradient Boosting;0.65;0.95;0.77;0.2;0.5
+ecoli-0_vs_1;casTGAN;Extra Trees;0.65;1.0;0.79;0.0;0.5
+ecoli-0_vs_1;casTGAN;Neural Network (MLP);0.65;1.0;0.79;0.0;0.5
+ecoli-0_vs_1;casTGAN;Logistic Regression;0.65;1.0;0.79;0.0;0.5
+ecoli1;casTGAN;KNN;0.1;0.04;0.06;0.2;0.46
+ecoli1;casTGAN;Random Forest;0.0;0.0;0.0;0.0;0.47
+ecoli1;casTGAN;Decision Tree;0.0;0.0;0.0;0.0;0.45
+ecoli1;casTGAN;XGBoost;0.0;0.0;0.0;0.0;0.46
+ecoli1;casTGAN;AdaBoost;0.0;0.0;0.0;0.0;0.5
+ecoli1;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.47
+ecoli1;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+ecoli1;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+ecoli1;casTGAN;Logistic Regression;0.0;0.0;0.0;0.0;0.5
+iris0;casTGAN;KNN;0.0;0.0;0.0;0.0;0.5
+iris0;casTGAN;Random Forest;1.0;0.13;0.24;0.37;0.57
+iris0;casTGAN;Decision Tree;0.0;0.0;0.0;0.0;0.5
+iris0;casTGAN;XGBoost;1.0;0.13;0.24;0.37;0.57
+iris0;casTGAN;AdaBoost;0.0;0.0;0.0;0.0;0.5
+iris0;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.5
+iris0;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+iris0;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+iris0;casTGAN;Logistic Regression;0.0;0.0;0.0;0.0;0.5
+kddcup-guess_passwd_vs_satan;casTGAN;KNN;0.0;0.0;0.0;0.0;0.5
+kddcup-guess_passwd_vs_satan;casTGAN;Random Forest;1.0;0.06;0.12;0.25;0.53
+kddcup-guess_passwd_vs_satan;casTGAN;Decision Tree;0.0;0.0;0.0;0.0;0.49
+kddcup-guess_passwd_vs_satan;casTGAN;XGBoost;0.5;0.31;0.38;0.56;0.65
+kddcup-guess_passwd_vs_satan;casTGAN;AdaBoost;0.6;0.56;0.58;0.75;0.77
+kddcup-guess_passwd_vs_satan;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.5
+kddcup-guess_passwd_vs_satan;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+kddcup-guess_passwd_vs_satan;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+kddcup-guess_passwd_vs_satan;casTGAN;Logistic Regression;0.33;0.19;0.24;0.43;0.59
+Migraine_onevsrest_0;casTGAN;KNN;0.64;0.52;0.58;0.5;0.5
+Migraine_onevsrest_0;casTGAN;Random Forest;0.5;0.34;0.41;0.37;0.37
+Migraine_onevsrest_0;casTGAN;Decision Tree;0.72;0.42;0.53;0.55;0.57
+Migraine_onevsrest_0;casTGAN;XGBoost;0.6;0.51;0.55;0.44;0.45
+Migraine_onevsrest_0;casTGAN;AdaBoost;0.67;0.6;0.63;0.53;0.53
+Migraine_onevsrest_0;casTGAN;Gradient Boosting;0.57;0.48;0.52;0.42;0.42
+Migraine_onevsrest_0;casTGAN;Extra Trees;0.43;0.27;0.34;0.32;0.32
+Migraine_onevsrest_0;casTGAN;Neural Network (MLP);0.59;0.6;0.6;0.4;0.44
+Migraine_onevsrest_0;casTGAN;Logistic Regression;0.73;0.59;0.65;0.6;0.6
+Migraine_onevsrest_1;casTGAN;KNN;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_1;casTGAN;Random Forest;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_1;casTGAN;Decision Tree;0.0;0.0;0.0;0.0;0.47
+Migraine_onevsrest_1;casTGAN;XGBoost;0.0;0.0;0.0;0.0;0.49
+Migraine_onevsrest_1;casTGAN;AdaBoost;0.0;0.0;0.0;0.0;0.48
+Migraine_onevsrest_1;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.49
+Migraine_onevsrest_1;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_1;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_1;casTGAN;Logistic Regression;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_2;casTGAN;KNN;0.0;0.0;0.0;0.0;0.43
+Migraine_onevsrest_2;casTGAN;Random Forest;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_2;casTGAN;Decision Tree;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_2;casTGAN;XGBoost;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_2;casTGAN;AdaBoost;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_2;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_2;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_2;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_2;casTGAN;Logistic Regression;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_3;casTGAN;KNN;0.1;0.17;0.12;0.39;0.54
+Migraine_onevsrest_3;casTGAN;Random Forest;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_3;casTGAN;Decision Tree;0.16;0.5;0.24;0.65;0.68
+Migraine_onevsrest_3;casTGAN;XGBoost;0.0;0.0;0.0;0.0;0.46
+Migraine_onevsrest_3;casTGAN;AdaBoost;0.0;0.0;0.0;0.0;0.38
+Migraine_onevsrest_3;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.47
+Migraine_onevsrest_3;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_3;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.46
+Migraine_onevsrest_3;casTGAN;Logistic Regression;0.0;0.0;0.0;0.0;0.5
+Migraine_onevsrest_4;casTGAN;KNN;0.08;1.0;0.14;0.68;0.73
+Migraine_onevsrest_4;casTGAN;Random Forest;0.08;0.4;0.14;0.57;0.6
+Migraine_onevsrest_4;casTGAN;Decision Tree;0.03;0.4;0.06;0.44;0.44
+Migraine_onevsrest_4;casTGAN;XGBoost;0.07;0.6;0.12;0.6;0.6
+Migraine_onevsrest_4;casTGAN;AdaBoost;0.04;0.2;0.06;0.39;0.48
+Migraine_onevsrest_4;casTGAN;Gradient Boosting;0.12;1.0;0.21;0.81;0.83
+Migraine_onevsrest_4;casTGAN;Extra Trees;0.11;0.4;0.17;0.58;0.62
+Migraine_onevsrest_4;casTGAN;Neural Network (MLP);0.04;0.2;0.06;0.39;0.49
+Migraine_onevsrest_4;casTGAN;Logistic Regression;0.12;0.2;0.15;0.43;0.57
+Migraine_onevsrest_5;casTGAN;KNN;0.06;0.75;0.12;0.67;0.68
+Migraine_onevsrest_5;casTGAN;Random Forest;0.04;1.0;0.08;0.46;0.6
+Migraine_onevsrest_5;casTGAN;Decision Tree;0.02;0.5;0.04;0.35;0.37
+Migraine_onevsrest_5;casTGAN;XGBoost;0.03;0.5;0.05;0.41;0.42
+Migraine_onevsrest_5;casTGAN;AdaBoost;0.02;0.5;0.04;0.17;0.28
+Migraine_onevsrest_5;casTGAN;Gradient Boosting;0.04;1.0;0.08;0.39;0.58
+Migraine_onevsrest_5;casTGAN;Extra Trees;0.04;1.0;0.07;0.32;0.55
+Migraine_onevsrest_5;casTGAN;Neural Network (MLP);0.04;1.0;0.07;0.23;0.53
+Migraine_onevsrest_5;casTGAN;Logistic Regression;0.11;1.0;0.2;0.84;0.85
+new-thyroid1;casTGAN;KNN;0.0;0.0;0.0;0.0;0.5
+new-thyroid1;casTGAN;Random Forest;0.0;0.0;0.0;0.0;0.46
+new-thyroid1;casTGAN;Decision Tree;0.0;0.0;0.0;0.0;0.49
+new-thyroid1;casTGAN;XGBoost;0.0;0.0;0.0;0.0;0.5
+new-thyroid1;casTGAN;AdaBoost;0.2;0.09;0.12;0.29;0.51
+new-thyroid1;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.49
+new-thyroid1;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+new-thyroid1;casTGAN;Neural Network (MLP);0.33;0.27;0.3;0.49;0.58
+new-thyroid1;casTGAN;Logistic Regression;0.8;0.36;0.5;0.6;0.67
+newthyroid2;casTGAN;KNN;0.17;0.45;0.24;0.49;0.5
+newthyroid2;casTGAN;Random Forest;0.2;0.18;0.19;0.39;0.52
+newthyroid2;casTGAN;Decision Tree;0.2;0.18;0.19;0.39;0.52
+newthyroid2;casTGAN;XGBoost;0.12;0.18;0.14;0.36;0.45
+newthyroid2;casTGAN;AdaBoost;0.33;0.55;0.41;0.65;0.66
+newthyroid2;casTGAN;Gradient Boosting;0.31;0.45;0.37;0.6;0.63
+newthyroid2;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+newthyroid2;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.49
+newthyroid2;casTGAN;Logistic Regression;0.05;0.27;0.09;0.1;0.15
+Obesity_onevsrest_0;casTGAN;KNN;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_0;casTGAN;Random Forest;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_0;casTGAN;Decision Tree;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_0;casTGAN;XGBoost;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_0;casTGAN;AdaBoost;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_0;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_0;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_0;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_0;casTGAN;Logistic Regression;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_1;casTGAN;KNN;0.21;0.65;0.32;0.63;0.63
+Obesity_onevsrest_1;casTGAN;Random Forest;0.27;0.24;0.25;0.46;0.57
+Obesity_onevsrest_1;casTGAN;Decision Tree;0.25;0.4;0.31;0.57;0.61
+Obesity_onevsrest_1;casTGAN;XGBoost;0.19;0.22;0.21;0.44;0.54
+Obesity_onevsrest_1;casTGAN;AdaBoost;0.25;0.35;0.29;0.54;0.59
+Obesity_onevsrest_1;casTGAN;Gradient Boosting;0.21;0.16;0.19;0.39;0.53
+Obesity_onevsrest_1;casTGAN;Extra Trees;0.18;0.21;0.19;0.42;0.53
+Obesity_onevsrest_1;casTGAN;Neural Network (MLP);0.27;0.75;0.4;0.71;0.72
+Obesity_onevsrest_1;casTGAN;Logistic Regression;0.22;0.74;0.34;0.66;0.66
+Obesity_onevsrest_2;casTGAN;KNN;0.3;0.51;0.37;0.64;0.66
+Obesity_onevsrest_2;casTGAN;Random Forest;0.38;0.42;0.4;0.61;0.66
+Obesity_onevsrest_2;casTGAN;Decision Tree;0.17;0.29;0.21;0.48;0.54
+Obesity_onevsrest_2;casTGAN;XGBoost;0.31;0.37;0.34;0.57;0.62
+Obesity_onevsrest_2;casTGAN;AdaBoost;0.36;0.57;0.44;0.69;0.71
+Obesity_onevsrest_2;casTGAN;Gradient Boosting;0.27;0.29;0.28;0.5;0.58
+Obesity_onevsrest_2;casTGAN;Extra Trees;0.47;0.22;0.3;0.46;0.59
+Obesity_onevsrest_2;casTGAN;Neural Network (MLP);0.32;0.75;0.45;0.75;0.75
+Obesity_onevsrest_2;casTGAN;Logistic Regression;0.24;0.37;0.29;0.55;0.6
+Obesity_onevsrest_3;casTGAN;KNN;0.19;0.39;0.25;0.53;0.56
+Obesity_onevsrest_3;casTGAN;Random Forest;0.14;0.21;0.16;0.4;0.5
+Obesity_onevsrest_3;casTGAN;Decision Tree;0.16;0.45;0.23;0.52;0.53
+Obesity_onevsrest_3;casTGAN;XGBoost;0.15;0.29;0.19;0.46;0.51
+Obesity_onevsrest_3;casTGAN;AdaBoost;0.18;0.4;0.25;0.53;0.55
+Obesity_onevsrest_3;casTGAN;Gradient Boosting;0.15;0.25;0.19;0.44;0.51
+Obesity_onevsrest_3;casTGAN;Extra Trees;0.33;0.16;0.22;0.39;0.55
+Obesity_onevsrest_3;casTGAN;Neural Network (MLP);0.21;0.56;0.31;0.61;0.61
+Obesity_onevsrest_3;casTGAN;Logistic Regression;0.16;0.64;0.26;0.55;0.56
+Obesity_onevsrest_4;casTGAN;KNN;0.34;0.8;0.47;0.74;0.74
+Obesity_onevsrest_4;casTGAN;Random Forest;0.31;0.41;0.35;0.58;0.61
+Obesity_onevsrest_4;casTGAN;Decision Tree;0.3;0.32;0.31;0.52;0.59
+Obesity_onevsrest_4;casTGAN;XGBoost;0.43;0.42;0.42;0.61;0.65
+Obesity_onevsrest_4;casTGAN;AdaBoost;0.33;0.71;0.45;0.71;0.71
+Obesity_onevsrest_4;casTGAN;Gradient Boosting;0.4;0.4;0.4;0.59;0.64
+Obesity_onevsrest_4;casTGAN;Extra Trees;0.34;0.3;0.32;0.52;0.59
+Obesity_onevsrest_4;casTGAN;Neural Network (MLP);0.3;0.24;0.27;0.46;0.56
+Obesity_onevsrest_4;casTGAN;Logistic Regression;0.17;0.32;0.22;0.47;0.5
+Obesity_onevsrest_5;casTGAN;KNN;0.73;0.12;0.21;0.35;0.56
+Obesity_onevsrest_5;casTGAN;Random Forest;1.0;0.01;0.02;0.11;0.51
+Obesity_onevsrest_5;casTGAN;Decision Tree;0.92;0.13;0.24;0.37;0.57
+Obesity_onevsrest_5;casTGAN;XGBoost;1.0;0.01;0.02;0.11;0.51
+Obesity_onevsrest_5;casTGAN;AdaBoost;1.0;0.01;0.02;0.11;0.51
+Obesity_onevsrest_5;casTGAN;Gradient Boosting;1.0;0.03;0.07;0.18;0.52
+Obesity_onevsrest_5;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_5;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_5;casTGAN;Logistic Regression;0.0;0.0;0.0;0.0;0.5
+Obesity_onevsrest_6;casTGAN;KNN;0.54;0.78;0.64;0.83;0.83
+Obesity_onevsrest_6;casTGAN;Random Forest;0.88;0.8;0.84;0.89;0.89
+Obesity_onevsrest_6;casTGAN;Decision Tree;0.52;0.49;0.51;0.67;0.7
+Obesity_onevsrest_6;casTGAN;XGBoost;0.66;0.57;0.61;0.73;0.76
+Obesity_onevsrest_6;casTGAN;AdaBoost;0.96;0.95;0.95;0.97;0.97
+Obesity_onevsrest_6;casTGAN;Gradient Boosting;0.82;0.61;0.7;0.77;0.79
+Obesity_onevsrest_6;casTGAN;Extra Trees;0.85;0.54;0.66;0.73;0.76
+Obesity_onevsrest_6;casTGAN;Neural Network (MLP);0.93;0.97;0.95;0.98;0.98
+Obesity_onevsrest_6;casTGAN;Logistic Regression;0.68;1.0;0.81;0.96;0.96
+page-blocks-1-3_vs_4;casTGAN;KNN;0.4;0.25;0.31;0.49;0.61
+page-blocks-1-3_vs_4;casTGAN;Random Forest;0.5;0.12;0.2;0.35;0.56
+page-blocks-1-3_vs_4;casTGAN;Decision Tree;0.0;0.0;0.0;0.0;0.49
+page-blocks-1-3_vs_4;casTGAN;XGBoost;0.5;0.38;0.43;0.61;0.68
+page-blocks-1-3_vs_4;casTGAN;AdaBoost;0.45;0.62;0.53;0.77;0.79
+page-blocks-1-3_vs_4;casTGAN;Gradient Boosting;0.0;0.0;0.0;0.0;0.49
+page-blocks-1-3_vs_4;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+page-blocks-1-3_vs_4;casTGAN;Neural Network (MLP);0.0;0.0;0.0;0.0;0.47
+page-blocks-1-3_vs_4;casTGAN;Logistic Regression;0.25;0.88;0.39;0.86;0.86
+pima;casTGAN;KNN;1.0;0.04;0.07;0.19;0.52
+pima;casTGAN;Random Forest;0.0;0.0;0.0;0.0;0.5
+pima;casTGAN;Decision Tree;0.67;0.12;0.21;0.35;0.55
+pima;casTGAN;XGBoost;1.0;0.01;0.02;0.11;0.51
+pima;casTGAN;AdaBoost;0.0;0.0;0.0;0.0;0.5
+pima;casTGAN;Gradient Boosting;0.67;0.05;0.09;0.22;0.52
+pima;casTGAN;Extra Trees;0.0;0.0;0.0;0.0;0.5
+pima;casTGAN;Neural Network (MLP);0.67;0.03;0.05;0.16;0.51
+pima;casTGAN;Logistic Regression;0.5;0.06;0.11;0.25;0.51
+transfusion;casTGAN;KNN;0.22;0.23;0.22;0.41;0.49
+transfusion;casTGAN;Random Forest;0.57;0.08;0.13;0.27;0.53
+transfusion;casTGAN;Decision Tree;0.48;0.19;0.27;0.42;0.56
+transfusion;casTGAN;XGBoost;0.31;0.09;0.14;0.3;0.52
+transfusion;casTGAN;AdaBoost;0.5;0.02;0.04;0.14;0.51
+transfusion;casTGAN;Gradient Boosting;0.32;0.15;0.21;0.37;0.53
+transfusion;casTGAN;Extra Trees;1.0;0.02;0.04;0.14;0.51
+transfusion;casTGAN;Neural Network (MLP);0.5;0.47;0.49;0.63;0.66
+transfusion;casTGAN;Logistic Regression;0.58;0.13;0.22;0.36;0.55
+vowel0;casTGAN;KNN;0.63;0.44;0.52;0.66;0.71
+vowel0;casTGAN;Random Forest;1.0;0.19;0.31;0.43;0.59
+vowel0;casTGAN;Decision Tree;0.32;0.3;0.31;0.53;0.62
+vowel0;casTGAN;XGBoost;1.0;0.26;0.41;0.51;0.63
+vowel0;casTGAN;AdaBoost;0.69;0.74;0.71;0.85;0.85
+vowel0;casTGAN;Gradient Boosting;1.0;0.26;0.41;0.51;0.63
+vowel0;casTGAN;Extra Trees;0.55;0.22;0.32;0.47;0.6
+vowel0;casTGAN;Neural Network (MLP);0.41;0.78;0.54;0.83;0.83
+vowel0;casTGAN;Logistic Regression;0.83;0.7;0.76;0.83;0.84
+yeast1;casTGAN;KNN;0.42;0.41;0.42;0.56;0.59
+yeast1;casTGAN;Random Forest;0.59;0.12;0.21;0.35;0.54
+yeast1;casTGAN;Decision Tree;0.47;0.2;0.28;0.43;0.55
+yeast1;casTGAN;XGBoost;0.59;0.23;0.33;0.47;0.58
+yeast1;casTGAN;AdaBoost;0.41;0.64;0.5;0.64;0.64
+yeast1;casTGAN;Gradient Boosting;0.56;0.15;0.23;0.37;0.55
+yeast1;casTGAN;Extra Trees;0.6;0.02;0.04;0.15;0.51
+yeast1;casTGAN;Neural Network (MLP);0.56;0.28;0.37;0.5;0.6
+yeast1;casTGAN;Logistic Regression;0.52;0.19;0.27;0.42;0.56
+yeast3;casTGAN;KNN;0.2;0.84;0.32;0.7;0.71
+yeast3;casTGAN;Random Forest;0.65;0.27;0.38;0.51;0.62
+yeast3;casTGAN;Decision Tree;0.25;0.18;0.21;0.41;0.56
+yeast3;casTGAN;XGBoost;0.56;0.45;0.5;0.66;0.7
+yeast3;casTGAN;AdaBoost;0.66;0.43;0.52;0.65;0.7
+yeast3;casTGAN;Gradient Boosting;0.56;0.29;0.38;0.53;0.63
+yeast3;casTGAN;Extra Trees;1.0;0.04;0.08;0.2;0.52
+yeast3;casTGAN;Neural Network (MLP);0.25;0.88;0.39;0.77;0.78
+yeast3;casTGAN;Logistic Regression;0.53;0.61;0.57;0.76;0.77
+abalone9-18;smote;KNN;0.27;0.69;0.39;0.78;0.79
+abalone9-18;smote;Random Forest;0.39;0.54;0.45;0.71;0.74
+abalone9-18;smote;Decision Tree;0.19;0.38;0.26;0.59;0.64
+abalone9-18;smote;XGBoost;0.39;0.54;0.45;0.71;0.74
+abalone9-18;smote;AdaBoost;0.26;0.62;0.36;0.74;0.75
+abalone9-18;smote;Gradient Boosting;0.3;0.46;0.36;0.66;0.7
+abalone9-18;smote;Extra Trees;0.33;0.46;0.39;0.66;0.7
+abalone9-18;smote;Neural Network (MLP);0.28;0.77;0.41;0.82;0.82
+abalone9-18;smote;Logistic Regression;0.3;0.85;0.44;0.86;0.86
+cleveland-0_vs_4;smote;KNN;0.13;0.5;0.21;0.61;0.62
+cleveland-0_vs_4;smote;Random Forest;1.0;0.5;0.67;0.71;0.75
+cleveland-0_vs_4;smote;Decision Tree;0.43;0.75;0.55;0.83;0.83
+cleveland-0_vs_4;smote;XGBoost;0.4;0.5;0.44;0.69;0.72
+cleveland-0_vs_4;smote;AdaBoost;0.67;0.5;0.57;0.7;0.74
+cleveland-0_vs_4;smote;Gradient Boosting;0.4;0.5;0.44;0.69;0.72
+cleveland-0_vs_4;smote;Extra Trees;1.0;0.5;0.67;0.71;0.75
+cleveland-0_vs_4;smote;Neural Network (MLP);0.3;0.75;0.43;0.8;0.8
+cleveland-0_vs_4;smote;Logistic Regression;0.43;0.75;0.55;0.83;0.83
+dermatology-6;smote;KNN;1.0;1.0;1.0;1.0;1.0
+dermatology-6;smote;Random Forest;1.0;1.0;1.0;1.0;1.0
+dermatology-6;smote;Decision Tree;1.0;1.0;1.0;1.0;1.0
+dermatology-6;smote;XGBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;smote;AdaBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;smote;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+dermatology-6;smote;Extra Trees;1.0;1.0;1.0;1.0;1.0
+dermatology-6;smote;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+dermatology-6;smote;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+ecoli-0_vs_1;smote;KNN;0.97;0.91;0.94;0.93;0.93
+ecoli-0_vs_1;smote;Random Forest;0.98;1.0;0.99;0.98;0.98
+ecoli-0_vs_1;smote;Decision Tree;0.98;0.93;0.95;0.94;0.94
+ecoli-0_vs_1;smote;XGBoost;0.98;1.0;0.99;0.98;0.98
+ecoli-0_vs_1;smote;AdaBoost;0.98;1.0;0.99;0.98;0.98
+ecoli-0_vs_1;smote;Gradient Boosting;0.98;1.0;0.99;0.98;0.98
+ecoli-0_vs_1;smote;Extra Trees;0.98;0.95;0.96;0.96;0.96
+ecoli-0_vs_1;smote;Neural Network (MLP);0.97;0.91;0.94;0.93;0.93
+ecoli-0_vs_1;smote;Logistic Regression;0.97;0.91;0.94;0.93;0.93
+ecoli1;smote;KNN;0.7;0.83;0.76;0.86;0.86
+ecoli1;smote;Random Forest;0.78;0.91;0.84;0.92;0.92
+ecoli1;smote;Decision Tree;0.74;0.74;0.74;0.83;0.83
+ecoli1;smote;XGBoost;0.76;0.7;0.73;0.81;0.82
+ecoli1;smote;AdaBoost;0.68;0.91;0.78;0.89;0.89
+ecoli1;smote;Gradient Boosting;0.82;0.78;0.8;0.86;0.87
+ecoli1;smote;Extra Trees;0.73;0.83;0.78;0.87;0.87
+ecoli1;smote;Neural Network (MLP);0.67;0.78;0.72;0.83;0.83
+ecoli1;smote;Logistic Regression;0.67;0.87;0.75;0.87;0.87
+iris0;smote;KNN;1.0;1.0;1.0;1.0;1.0
+iris0;smote;Random Forest;1.0;1.0;1.0;1.0;1.0
+iris0;smote;Decision Tree;1.0;1.0;1.0;1.0;1.0
+iris0;smote;XGBoost;0.94;1.0;0.97;0.98;0.98
+iris0;smote;AdaBoost;1.0;1.0;1.0;1.0;1.0
+iris0;smote;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+iris0;smote;Extra Trees;1.0;1.0;1.0;1.0;1.0
+iris0;smote;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+iris0;smote;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;smote;KNN;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;smote;Random Forest;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;smote;Decision Tree;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;smote;XGBoost;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;smote;AdaBoost;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;smote;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;smote;Extra Trees;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;smote;Neural Network (MLP);0.89;1.0;0.94;1.0;1.0
+kddcup-guess_passwd_vs_satan;smote;Logistic Regression;0.94;1.0;0.97;1.0;1.0
+Migraine_onevsrest_0;smote;KNN;0.78;0.86;0.82;0.7;0.71
+Migraine_onevsrest_0;smote;Random Forest;0.92;0.99;0.95;0.92;0.92
+Migraine_onevsrest_0;smote;Decision Tree;0.94;1.0;0.97;0.94;0.94
+Migraine_onevsrest_0;smote;XGBoost;0.94;1.0;0.97;0.94;0.94
+Migraine_onevsrest_0;smote;AdaBoost;0.92;0.97;0.95;0.91;0.91
+Migraine_onevsrest_0;smote;Gradient Boosting;0.94;0.99;0.96;0.93;0.93
+Migraine_onevsrest_0;smote;Extra Trees;0.92;1.0;0.96;0.92;0.93
+Migraine_onevsrest_0;smote;Neural Network (MLP);0.93;0.95;0.94;0.91;0.91
+Migraine_onevsrest_0;smote;Logistic Regression;0.91;0.96;0.93;0.89;0.89
+Migraine_onevsrest_1;smote;KNN;0.71;0.83;0.77;0.88;0.89
+Migraine_onevsrest_1;smote;Random Forest;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;smote;Decision Tree;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;smote;XGBoost;0.9;1.0;0.95;0.99;0.99
+Migraine_onevsrest_1;smote;AdaBoost;0.9;1.0;0.95;0.99;0.99
+Migraine_onevsrest_1;smote;Gradient Boosting;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;smote;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;smote;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;smote;Logistic Regression;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_2;smote;KNN;0.36;0.57;0.44;0.73;0.75
+Migraine_onevsrest_2;smote;Random Forest;0.6;0.43;0.5;0.65;0.7
+Migraine_onevsrest_2;smote;Decision Tree;0.5;0.71;0.59;0.83;0.83
+Migraine_onevsrest_2;smote;XGBoost;0.67;0.57;0.62;0.75;0.78
+Migraine_onevsrest_2;smote;AdaBoost;0.5;0.71;0.59;0.83;0.83
+Migraine_onevsrest_2;smote;Gradient Boosting;0.6;0.43;0.5;0.65;0.7
+Migraine_onevsrest_2;smote;Extra Trees;0.43;0.43;0.43;0.64;0.7
+Migraine_onevsrest_2;smote;Neural Network (MLP);0.55;0.86;0.67;0.9;0.91
+Migraine_onevsrest_2;smote;Logistic Regression;0.46;0.86;0.6;0.9;0.9
+Migraine_onevsrest_3;smote;KNN;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;smote;Random Forest;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;smote;Decision Tree;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;smote;XGBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;smote;AdaBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;smote;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;smote;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;smote;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;smote;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_4;smote;KNN;0.13;0.4;0.2;0.59;0.64
+Migraine_onevsrest_4;smote;Random Forest;0.12;0.2;0.15;0.43;0.57
+Migraine_onevsrest_4;smote;Decision Tree;0.27;0.6;0.38;0.75;0.76
+Migraine_onevsrest_4;smote;XGBoost;0.25;0.4;0.31;0.61;0.67
+Migraine_onevsrest_4;smote;AdaBoost;0.17;0.4;0.24;0.6;0.65
+Migraine_onevsrest_4;smote;Gradient Boosting;0.3;0.6;0.4;0.75;0.77
+Migraine_onevsrest_4;smote;Extra Trees;0.12;0.2;0.15;0.43;0.57
+Migraine_onevsrest_4;smote;Neural Network (MLP);0.14;0.2;0.17;0.43;0.57
+Migraine_onevsrest_4;smote;Logistic Regression;0.25;0.6;0.35;0.74;0.76
+Migraine_onevsrest_5;smote;KNN;0.0;0.0;0.0;0.0;0.47
+Migraine_onevsrest_5;smote;Random Forest;0.25;0.25;0.25;0.49;0.61
+Migraine_onevsrest_5;smote;Decision Tree;0.14;0.25;0.18;0.49;0.6
+Migraine_onevsrest_5;smote;XGBoost;0.17;0.25;0.2;0.49;0.6
+Migraine_onevsrest_5;smote;AdaBoost;0.17;0.25;0.2;0.49;0.6
+Migraine_onevsrest_5;smote;Gradient Boosting;0.2;0.25;0.22;0.49;0.61
+Migraine_onevsrest_5;smote;Extra Trees;0.17;0.25;0.2;0.49;0.6
+Migraine_onevsrest_5;smote;Neural Network (MLP);0.14;0.25;0.18;0.49;0.6
+Migraine_onevsrest_5;smote;Logistic Regression;0.24;1.0;0.38;0.94;0.94
+new-thyroid1;smote;KNN;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;smote;Random Forest;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;smote;Decision Tree;0.85;1.0;0.92;0.98;0.98
+new-thyroid1;smote;XGBoost;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;smote;AdaBoost;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;smote;Gradient Boosting;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;smote;Extra Trees;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;smote;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+new-thyroid1;smote;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+newthyroid2;smote;KNN;0.92;1.0;0.96;0.99;0.99
+newthyroid2;smote;Random Forest;1.0;0.91;0.95;0.95;0.95
+newthyroid2;smote;Decision Tree;0.69;0.82;0.75;0.87;0.87
+newthyroid2;smote;XGBoost;1.0;0.82;0.9;0.9;0.91
+newthyroid2;smote;AdaBoost;1.0;1.0;1.0;1.0;1.0
+newthyroid2;smote;Gradient Boosting;0.9;0.82;0.86;0.9;0.9
+newthyroid2;smote;Extra Trees;1.0;1.0;1.0;1.0;1.0
+newthyroid2;smote;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+newthyroid2;smote;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+Obesity_onevsrest_0;smote;KNN;0.71;1.0;0.83;0.97;0.97
+Obesity_onevsrest_0;smote;Random Forest;0.93;0.94;0.93;0.96;0.96
+Obesity_onevsrest_0;smote;Decision Tree;0.96;0.99;0.98;0.99;0.99
+Obesity_onevsrest_0;smote;XGBoost;0.96;1.0;0.98;1.0;1.0
+Obesity_onevsrest_0;smote;AdaBoost;0.95;1.0;0.98;1.0;1.0
+Obesity_onevsrest_0;smote;Gradient Boosting;0.95;1.0;0.98;1.0;1.0
+Obesity_onevsrest_0;smote;Extra Trees;0.96;0.91;0.94;0.95;0.95
+Obesity_onevsrest_0;smote;Neural Network (MLP);0.9;0.94;0.92;0.96;0.96
+Obesity_onevsrest_0;smote;Logistic Regression;0.9;1.0;0.95;0.99;0.99
+Obesity_onevsrest_1;smote;KNN;0.83;0.81;0.82;0.89;0.89
+Obesity_onevsrest_1;smote;Random Forest;0.84;0.95;0.9;0.96;0.96
+Obesity_onevsrest_1;smote;Decision Tree;0.81;0.93;0.87;0.95;0.95
+Obesity_onevsrest_1;smote;XGBoost;0.94;0.96;0.95;0.98;0.98
+Obesity_onevsrest_1;smote;AdaBoost;0.42;0.87;0.56;0.84;0.84
+Obesity_onevsrest_1;smote;Gradient Boosting;0.95;0.94;0.95;0.97;0.97
+Obesity_onevsrest_1;smote;Extra Trees;0.8;0.86;0.83;0.91;0.91
+Obesity_onevsrest_1;smote;Neural Network (MLP);0.6;0.87;0.71;0.89;0.89
+Obesity_onevsrest_1;smote;Logistic Regression;0.39;0.86;0.54;0.82;0.83
+Obesity_onevsrest_2;smote;KNN;0.75;0.96;0.84;0.96;0.96
+Obesity_onevsrest_2;smote;Random Forest;0.93;0.81;0.86;0.89;0.9
+Obesity_onevsrest_2;smote;Decision Tree;0.83;0.83;0.83;0.9;0.9
+Obesity_onevsrest_2;smote;XGBoost;0.93;0.93;0.93;0.96;0.96
+Obesity_onevsrest_2;smote;AdaBoost;0.48;0.86;0.61;0.86;0.86
+Obesity_onevsrest_2;smote;Gradient Boosting;0.94;0.92;0.93;0.95;0.95
+Obesity_onevsrest_2;smote;Extra Trees;0.96;0.77;0.85;0.88;0.88
+Obesity_onevsrest_2;smote;Neural Network (MLP);0.64;0.89;0.74;0.91;0.91
+Obesity_onevsrest_2;smote;Logistic Regression;0.32;0.71;0.45;0.74;0.74
+Obesity_onevsrest_3;smote;KNN;0.81;0.95;0.88;0.96;0.96
+Obesity_onevsrest_3;smote;Random Forest;0.94;0.92;0.93;0.95;0.96
+Obesity_onevsrest_3;smote;Decision Tree;0.86;0.94;0.9;0.96;0.96
+Obesity_onevsrest_3;smote;XGBoost;0.97;0.99;0.98;0.99;0.99
+Obesity_onevsrest_3;smote;AdaBoost;0.41;0.95;0.57;0.86;0.87
+Obesity_onevsrest_3;smote;Gradient Boosting;0.98;0.99;0.98;0.99;0.99
+Obesity_onevsrest_3;smote;Extra Trees;0.98;0.92;0.95;0.96;0.96
+Obesity_onevsrest_3;smote;Neural Network (MLP);0.78;0.89;0.83;0.92;0.92
+Obesity_onevsrest_3;smote;Logistic Regression;0.35;0.8;0.49;0.78;0.78
+Obesity_onevsrest_4;smote;KNN;0.92;0.98;0.95;0.98;0.98
+Obesity_onevsrest_4;smote;Random Forest;0.99;0.96;0.98;0.98;0.98
+Obesity_onevsrest_4;smote;Decision Tree;0.95;0.92;0.94;0.96;0.96
+Obesity_onevsrest_4;smote;XGBoost;0.98;0.95;0.97;0.97;0.97
+Obesity_onevsrest_4;smote;AdaBoost;0.62;0.87;0.72;0.88;0.88
+Obesity_onevsrest_4;smote;Gradient Boosting;0.99;0.95;0.97;0.97;0.98
+Obesity_onevsrest_4;smote;Extra Trees;0.99;0.9;0.95;0.95;0.95
+Obesity_onevsrest_4;smote;Neural Network (MLP);0.84;0.88;0.86;0.92;0.92
+Obesity_onevsrest_4;smote;Logistic Regression;0.36;0.73;0.48;0.74;0.74
+Obesity_onevsrest_5;smote;KNN;0.99;0.99;0.99;0.99;0.99
+Obesity_onevsrest_5;smote;Random Forest;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;smote;Decision Tree;1.0;0.97;0.98;0.98;0.98
+Obesity_onevsrest_5;smote;XGBoost;1.0;1.0;1.0;1.0;1.0
+Obesity_onevsrest_5;smote;AdaBoost;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;smote;Gradient Boosting;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;smote;Extra Trees;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;smote;Neural Network (MLP);0.99;0.96;0.97;0.98;0.98
+Obesity_onevsrest_5;smote;Logistic Regression;0.87;0.96;0.91;0.97;0.97
+Obesity_onevsrest_6;smote;KNN;0.93;0.99;0.96;0.99;0.99
+Obesity_onevsrest_6;smote;Random Forest;1.0;0.99;0.99;0.99;0.99
+Obesity_onevsrest_6;smote;Decision Tree;0.96;0.99;0.97;0.99;0.99
+Obesity_onevsrest_6;smote;XGBoost;0.96;1.0;0.98;1.0;1.0
+Obesity_onevsrest_6;smote;AdaBoost;0.9;1.0;0.95;0.99;0.99
+Obesity_onevsrest_6;smote;Gradient Boosting;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;smote;Extra Trees;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;smote;Neural Network (MLP);0.98;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;smote;Logistic Regression;0.99;1.0;0.99;1.0;1.0
+page-blocks-1-3_vs_4;smote;KNN;0.42;1.0;0.59;0.96;0.96
+page-blocks-1-3_vs_4;smote;Random Forest;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;smote;Decision Tree;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;smote;XGBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;smote;AdaBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;smote;Gradient Boosting;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;smote;Extra Trees;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;smote;Neural Network (MLP);0.57;1.0;0.73;0.98;0.98
+page-blocks-1-3_vs_4;smote;Logistic Regression;0.42;1.0;0.59;0.96;0.96
+pima;smote;KNN;0.56;0.55;0.55;0.65;0.66
+pima;smote;Random Forest;0.62;0.68;0.65;0.73;0.73
+pima;smote;Decision Tree;0.56;0.81;0.66;0.73;0.74
+pima;smote;XGBoost;0.61;0.65;0.63;0.71;0.72
+pima;smote;AdaBoost;0.58;0.78;0.67;0.74;0.74
+pima;smote;Gradient Boosting;0.65;0.64;0.64;0.72;0.73
+pima;smote;Extra Trees;0.63;0.65;0.64;0.72;0.72
+pima;smote;Neural Network (MLP);0.56;0.6;0.58;0.67;0.67
+pima;smote;Logistic Regression;0.63;0.72;0.67;0.75;0.75
+transfusion;smote;KNN;0.33;0.38;0.35;0.54;0.57
+transfusion;smote;Random Forest;0.38;0.49;0.43;0.61;0.62
+transfusion;smote;Decision Tree;0.4;0.6;0.48;0.66;0.66
+transfusion;smote;XGBoost;0.38;0.47;0.42;0.6;0.62
+transfusion;smote;AdaBoost;0.39;0.72;0.5;0.68;0.68
+transfusion;smote;Gradient Boosting;0.42;0.6;0.49;0.67;0.67
+transfusion;smote;Extra Trees;0.42;0.68;0.52;0.69;0.69
+transfusion;smote;Neural Network (MLP);0.38;0.62;0.47;0.65;0.65
+transfusion;smote;Logistic Regression;0.41;0.79;0.54;0.72;0.72
+vowel0;smote;KNN;0.96;1.0;0.98;1.0;1.0
+vowel0;smote;Random Forest;0.96;1.0;0.98;1.0;1.0
+vowel0;smote;Decision Tree;0.93;1.0;0.96;1.0;1.0
+vowel0;smote;XGBoost;0.93;1.0;0.96;1.0;1.0
+vowel0;smote;AdaBoost;0.96;1.0;0.98;1.0;1.0
+vowel0;smote;Gradient Boosting;0.96;1.0;0.98;1.0;1.0
+vowel0;smote;Extra Trees;0.96;1.0;0.98;1.0;1.0
+vowel0;smote;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+vowel0;smote;Logistic Regression;0.76;0.93;0.83;0.95;0.95
+yeast1;smote;KNN;0.49;0.67;0.57;0.69;0.69
+yeast1;smote;Random Forest;0.56;0.57;0.57;0.68;0.7
+yeast1;smote;Decision Tree;0.45;0.57;0.51;0.64;0.64
+yeast1;smote;XGBoost;0.58;0.55;0.57;0.68;0.69
+yeast1;smote;AdaBoost;0.53;0.65;0.59;0.71;0.71
+yeast1;smote;Gradient Boosting;0.58;0.59;0.58;0.7;0.71
+yeast1;smote;Extra Trees;0.6;0.58;0.59;0.7;0.71
+yeast1;smote;Neural Network (MLP);0.54;0.66;0.59;0.71;0.72
+yeast1;smote;Logistic Regression;0.5;0.74;0.6;0.72;0.72
+yeast3;smote;KNN;0.61;0.84;0.71;0.88;0.89
+yeast3;smote;Random Forest;0.75;0.84;0.79;0.9;0.9
+yeast3;smote;Decision Tree;0.64;0.78;0.7;0.86;0.86
+yeast3;smote;XGBoost;0.78;0.78;0.78;0.87;0.87
+yeast3;smote;AdaBoost;0.73;0.92;0.81;0.94;0.94
+yeast3;smote;Gradient Boosting;0.75;0.78;0.76;0.87;0.87
+yeast3;smote;Extra Trees;0.78;0.8;0.79;0.88;0.88
+yeast3;smote;Neural Network (MLP);0.65;0.94;0.77;0.94;0.94
+yeast3;smote;Logistic Regression;0.52;0.9;0.66;0.9;0.9
+abalone9-18;SMOTECDNN;KNN;0.21;0.69;0.33;0.76;0.77
+abalone9-18;SMOTECDNN;Random Forest;0.23;0.54;0.32;0.69;0.71
+abalone9-18;SMOTECDNN;Decision Tree;0.18;0.54;0.27;0.68;0.69
+abalone9-18;SMOTECDNN;XGBoost;0.24;0.62;0.34;0.73;0.74
+abalone9-18;SMOTECDNN;AdaBoost;0.24;0.69;0.35;0.77;0.78
+abalone9-18;SMOTECDNN;Gradient Boosting;0.29;0.54;0.38;0.7;0.73
+abalone9-18;SMOTECDNN;Extra Trees;0.25;0.46;0.32;0.65;0.69
+abalone9-18;SMOTECDNN;Neural Network (MLP);0.28;0.77;0.41;0.82;0.82
+abalone9-18;SMOTECDNN;Logistic Regression;0.25;0.92;0.39;0.87;0.87
+cleveland-0_vs_4;SMOTECDNN;KNN;0.12;0.5;0.19;0.59;0.6
+cleveland-0_vs_4;SMOTECDNN;Random Forest;0.67;0.5;0.57;0.7;0.74
+cleveland-0_vs_4;SMOTECDNN;Decision Tree;0.22;0.5;0.31;0.65;0.68
+cleveland-0_vs_4;SMOTECDNN;XGBoost;0.67;0.5;0.57;0.7;0.74
+cleveland-0_vs_4;SMOTECDNN;AdaBoost;0.33;0.5;0.4;0.68;0.71
+cleveland-0_vs_4;SMOTECDNN;Gradient Boosting;0.5;0.5;0.5;0.69;0.73
+cleveland-0_vs_4;SMOTECDNN;Extra Trees;1.0;0.5;0.67;0.71;0.75
+cleveland-0_vs_4;SMOTECDNN;Neural Network (MLP);0.25;0.75;0.38;0.78;0.78
+cleveland-0_vs_4;SMOTECDNN;Logistic Regression;0.38;0.75;0.5;0.82;0.82
+dermatology-6;SMOTECDNN;KNN;1.0;1.0;1.0;1.0;1.0
+dermatology-6;SMOTECDNN;Random Forest;1.0;1.0;1.0;1.0;1.0
+dermatology-6;SMOTECDNN;Decision Tree;1.0;1.0;1.0;1.0;1.0
+dermatology-6;SMOTECDNN;XGBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;SMOTECDNN;AdaBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;SMOTECDNN;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+dermatology-6;SMOTECDNN;Extra Trees;1.0;1.0;1.0;1.0;1.0
+dermatology-6;SMOTECDNN;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+dermatology-6;SMOTECDNN;Logistic Regression;0.86;1.0;0.92;1.0;1.0
+ecoli-0_vs_1;SMOTECDNN;KNN;0.98;1.0;0.99;0.98;0.98
+ecoli-0_vs_1;SMOTECDNN;Random Forest;0.98;1.0;0.99;0.98;0.98
+ecoli-0_vs_1;SMOTECDNN;Decision Tree;0.98;0.98;0.98;0.97;0.97
+ecoli-0_vs_1;SMOTECDNN;XGBoost;0.98;1.0;0.99;0.98;0.98
+ecoli-0_vs_1;SMOTECDNN;AdaBoost;0.98;1.0;0.99;0.98;0.98
+ecoli-0_vs_1;SMOTECDNN;Gradient Boosting;0.98;1.0;0.99;0.98;0.98
+ecoli-0_vs_1;SMOTECDNN;Extra Trees;0.98;0.98;0.98;0.97;0.97
+ecoli-0_vs_1;SMOTECDNN;Neural Network (MLP);0.97;0.91;0.94;0.93;0.93
+ecoli-0_vs_1;SMOTECDNN;Logistic Regression;0.98;0.95;0.96;0.96;0.96
+ecoli1;SMOTECDNN;KNN;0.73;0.83;0.78;0.87;0.87
+ecoli1;SMOTECDNN;Random Forest;0.69;0.87;0.77;0.88;0.88
+ecoli1;SMOTECDNN;Decision Tree;0.75;0.91;0.82;0.91;0.91
+ecoli1;SMOTECDNN;XGBoost;0.79;0.96;0.86;0.94;0.94
+ecoli1;SMOTECDNN;AdaBoost;0.68;0.91;0.78;0.89;0.89
+ecoli1;SMOTECDNN;Gradient Boosting;0.79;0.96;0.86;0.94;0.94
+ecoli1;SMOTECDNN;Extra Trees;0.73;0.83;0.78;0.87;0.87
+ecoli1;SMOTECDNN;Neural Network (MLP);0.62;0.78;0.69;0.82;0.82
+ecoli1;SMOTECDNN;Logistic Regression;0.65;0.96;0.77;0.9;0.9
+iris0;SMOTECDNN;KNN;1.0;1.0;1.0;1.0;1.0
+iris0;SMOTECDNN;Random Forest;1.0;1.0;1.0;1.0;1.0
+iris0;SMOTECDNN;Decision Tree;1.0;1.0;1.0;1.0;1.0
+iris0;SMOTECDNN;XGBoost;0.94;1.0;0.97;0.98;0.98
+iris0;SMOTECDNN;AdaBoost;1.0;1.0;1.0;1.0;1.0
+iris0;SMOTECDNN;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+iris0;SMOTECDNN;Extra Trees;1.0;1.0;1.0;1.0;1.0
+iris0;SMOTECDNN;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+iris0;SMOTECDNN;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;SMOTECDNN;KNN;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;SMOTECDNN;Random Forest;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;SMOTECDNN;Decision Tree;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;SMOTECDNN;XGBoost;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;SMOTECDNN;AdaBoost;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;SMOTECDNN;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;SMOTECDNN;Extra Trees;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;SMOTECDNN;Neural Network (MLP);0.94;1.0;0.97;1.0;1.0
+kddcup-guess_passwd_vs_satan;SMOTECDNN;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_0;SMOTECDNN;KNN;0.75;0.81;0.78;0.64;0.66
+Migraine_onevsrest_0;SMOTECDNN;Random Forest;0.91;0.93;0.92;0.88;0.88
+Migraine_onevsrest_0;SMOTECDNN;Decision Tree;0.89;0.89;0.89;0.85;0.85
+Migraine_onevsrest_0;SMOTECDNN;XGBoost;0.92;0.93;0.93;0.89;0.89
+Migraine_onevsrest_0;SMOTECDNN;AdaBoost;0.92;0.92;0.92;0.89;0.89
+Migraine_onevsrest_0;SMOTECDNN;Gradient Boosting;0.9;0.97;0.93;0.88;0.89
+Migraine_onevsrest_0;SMOTECDNN;Extra Trees;0.91;1.0;0.95;0.91;0.91
+Migraine_onevsrest_0;SMOTECDNN;Neural Network (MLP);0.93;0.97;0.95;0.92;0.93
+Migraine_onevsrest_0;SMOTECDNN;Logistic Regression;0.89;0.93;0.91;0.87;0.87
+Migraine_onevsrest_1;SMOTECDNN;KNN;0.52;0.78;0.62;0.82;0.82
+Migraine_onevsrest_1;SMOTECDNN;Random Forest;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;SMOTECDNN;Decision Tree;0.82;1.0;0.9;0.98;0.98
+Migraine_onevsrest_1;SMOTECDNN;XGBoost;0.72;1.0;0.84;0.96;0.96
+Migraine_onevsrest_1;SMOTECDNN;AdaBoost;0.82;1.0;0.9;0.98;0.98
+Migraine_onevsrest_1;SMOTECDNN;Gradient Boosting;0.86;1.0;0.92;0.98;0.98
+Migraine_onevsrest_1;SMOTECDNN;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;SMOTECDNN;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;SMOTECDNN;Logistic Regression;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_2;SMOTECDNN;KNN;0.3;0.43;0.35;0.63;0.68
+Migraine_onevsrest_2;SMOTECDNN;Random Forest;0.56;0.71;0.62;0.83;0.84
+Migraine_onevsrest_2;SMOTECDNN;Decision Tree;0.44;0.57;0.5;0.74;0.76
+Migraine_onevsrest_2;SMOTECDNN;XGBoost;0.44;0.57;0.5;0.74;0.76
+Migraine_onevsrest_2;SMOTECDNN;AdaBoost;0.44;0.57;0.5;0.74;0.76
+Migraine_onevsrest_2;SMOTECDNN;Gradient Boosting;0.5;0.57;0.53;0.74;0.77
+Migraine_onevsrest_2;SMOTECDNN;Extra Trees;0.38;0.43;0.4;0.64;0.69
+Migraine_onevsrest_2;SMOTECDNN;Neural Network (MLP);0.55;0.86;0.67;0.9;0.91
+Migraine_onevsrest_2;SMOTECDNN;Logistic Regression;0.55;0.86;0.67;0.9;0.91
+Migraine_onevsrest_3;SMOTECDNN;KNN;1.0;0.83;0.91;0.91;0.92
+Migraine_onevsrest_3;SMOTECDNN;Random Forest;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;SMOTECDNN;Decision Tree;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;SMOTECDNN;XGBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;SMOTECDNN;AdaBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;SMOTECDNN;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;SMOTECDNN;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;SMOTECDNN;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;SMOTECDNN;Logistic Regression;0.86;1.0;0.92;1.0;1.0
+Migraine_onevsrest_4;SMOTECDNN;KNN;0.14;0.6;0.23;0.71;0.72
+Migraine_onevsrest_4;SMOTECDNN;Random Forest;0.12;0.2;0.15;0.43;0.57
+Migraine_onevsrest_4;SMOTECDNN;Decision Tree;0.33;0.6;0.43;0.75;0.77
+Migraine_onevsrest_4;SMOTECDNN;XGBoost;0.25;0.6;0.35;0.74;0.76
+Migraine_onevsrest_4;SMOTECDNN;AdaBoost;0.14;0.4;0.21;0.6;0.64
+Migraine_onevsrest_4;SMOTECDNN;Gradient Boosting;0.23;0.6;0.33;0.74;0.75
+Migraine_onevsrest_4;SMOTECDNN;Extra Trees;0.11;0.2;0.14;0.43;0.56
+Migraine_onevsrest_4;SMOTECDNN;Neural Network (MLP);0.18;0.4;0.25;0.61;0.66
+Migraine_onevsrest_4;SMOTECDNN;Logistic Regression;0.25;0.6;0.35;0.74;0.76
+Migraine_onevsrest_5;SMOTECDNN;KNN;0.13;0.5;0.21;0.66;0.69
+Migraine_onevsrest_5;SMOTECDNN;Random Forest;0.25;0.25;0.25;0.49;0.61
+Migraine_onevsrest_5;SMOTECDNN;Decision Tree;0.17;0.25;0.2;0.49;0.6
+Migraine_onevsrest_5;SMOTECDNN;XGBoost;0.17;0.25;0.2;0.49;0.6
+Migraine_onevsrest_5;SMOTECDNN;AdaBoost;0.12;0.25;0.17;0.48;0.59
+Migraine_onevsrest_5;SMOTECDNN;Gradient Boosting;0.17;0.25;0.2;0.49;0.6
+Migraine_onevsrest_5;SMOTECDNN;Extra Trees;0.2;0.25;0.22;0.49;0.61
+Migraine_onevsrest_5;SMOTECDNN;Neural Network (MLP);0.22;0.5;0.31;0.68;0.72
+Migraine_onevsrest_5;SMOTECDNN;Logistic Regression;0.22;1.0;0.36;0.93;0.94
+new-thyroid1;SMOTECDNN;KNN;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;SMOTECDNN;Random Forest;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;SMOTECDNN;Decision Tree;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;SMOTECDNN;XGBoost;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;SMOTECDNN;AdaBoost;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;SMOTECDNN;Gradient Boosting;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;SMOTECDNN;Extra Trees;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;SMOTECDNN;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+new-thyroid1;SMOTECDNN;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+newthyroid2;SMOTECDNN;KNN;0.92;1.0;0.96;0.99;0.99
+newthyroid2;SMOTECDNN;Random Forest;1.0;0.82;0.9;0.9;0.91
+newthyroid2;SMOTECDNN;Decision Tree;0.9;0.82;0.86;0.9;0.9
+newthyroid2;SMOTECDNN;XGBoost;1.0;0.82;0.9;0.9;0.91
+newthyroid2;SMOTECDNN;AdaBoost;1.0;0.82;0.9;0.9;0.91
+newthyroid2;SMOTECDNN;Gradient Boosting;0.9;0.82;0.86;0.9;0.9
+newthyroid2;SMOTECDNN;Extra Trees;1.0;0.91;0.95;0.95;0.95
+newthyroid2;SMOTECDNN;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+newthyroid2;SMOTECDNN;Logistic Regression;0.91;0.91;0.91;0.94;0.95
+Obesity_onevsrest_0;SMOTECDNN;KNN;0.66;1.0;0.79;0.96;0.96
+Obesity_onevsrest_0;SMOTECDNN;Random Forest;0.81;0.99;0.89;0.98;0.98
+Obesity_onevsrest_0;SMOTECDNN;Decision Tree;0.9;1.0;0.95;0.99;0.99
+Obesity_onevsrest_0;SMOTECDNN;XGBoost;0.79;1.0;0.88;0.98;0.98
+Obesity_onevsrest_0;SMOTECDNN;AdaBoost;0.8;1.0;0.89;0.98;0.98
+Obesity_onevsrest_0;SMOTECDNN;Gradient Boosting;0.8;1.0;0.89;0.98;0.98
+Obesity_onevsrest_0;SMOTECDNN;Extra Trees;0.85;0.94;0.89;0.96;0.96
+Obesity_onevsrest_0;SMOTECDNN;Neural Network (MLP);0.7;1.0;0.82;0.97;0.97
+Obesity_onevsrest_0;SMOTECDNN;Logistic Regression;0.8;1.0;0.89;0.98;0.98
+Obesity_onevsrest_1;SMOTECDNN;KNN;0.72;0.8;0.76;0.87;0.88
+Obesity_onevsrest_1;SMOTECDNN;Random Forest;0.79;0.96;0.87;0.96;0.96
+Obesity_onevsrest_1;SMOTECDNN;Decision Tree;0.86;0.85;0.85;0.91;0.91
+Obesity_onevsrest_1;SMOTECDNN;XGBoost;0.89;0.96;0.93;0.97;0.97
+Obesity_onevsrest_1;SMOTECDNN;AdaBoost;0.41;0.92;0.57;0.85;0.85
+Obesity_onevsrest_1;SMOTECDNN;Gradient Boosting;0.96;0.94;0.95;0.97;0.97
+Obesity_onevsrest_1;SMOTECDNN;Extra Trees;0.77;0.93;0.84;0.94;0.94
+Obesity_onevsrest_1;SMOTECDNN;Neural Network (MLP);0.61;0.87;0.72;0.89;0.89
+Obesity_onevsrest_1;SMOTECDNN;Logistic Regression;0.38;0.87;0.53;0.82;0.82
+Obesity_onevsrest_2;SMOTECDNN;KNN;0.7;0.96;0.81;0.95;0.95
+Obesity_onevsrest_2;SMOTECDNN;Random Forest;0.88;0.84;0.86;0.91;0.91
+Obesity_onevsrest_2;SMOTECDNN;Decision Tree;0.7;0.81;0.75;0.87;0.88
+Obesity_onevsrest_2;SMOTECDNN;XGBoost;0.85;0.93;0.89;0.95;0.95
+Obesity_onevsrest_2;SMOTECDNN;AdaBoost;0.56;0.87;0.68;0.88;0.88
+Obesity_onevsrest_2;SMOTECDNN;Gradient Boosting;0.84;0.89;0.87;0.93;0.93
+Obesity_onevsrest_2;SMOTECDNN;Extra Trees;0.9;0.76;0.82;0.87;0.87
+Obesity_onevsrest_2;SMOTECDNN;Neural Network (MLP);0.78;0.89;0.83;0.93;0.93
+Obesity_onevsrest_2;SMOTECDNN;Logistic Regression;0.3;0.69;0.42;0.72;0.72
+Obesity_onevsrest_3;SMOTECDNN;KNN;0.73;0.97;0.83;0.95;0.95
+Obesity_onevsrest_3;SMOTECDNN;Random Forest;0.85;0.94;0.89;0.96;0.96
+Obesity_onevsrest_3;SMOTECDNN;Decision Tree;0.85;0.95;0.9;0.96;0.96
+Obesity_onevsrest_3;SMOTECDNN;XGBoost;0.92;1.0;0.96;0.99;0.99
+Obesity_onevsrest_3;SMOTECDNN;AdaBoost;0.51;0.91;0.66;0.88;0.88
+Obesity_onevsrest_3;SMOTECDNN;Gradient Boosting;0.91;0.99;0.95;0.99;0.99
+Obesity_onevsrest_3;SMOTECDNN;Extra Trees;0.91;0.92;0.91;0.95;0.95
+Obesity_onevsrest_3;SMOTECDNN;Neural Network (MLP);0.83;0.84;0.83;0.9;0.91
+Obesity_onevsrest_3;SMOTECDNN;Logistic Regression;0.35;0.85;0.49;0.79;0.8
+Obesity_onevsrest_4;SMOTECDNN;KNN;0.91;0.98;0.94;0.98;0.98
+Obesity_onevsrest_4;SMOTECDNN;Random Forest;0.99;0.96;0.98;0.98;0.98
+Obesity_onevsrest_4;SMOTECDNN;Decision Tree;0.92;0.92;0.92;0.95;0.95
+Obesity_onevsrest_4;SMOTECDNN;XGBoost;0.98;0.98;0.98;0.99;0.99
+Obesity_onevsrest_4;SMOTECDNN;AdaBoost;0.61;0.87;0.72;0.88;0.88
+Obesity_onevsrest_4;SMOTECDNN;Gradient Boosting;0.98;0.94;0.96;0.97;0.97
+Obesity_onevsrest_4;SMOTECDNN;Extra Trees;0.98;0.92;0.95;0.96;0.96
+Obesity_onevsrest_4;SMOTECDNN;Neural Network (MLP);0.79;0.91;0.85;0.93;0.93
+Obesity_onevsrest_4;SMOTECDNN;Logistic Regression;0.36;0.72;0.48;0.73;0.73
+Obesity_onevsrest_5;SMOTECDNN;KNN;0.97;0.98;0.97;0.99;0.99
+Obesity_onevsrest_5;SMOTECDNN;Random Forest;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;SMOTECDNN;Decision Tree;0.99;0.97;0.98;0.98;0.98
+Obesity_onevsrest_5;SMOTECDNN;XGBoost;1.0;1.0;1.0;1.0;1.0
+Obesity_onevsrest_5;SMOTECDNN;AdaBoost;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_5;SMOTECDNN;Gradient Boosting;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_5;SMOTECDNN;Extra Trees;0.98;0.98;0.98;0.99;0.99
+Obesity_onevsrest_5;SMOTECDNN;Neural Network (MLP);0.97;0.98;0.97;0.99;0.99
+Obesity_onevsrest_5;SMOTECDNN;Logistic Regression;0.87;0.96;0.91;0.97;0.97
+Obesity_onevsrest_6;SMOTECDNN;KNN;0.88;1.0;0.94;0.99;0.99
+Obesity_onevsrest_6;SMOTECDNN;Random Forest;1.0;0.99;0.99;0.99;0.99
+Obesity_onevsrest_6;SMOTECDNN;Decision Tree;0.98;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;SMOTECDNN;XGBoost;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;SMOTECDNN;AdaBoost;0.92;1.0;0.96;0.99;0.99
+Obesity_onevsrest_6;SMOTECDNN;Gradient Boosting;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;SMOTECDNN;Extra Trees;1.0;0.99;0.99;0.99;0.99
+Obesity_onevsrest_6;SMOTECDNN;Neural Network (MLP);0.97;1.0;0.98;1.0;1.0
+Obesity_onevsrest_6;SMOTECDNN;Logistic Regression;0.94;1.0;0.97;0.99;0.99
+page-blocks-1-3_vs_4;SMOTECDNN;KNN;0.42;1.0;0.59;0.96;0.96
+page-blocks-1-3_vs_4;SMOTECDNN;Random Forest;0.73;1.0;0.84;0.99;0.99
+page-blocks-1-3_vs_4;SMOTECDNN;Decision Tree;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;SMOTECDNN;XGBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;SMOTECDNN;AdaBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;SMOTECDNN;Gradient Boosting;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;SMOTECDNN;Extra Trees;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;SMOTECDNN;Neural Network (MLP);0.57;1.0;0.73;0.98;0.98
+page-blocks-1-3_vs_4;SMOTECDNN;Logistic Regression;0.44;1.0;0.62;0.96;0.96
+pima;SMOTECDNN;KNN;0.58;0.74;0.65;0.73;0.73
+pima;SMOTECDNN;Random Forest;0.63;0.78;0.7;0.77;0.77
+pima;SMOTECDNN;Decision Tree;0.59;0.71;0.65;0.73;0.73
+pima;SMOTECDNN;XGBoost;0.64;0.74;0.69;0.76;0.76
+pima;SMOTECDNN;AdaBoost;0.61;0.75;0.67;0.75;0.75
+pima;SMOTECDNN;Gradient Boosting;0.62;0.72;0.67;0.75;0.75
+pima;SMOTECDNN;Extra Trees;0.65;0.78;0.7;0.77;0.77
+pima;SMOTECDNN;Neural Network (MLP);0.53;0.59;0.56;0.65;0.66
+pima;SMOTECDNN;Logistic Regression;0.58;0.78;0.67;0.74;0.74
+transfusion;SMOTECDNN;KNN;0.29;0.47;0.36;0.55;0.56
+transfusion;SMOTECDNN;Random Forest;0.34;0.62;0.44;0.63;0.63
+transfusion;SMOTECDNN;Decision Tree;0.33;0.53;0.41;0.59;0.6
+transfusion;SMOTECDNN;XGBoost;0.32;0.58;0.41;0.6;0.6
+transfusion;SMOTECDNN;AdaBoost;0.39;0.68;0.49;0.67;0.67
+transfusion;SMOTECDNN;Gradient Boosting;0.32;0.58;0.41;0.6;0.6
+transfusion;SMOTECDNN;Extra Trees;0.31;0.53;0.39;0.58;0.58
+transfusion;SMOTECDNN;Neural Network (MLP);0.39;0.74;0.51;0.69;0.69
+transfusion;SMOTECDNN;Logistic Regression;0.41;0.74;0.53;0.71;0.71
+vowel0;SMOTECDNN;KNN;0.9;1.0;0.95;0.99;0.99
+vowel0;SMOTECDNN;Random Forest;1.0;1.0;1.0;1.0;1.0
+vowel0;SMOTECDNN;Decision Tree;0.93;1.0;0.96;1.0;1.0
+vowel0;SMOTECDNN;XGBoost;0.87;1.0;0.93;0.99;0.99
+vowel0;SMOTECDNN;AdaBoost;0.96;1.0;0.98;1.0;1.0
+vowel0;SMOTECDNN;Gradient Boosting;0.96;1.0;0.98;1.0;1.0
+vowel0;SMOTECDNN;Extra Trees;0.93;1.0;0.96;1.0;1.0
+vowel0;SMOTECDNN;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+vowel0;SMOTECDNN;Logistic Regression;0.66;0.93;0.77;0.94;0.94
+yeast1;SMOTECDNN;KNN;0.46;0.76;0.58;0.7;0.7
+yeast1;SMOTECDNN;Random Forest;0.5;0.67;0.57;0.7;0.7
+yeast1;SMOTECDNN;Decision Tree;0.48;0.68;0.56;0.69;0.69
+yeast1;SMOTECDNN;XGBoost;0.49;0.71;0.58;0.7;0.7
+yeast1;SMOTECDNN;AdaBoost;0.49;0.76;0.6;0.72;0.72
+yeast1;SMOTECDNN;Gradient Boosting;0.49;0.67;0.56;0.69;0.69
+yeast1;SMOTECDNN;Extra Trees;0.49;0.7;0.57;0.7;0.7
+yeast1;SMOTECDNN;Neural Network (MLP);0.52;0.71;0.6;0.72;0.72
+yeast1;SMOTECDNN;Logistic Regression;0.39;0.9;0.55;0.63;0.67
+yeast3;SMOTECDNN;KNN;0.6;0.86;0.71;0.89;0.89
+yeast3;SMOTECDNN;Random Forest;0.69;0.9;0.78;0.92;0.92
+yeast3;SMOTECDNN;Decision Tree;0.68;0.94;0.79;0.94;0.94
+yeast3;SMOTECDNN;XGBoost;0.67;0.86;0.75;0.9;0.9
+yeast3;SMOTECDNN;AdaBoost;0.69;0.94;0.79;0.94;0.94
+yeast3;SMOTECDNN;Gradient Boosting;0.76;0.92;0.83;0.94;0.94
+yeast3;SMOTECDNN;Extra Trees;0.7;0.88;0.78;0.92;0.92
+yeast3;SMOTECDNN;Neural Network (MLP);0.62;0.92;0.74;0.92;0.92
+yeast3;SMOTECDNN;Logistic Regression;0.5;0.96;0.66;0.92;0.92
+abalone9-18;2;KNN;0.33;0.92;0.49;0.9;0.9
+abalone9-18;2;Random Forest;0.29;0.85;0.43;0.86;0.86
+abalone9-18;2;Decision Tree;0.23;0.77;0.35;0.8;0.8
+abalone9-18;2;XGBoost;0.35;0.69;0.46;0.8;0.8
+abalone9-18;2;AdaBoost;0.23;0.77;0.35;0.8;0.8
+abalone9-18;2;Gradient Boosting;0.37;0.77;0.5;0.84;0.84
+abalone9-18;2;Extra Trees;0.32;0.85;0.47;0.87;0.87
+abalone9-18;2;Neural Network (MLP);0.3;0.92;0.45;0.89;0.89
+abalone9-18;2;Logistic Regression;0.29;0.77;0.42;0.82;0.82
+cleveland-0_vs_4;2;KNN;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;2;Random Forest;1.0;0.5;0.67;0.71;0.75
+cleveland-0_vs_4;2;Decision Tree;0.5;0.5;0.5;0.69;0.73
+cleveland-0_vs_4;2;XGBoost;0.5;0.25;0.33;0.49;0.61
+cleveland-0_vs_4;2;AdaBoost;0.67;0.5;0.57;0.7;0.74
+cleveland-0_vs_4;2;Gradient Boosting;1.0;0.75;0.86;0.87;0.88
+cleveland-0_vs_4;2;Extra Trees;1.0;0.5;0.67;0.71;0.75
+cleveland-0_vs_4;2;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;2;Logistic Regression;0.75;0.75;0.75;0.86;0.86
+dermatology-6;2;KNN;1.0;1.0;1.0;1.0;1.0
+dermatology-6;2;Random Forest;1.0;1.0;1.0;1.0;1.0
+dermatology-6;2;Decision Tree;1.0;1.0;1.0;1.0;1.0
+dermatology-6;2;XGBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;2;AdaBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;2;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+dermatology-6;2;Extra Trees;1.0;1.0;1.0;1.0;1.0
+dermatology-6;2;Neural Network (MLP);0.86;1.0;0.92;1.0;1.0
+dermatology-6;2;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+ecoli-0_vs_1;2;KNN;0.9;1.0;0.95;0.88;0.89
+ecoli-0_vs_1;2;Random Forest;0.9;1.0;0.95;0.88;0.89
+ecoli-0_vs_1;2;Decision Tree;0.93;1.0;0.97;0.93;0.93
+ecoli-0_vs_1;2;XGBoost;0.93;1.0;0.97;0.93;0.93
+ecoli-0_vs_1;2;AdaBoost;0.9;1.0;0.95;0.88;0.89
+ecoli-0_vs_1;2;Gradient Boosting;0.9;1.0;0.95;0.88;0.89
+ecoli-0_vs_1;2;Extra Trees;0.75;1.0;0.86;0.63;0.7
+ecoli-0_vs_1;2;Neural Network (MLP);0.65;1.0;0.79;0.0;0.5
+ecoli-0_vs_1;2;Logistic Regression;0.65;1.0;0.79;0.0;0.5
+ecoli1;2;KNN;0.8;0.87;0.83;0.9;0.9
+ecoli1;2;Random Forest;0.75;0.78;0.77;0.85;0.85
+ecoli1;2;Decision Tree;0.78;0.78;0.78;0.86;0.86
+ecoli1;2;XGBoost;0.83;0.83;0.83;0.89;0.89
+ecoli1;2;AdaBoost;0.55;0.96;0.7;0.86;0.86
+ecoli1;2;Gradient Boosting;0.75;0.78;0.77;0.85;0.85
+ecoli1;2;Extra Trees;0.73;0.96;0.83;0.93;0.93
+ecoli1;2;Neural Network (MLP);0.69;0.78;0.73;0.84;0.84
+ecoli1;2;Logistic Regression;0.61;0.83;0.7;0.84;0.84
+iris0;2;KNN;1.0;1.0;1.0;1.0;1.0
+iris0;2;Random Forest;1.0;1.0;1.0;1.0;1.0
+iris0;2;Decision Tree;1.0;1.0;1.0;1.0;1.0
+iris0;2;XGBoost;0.94;1.0;0.97;0.98;0.98
+iris0;2;AdaBoost;1.0;1.0;1.0;1.0;1.0
+iris0;2;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+iris0;2;Extra Trees;1.0;1.0;1.0;1.0;1.0
+iris0;2;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+iris0;2;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;2;KNN;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;2;Random Forest;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;2;Decision Tree;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;2;XGBoost;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;2;AdaBoost;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;2;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;2;Extra Trees;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;2;Neural Network (MLP);0.94;1.0;0.97;1.0;1.0
+kddcup-guess_passwd_vs_satan;2;Logistic Regression;0.94;1.0;0.97;1.0;1.0
+Migraine_onevsrest_0;2;KNN;0.71;0.97;0.82;0.53;0.63
+Migraine_onevsrest_0;2;Random Forest;0.87;1.0;0.93;0.86;0.87
+Migraine_onevsrest_0;2;Decision Tree;0.9;1.0;0.95;0.9;0.9
+Migraine_onevsrest_0;2;XGBoost;0.86;1.0;0.92;0.84;0.85
+Migraine_onevsrest_0;2;AdaBoost;0.88;0.97;0.92;0.86;0.86
+Migraine_onevsrest_0;2;Gradient Boosting;0.88;0.99;0.93;0.86;0.87
+Migraine_onevsrest_0;2;Extra Trees;0.77;0.99;0.86;0.68;0.72
+Migraine_onevsrest_0;2;Neural Network (MLP);0.88;0.97;0.92;0.86;0.86
+Migraine_onevsrest_0;2;Logistic Regression;0.76;0.95;0.84;0.66;0.7
+Migraine_onevsrest_1;2;KNN;0.93;0.72;0.81;0.85;0.86
+Migraine_onevsrest_1;2;Random Forest;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;2;Decision Tree;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;2;XGBoost;0.9;1.0;0.95;0.99;0.99
+Migraine_onevsrest_1;2;AdaBoost;0.78;1.0;0.88;0.97;0.97
+Migraine_onevsrest_1;2;Gradient Boosting;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;2;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;2;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;2;Logistic Regression;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_2;2;KNN;0.55;0.86;0.67;0.9;0.91
+Migraine_onevsrest_2;2;Random Forest;0.64;1.0;0.78;0.98;0.98
+Migraine_onevsrest_2;2;Decision Tree;0.44;1.0;0.61;0.96;0.96
+Migraine_onevsrest_2;2;XGBoost;0.75;0.86;0.8;0.92;0.92
+Migraine_onevsrest_2;2;AdaBoost;0.5;0.86;0.63;0.9;0.9
+Migraine_onevsrest_2;2;Gradient Boosting;0.75;0.86;0.8;0.92;0.92
+Migraine_onevsrest_2;2;Extra Trees;0.71;0.71;0.71;0.84;0.85
+Migraine_onevsrest_2;2;Neural Network (MLP);0.5;0.43;0.46;0.65;0.7
+Migraine_onevsrest_2;2;Logistic Regression;0.15;1.0;0.26;0.79;0.81
+Migraine_onevsrest_3;2;KNN;1.0;0.83;0.91;0.91;0.92
+Migraine_onevsrest_3;2;Random Forest;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;2;Decision Tree;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;2;XGBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;2;AdaBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;2;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;2;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;2;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;2;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_4;2;KNN;0.75;0.6;0.67;0.77;0.8
+Migraine_onevsrest_4;2;Random Forest;0.83;1.0;0.91;1.0;1.0
+Migraine_onevsrest_4;2;Decision Tree;0.5;0.8;0.62;0.88;0.88
+Migraine_onevsrest_4;2;XGBoost;0.5;0.8;0.62;0.88;0.88
+Migraine_onevsrest_4;2;AdaBoost;0.71;1.0;0.83;0.99;0.99
+Migraine_onevsrest_4;2;Gradient Boosting;0.43;0.6;0.5;0.76;0.78
+Migraine_onevsrest_4;2;Extra Trees;0.83;1.0;0.91;1.0;1.0
+Migraine_onevsrest_4;2;Neural Network (MLP);0.8;0.8;0.8;0.89;0.9
+Migraine_onevsrest_4;2;Logistic Regression;0.83;1.0;0.91;1.0;1.0
+Migraine_onevsrest_5;2;KNN;0.44;1.0;0.62;0.98;0.98
+Migraine_onevsrest_5;2;Random Forest;0.57;1.0;0.73;0.99;0.99
+Migraine_onevsrest_5;2;Decision Tree;0.5;1.0;0.67;0.98;0.98
+Migraine_onevsrest_5;2;XGBoost;0.5;1.0;0.67;0.98;0.98
+Migraine_onevsrest_5;2;AdaBoost;0.5;1.0;0.67;0.98;0.98
+Migraine_onevsrest_5;2;Gradient Boosting;0.4;1.0;0.57;0.97;0.97
+Migraine_onevsrest_5;2;Extra Trees;0.4;1.0;0.57;0.97;0.97
+Migraine_onevsrest_5;2;Neural Network (MLP);0.33;1.0;0.5;0.96;0.96
+Migraine_onevsrest_5;2;Logistic Regression;0.5;1.0;0.67;0.98;0.98
+new-thyroid1;2;KNN;1.0;0.82;0.9;0.9;0.91
+new-thyroid1;2;Random Forest;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;2;Decision Tree;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;2;XGBoost;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;2;AdaBoost;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;2;Gradient Boosting;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;2;Extra Trees;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;2;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+new-thyroid1;2;Logistic Regression;0.69;1.0;0.81;0.95;0.95
+newthyroid2;2;KNN;1.0;0.82;0.9;0.9;0.91
+newthyroid2;2;Random Forest;1.0;0.82;0.9;0.9;0.91
+newthyroid2;2;Decision Tree;0.9;0.82;0.86;0.9;0.9
+newthyroid2;2;XGBoost;1.0;0.82;0.9;0.9;0.91
+newthyroid2;2;AdaBoost;1.0;0.91;0.95;0.95;0.95
+newthyroid2;2;Gradient Boosting;1.0;0.82;0.9;0.9;0.91
+newthyroid2;2;Extra Trees;1.0;0.91;0.95;0.95;0.95
+newthyroid2;2;Neural Network (MLP);1.0;0.73;0.84;0.85;0.86
+newthyroid2;2;Logistic Regression;0.65;1.0;0.79;0.94;0.94
+Obesity_onevsrest_0;2;KNN;0.75;1.0;0.86;0.98;0.98
+Obesity_onevsrest_0;2;Random Forest;0.95;0.95;0.95;0.97;0.97
+Obesity_onevsrest_0;2;Decision Tree;0.95;0.99;0.97;0.99;0.99
+Obesity_onevsrest_0;2;XGBoost;0.98;1.0;0.99;1.0;1.0
+Obesity_onevsrest_0;2;AdaBoost;0.84;1.0;0.91;0.99;0.99
+Obesity_onevsrest_0;2;Gradient Boosting;0.94;0.97;0.96;0.98;0.98
+Obesity_onevsrest_0;2;Extra Trees;0.99;0.89;0.93;0.94;0.94
+Obesity_onevsrest_0;2;Neural Network (MLP);0.78;0.97;0.87;0.97;0.97
+Obesity_onevsrest_0;2;Logistic Regression;0.13;1.0;0.23;0.0;0.5
+Obesity_onevsrest_1;2;KNN;0.95;0.69;0.8;0.83;0.84
+Obesity_onevsrest_1;2;Random Forest;0.92;0.79;0.85;0.88;0.89
+Obesity_onevsrest_1;2;Decision Tree;0.88;0.86;0.87;0.92;0.92
+Obesity_onevsrest_1;2;XGBoost;0.94;0.93;0.93;0.96;0.96
+Obesity_onevsrest_1;2;AdaBoost;0.68;0.59;0.63;0.75;0.77
+Obesity_onevsrest_1;2;Gradient Boosting;0.98;0.93;0.95;0.96;0.96
+Obesity_onevsrest_1;2;Extra Trees;0.85;0.78;0.81;0.87;0.88
+Obesity_onevsrest_1;2;Neural Network (MLP);0.85;0.6;0.7;0.77;0.79
+Obesity_onevsrest_1;2;Logistic Regression;0.33;0.56;0.42;0.68;0.69
+Obesity_onevsrest_2;2;KNN;0.81;0.9;0.85;0.93;0.94
+Obesity_onevsrest_2;2;Random Forest;1.0;0.78;0.88;0.88;0.89
+Obesity_onevsrest_2;2;Decision Tree;0.85;0.84;0.85;0.91;0.91
+Obesity_onevsrest_2;2;XGBoost;0.97;0.89;0.93;0.94;0.94
+Obesity_onevsrest_2;2;AdaBoost;0.64;0.57;0.6;0.73;0.76
+Obesity_onevsrest_2;2;Gradient Boosting;1.0;0.9;0.95;0.95;0.95
+Obesity_onevsrest_2;2;Extra Trees;0.98;0.75;0.85;0.86;0.87
+Obesity_onevsrest_2;2;Neural Network (MLP);0.85;0.64;0.73;0.79;0.81
+Obesity_onevsrest_2;2;Logistic Regression;0.13;1.0;0.23;0.0;0.5
+Obesity_onevsrest_3;2;KNN;0.91;0.86;0.89;0.92;0.92
+Obesity_onevsrest_3;2;Random Forest;0.99;0.87;0.93;0.93;0.94
+Obesity_onevsrest_3;2;Decision Tree;0.91;0.83;0.87;0.9;0.91
+Obesity_onevsrest_3;2;XGBoost;0.99;0.99;0.99;0.99;0.99
+Obesity_onevsrest_3;2;AdaBoost;0.77;0.51;0.61;0.7;0.74
+Obesity_onevsrest_3;2;Gradient Boosting;0.99;0.98;0.98;0.99;0.99
+Obesity_onevsrest_3;2;Extra Trees;0.98;0.92;0.95;0.96;0.96
+Obesity_onevsrest_3;2;Neural Network (MLP);0.87;0.83;0.85;0.9;0.9
+Obesity_onevsrest_3;2;Logistic Regression;0.26;0.45;0.33;0.6;0.62
+Obesity_onevsrest_4;2;KNN;0.97;0.97;0.97;0.98;0.98
+Obesity_onevsrest_4;2;Random Forest;0.99;0.95;0.97;0.97;0.98
+Obesity_onevsrest_4;2;Decision Tree;0.92;0.88;0.9;0.93;0.93
+Obesity_onevsrest_4;2;XGBoost;0.98;0.91;0.95;0.95;0.96
+Obesity_onevsrest_4;2;AdaBoost;0.8;0.66;0.72;0.8;0.81
+Obesity_onevsrest_4;2;Gradient Boosting;1.0;0.94;0.97;0.97;0.97
+Obesity_onevsrest_4;2;Extra Trees;1.0;0.88;0.93;0.94;0.94
+Obesity_onevsrest_4;2;Neural Network (MLP);0.85;0.85;0.85;0.91;0.91
+Obesity_onevsrest_4;2;Logistic Regression;0.17;1.0;0.29;0.0;0.5
+Obesity_onevsrest_5;2;KNN;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_5;2;Random Forest;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;2;Decision Tree;1.0;0.96;0.98;0.98;0.98
+Obesity_onevsrest_5;2;XGBoost;1.0;0.99;0.99;0.99;0.99
+Obesity_onevsrest_5;2;AdaBoost;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;2;Gradient Boosting;0.99;0.99;0.99;0.99;0.99
+Obesity_onevsrest_5;2;Extra Trees;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;2;Neural Network (MLP);0.95;0.98;0.96;0.98;0.98
+Obesity_onevsrest_5;2;Logistic Regression;0.36;0.97;0.53;0.83;0.84
+Obesity_onevsrest_6;2;KNN;0.92;1.0;0.96;0.99;0.99
+Obesity_onevsrest_6;2;Random Forest;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;2;Decision Tree;0.95;1.0;0.97;1.0;1.0
+Obesity_onevsrest_6;2;XGBoost;0.98;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;2;AdaBoost;0.87;1.0;0.93;0.99;0.99
+Obesity_onevsrest_6;2;Gradient Boosting;0.97;1.0;0.98;1.0;1.0
+Obesity_onevsrest_6;2;Extra Trees;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;2;Neural Network (MLP);0.95;1.0;0.97;1.0;1.0
+Obesity_onevsrest_6;2;Logistic Regression;0.96;1.0;0.98;1.0;1.0
+page-blocks-1-3_vs_4;2;KNN;0.67;0.5;0.57;0.7;0.74
+page-blocks-1-3_vs_4;2;Random Forest;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;2;Decision Tree;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;2;XGBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;2;AdaBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;2;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;2;Extra Trees;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;2;Neural Network (MLP);0.62;1.0;0.76;0.98;0.98
+page-blocks-1-3_vs_4;2;Logistic Regression;0.38;1.0;0.55;0.95;0.95
+pima;2;KNN;0.67;0.56;0.61;0.69;0.71
+pima;2;Random Forest;0.66;0.55;0.6;0.68;0.7
+pima;2;Decision Tree;0.62;0.57;0.6;0.68;0.69
+pima;2;XGBoost;0.67;0.51;0.58;0.67;0.69
+pima;2;AdaBoost;0.7;0.49;0.57;0.66;0.69
+pima;2;Gradient Boosting;0.68;0.59;0.63;0.71;0.72
+pima;2;Extra Trees;0.63;0.51;0.57;0.66;0.68
+pima;2;Neural Network (MLP);0.37;0.62;0.46;0.52;0.53
+pima;2;Logistic Regression;0.35;1.0;0.51;0.0;0.5
+transfusion;2;KNN;0.43;0.36;0.39;0.55;0.61
+transfusion;2;Random Forest;0.43;0.36;0.39;0.55;0.61
+transfusion;2;Decision Tree;0.4;0.4;0.4;0.57;0.61
+transfusion;2;XGBoost;0.43;0.42;0.42;0.59;0.62
+transfusion;2;AdaBoost;0.55;0.32;0.4;0.54;0.62
+transfusion;2;Gradient Boosting;0.46;0.43;0.45;0.6;0.64
+transfusion;2;Extra Trees;0.38;0.34;0.36;0.53;0.59
+transfusion;2;Neural Network (MLP);0.53;0.43;0.48;0.62;0.66
+transfusion;2;Logistic Regression;0.24;1.0;0.38;0.0;0.5
+vowel0;2;KNN;1.0;1.0;1.0;1.0;1.0
+vowel0;2;Random Forest;0.93;0.96;0.95;0.98;0.98
+vowel0;2;Decision Tree;0.85;0.81;0.83;0.9;0.9
+vowel0;2;XGBoost;0.93;0.96;0.95;0.98;0.98
+vowel0;2;AdaBoost;0.87;0.96;0.91;0.97;0.97
+vowel0;2;Gradient Boosting;0.93;0.93;0.93;0.96;0.96
+vowel0;2;Extra Trees;1.0;0.96;0.98;0.98;0.98
+vowel0;2;Neural Network (MLP);1.0;0.89;0.94;0.94;0.94
+vowel0;2;Logistic Regression;0.55;0.63;0.59;0.77;0.79
+yeast1;2;KNN;0.51;0.78;0.61;0.73;0.73
+yeast1;2;Random Forest;0.51;0.67;0.58;0.71;0.71
+yeast1;2;Decision Tree;0.47;0.66;0.55;0.68;0.68
+yeast1;2;XGBoost;0.55;0.68;0.61;0.72;0.73
+yeast1;2;AdaBoost;0.45;0.71;0.55;0.68;0.68
+yeast1;2;Gradient Boosting;0.52;0.65;0.58;0.7;0.7
+yeast1;2;Extra Trees;0.5;0.72;0.59;0.71;0.71
+yeast1;2;Neural Network (MLP);0.46;0.67;0.54;0.67;0.67
+yeast1;2;Logistic Regression;0.45;0.71;0.55;0.67;0.68
+yeast3;2;KNN;0.63;0.88;0.74;0.91;0.91
+yeast3;2;Random Forest;0.66;0.84;0.74;0.89;0.89
+yeast3;2;Decision Tree;0.64;0.8;0.71;0.87;0.87
+yeast3;2;XGBoost;0.66;0.84;0.74;0.89;0.89
+yeast3;2;AdaBoost;0.61;0.9;0.73;0.91;0.91
+yeast3;2;Gradient Boosting;0.66;0.88;0.75;0.91;0.91
+yeast3;2;Extra Trees;0.71;0.84;0.77;0.89;0.9
+yeast3;2;Neural Network (MLP);0.65;0.86;0.74;0.9;0.9
+yeast3;2;Logistic Regression;0.52;0.9;0.66;0.9;0.9
+abalone9-18;4;KNN;0.27;0.77;0.4;0.82;0.82
+abalone9-18;4;Random Forest;0.31;0.85;0.46;0.86;0.86
+abalone9-18;4;Decision Tree;0.27;0.85;0.41;0.85;0.85
+abalone9-18;4;XGBoost;0.33;0.69;0.45;0.79;0.8
+abalone9-18;4;AdaBoost;0.25;0.69;0.37;0.78;0.78
+abalone9-18;4;Gradient Boosting;0.46;0.85;0.59;0.89;0.89
+abalone9-18;4;Extra Trees;0.3;0.85;0.44;0.86;0.86
+abalone9-18;4;Neural Network (MLP);0.32;0.92;0.48;0.9;0.9
+abalone9-18;4;Logistic Regression;0.26;0.77;0.39;0.82;0.82
+cleveland-0_vs_4;4;KNN;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;4;Random Forest;1.0;0.75;0.86;0.87;0.88
+cleveland-0_vs_4;4;Decision Tree;0.5;0.25;0.33;0.49;0.61
+cleveland-0_vs_4;4;XGBoost;0.67;0.5;0.57;0.7;0.74
+cleveland-0_vs_4;4;AdaBoost;1.0;0.5;0.67;0.71;0.75
+cleveland-0_vs_4;4;Gradient Boosting;0.75;0.75;0.75;0.86;0.86
+cleveland-0_vs_4;4;Extra Trees;1.0;0.5;0.67;0.71;0.75
+cleveland-0_vs_4;4;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;4;Logistic Regression;0.67;1.0;0.8;0.98;0.98
+dermatology-6;4;KNN;1.0;1.0;1.0;1.0;1.0
+dermatology-6;4;Random Forest;1.0;1.0;1.0;1.0;1.0
+dermatology-6;4;Decision Tree;1.0;1.0;1.0;1.0;1.0
+dermatology-6;4;XGBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;4;AdaBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;4;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+dermatology-6;4;Extra Trees;1.0;1.0;1.0;1.0;1.0
+dermatology-6;4;Neural Network (MLP);0.75;1.0;0.86;0.99;0.99
+dermatology-6;4;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+ecoli-0_vs_1;4;KNN;0.9;1.0;0.95;0.88;0.89
+ecoli-0_vs_1;4;Random Forest;0.9;1.0;0.95;0.88;0.89
+ecoli-0_vs_1;4;Decision Tree;0.9;1.0;0.95;0.88;0.89
+ecoli-0_vs_1;4;XGBoost;0.93;1.0;0.97;0.93;0.93
+ecoli-0_vs_1;4;AdaBoost;0.93;1.0;0.97;0.93;0.93
+ecoli-0_vs_1;4;Gradient Boosting;0.93;1.0;0.97;0.93;0.93
+ecoli-0_vs_1;4;Extra Trees;0.9;1.0;0.95;0.88;0.89
+ecoli-0_vs_1;4;Neural Network (MLP);0.65;1.0;0.79;0.0;0.5
+ecoli-0_vs_1;4;Logistic Regression;0.65;1.0;0.79;0.0;0.5
+ecoli1;4;KNN;0.83;0.87;0.85;0.91;0.91
+ecoli1;4;Random Forest;0.77;0.87;0.82;0.9;0.9
+ecoli1;4;Decision Tree;0.78;0.78;0.78;0.86;0.86
+ecoli1;4;XGBoost;0.81;0.74;0.77;0.84;0.84
+ecoli1;4;AdaBoost;0.81;0.91;0.86;0.92;0.92
+ecoli1;4;Gradient Boosting;0.8;0.87;0.83;0.9;0.9
+ecoli1;4;Extra Trees;0.68;0.91;0.78;0.89;0.89
+ecoli1;4;Neural Network (MLP);0.63;0.83;0.72;0.84;0.84
+ecoli1;4;Logistic Regression;0.63;0.96;0.76;0.89;0.89
+iris0;4;KNN;1.0;1.0;1.0;1.0;1.0
+iris0;4;Random Forest;1.0;1.0;1.0;1.0;1.0
+iris0;4;Decision Tree;1.0;1.0;1.0;1.0;1.0
+iris0;4;XGBoost;0.94;1.0;0.97;0.98;0.98
+iris0;4;AdaBoost;1.0;1.0;1.0;1.0;1.0
+iris0;4;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+iris0;4;Extra Trees;1.0;1.0;1.0;1.0;1.0
+iris0;4;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+iris0;4;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;4;KNN;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;4;Random Forest;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;4;Decision Tree;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;4;XGBoost;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;4;AdaBoost;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;4;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;4;Extra Trees;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;4;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;4;Logistic Regression;0.89;1.0;0.94;1.0;1.0
+Migraine_onevsrest_0;4;KNN;0.73;0.97;0.84;0.6;0.67
+Migraine_onevsrest_0;4;Random Forest;0.87;1.0;0.93;0.86;0.87
+Migraine_onevsrest_0;4;Decision Tree;0.79;0.95;0.86;0.73;0.75
+Migraine_onevsrest_0;4;XGBoost;0.87;0.99;0.92;0.85;0.86
+Migraine_onevsrest_0;4;AdaBoost;0.89;0.97;0.93;0.87;0.88
+Migraine_onevsrest_0;4;Gradient Boosting;0.87;1.0;0.93;0.86;0.87
+Migraine_onevsrest_0;4;Extra Trees;0.83;1.0;0.91;0.8;0.82
+Migraine_onevsrest_0;4;Neural Network (MLP);0.89;0.97;0.93;0.87;0.88
+Migraine_onevsrest_0;4;Logistic Regression;0.84;0.97;0.9;0.8;0.82
+Migraine_onevsrest_1;4;KNN;0.78;0.78;0.78;0.86;0.87
+Migraine_onevsrest_1;4;Random Forest;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;4;Decision Tree;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;4;XGBoost;0.9;1.0;0.95;0.99;0.99
+Migraine_onevsrest_1;4;AdaBoost;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;4;Gradient Boosting;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;4;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;4;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;4;Logistic Regression;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_2;4;KNN;0.47;1.0;0.64;0.96;0.96
+Migraine_onevsrest_2;4;Random Forest;0.64;1.0;0.78;0.98;0.98
+Migraine_onevsrest_2;4;Decision Tree;0.78;1.0;0.88;0.99;0.99
+Migraine_onevsrest_2;4;XGBoost;0.7;1.0;0.82;0.99;0.99
+Migraine_onevsrest_2;4;AdaBoost;0.54;1.0;0.7;0.97;0.97
+Migraine_onevsrest_2;4;Gradient Boosting;0.7;1.0;0.82;0.99;0.99
+Migraine_onevsrest_2;4;Extra Trees;0.58;1.0;0.74;0.98;0.98
+Migraine_onevsrest_2;4;Neural Network (MLP);0.38;0.71;0.5;0.81;0.82
+Migraine_onevsrest_2;4;Logistic Regression;0.21;0.86;0.33;0.82;0.82
+Migraine_onevsrest_3;4;KNN;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;4;Random Forest;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;4;Decision Tree;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;4;XGBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;4;AdaBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;4;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;4;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;4;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;4;Logistic Regression;0.86;1.0;0.92;1.0;1.0
+Migraine_onevsrest_4;4;KNN;0.83;1.0;0.91;1.0;1.0
+Migraine_onevsrest_4;4;Random Forest;0.56;1.0;0.71;0.98;0.98
+Migraine_onevsrest_4;4;Decision Tree;0.42;1.0;0.59;0.97;0.97
+Migraine_onevsrest_4;4;XGBoost;0.38;1.0;0.56;0.96;0.96
+Migraine_onevsrest_4;4;AdaBoost;0.83;1.0;0.91;1.0;1.0
+Migraine_onevsrest_4;4;Gradient Boosting;0.71;1.0;0.83;0.99;0.99
+Migraine_onevsrest_4;4;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_4;4;Neural Network (MLP);0.83;1.0;0.91;1.0;1.0
+Migraine_onevsrest_4;4;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_5;4;KNN;0.36;1.0;0.53;0.97;0.97
+Migraine_onevsrest_5;4;Random Forest;0.44;1.0;0.62;0.98;0.98
+Migraine_onevsrest_5;4;Decision Tree;0.44;1.0;0.62;0.98;0.98
+Migraine_onevsrest_5;4;XGBoost;0.4;1.0;0.57;0.97;0.97
+Migraine_onevsrest_5;4;AdaBoost;0.5;1.0;0.67;0.98;0.98
+Migraine_onevsrest_5;4;Gradient Boosting;0.44;1.0;0.62;0.98;0.98
+Migraine_onevsrest_5;4;Extra Trees;0.44;1.0;0.62;0.98;0.98
+Migraine_onevsrest_5;4;Neural Network (MLP);0.33;1.0;0.5;0.96;0.96
+Migraine_onevsrest_5;4;Logistic Regression;0.27;1.0;0.42;0.95;0.95
+new-thyroid1;4;KNN;1.0;0.82;0.9;0.9;0.91
+new-thyroid1;4;Random Forest;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;4;Decision Tree;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;4;XGBoost;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;4;AdaBoost;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;4;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;4;Extra Trees;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;4;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+new-thyroid1;4;Logistic Regression;0.69;1.0;0.81;0.95;0.95
+newthyroid2;4;KNN;1.0;0.82;0.9;0.9;0.91
+newthyroid2;4;Random Forest;1.0;0.82;0.9;0.9;0.91
+newthyroid2;4;Decision Tree;1.0;0.82;0.9;0.9;0.91
+newthyroid2;4;XGBoost;1.0;0.82;0.9;0.9;0.91
+newthyroid2;4;AdaBoost;1.0;1.0;1.0;1.0;1.0
+newthyroid2;4;Gradient Boosting;0.9;0.82;0.86;0.9;0.9
+newthyroid2;4;Extra Trees;1.0;0.91;0.95;0.95;0.95
+newthyroid2;4;Neural Network (MLP);0.2;1.0;0.33;0.41;0.58
+newthyroid2;4;Logistic Regression;0.65;1.0;0.79;0.94;0.94
+Obesity_onevsrest_0;4;KNN;0.73;1.0;0.85;0.97;0.97
+Obesity_onevsrest_0;4;Random Forest;0.95;0.95;0.95;0.97;0.97
+Obesity_onevsrest_0;4;Decision Tree;0.95;1.0;0.98;1.0;1.0
+Obesity_onevsrest_0;4;XGBoost;0.98;0.99;0.98;0.99;0.99
+Obesity_onevsrest_0;4;AdaBoost;0.95;1.0;0.98;1.0;1.0
+Obesity_onevsrest_0;4;Gradient Boosting;0.94;1.0;0.97;1.0;1.0
+Obesity_onevsrest_0;4;Extra Trees;0.96;0.95;0.96;0.97;0.97
+Obesity_onevsrest_0;4;Neural Network (MLP);0.78;1.0;0.88;0.98;0.98
+Obesity_onevsrest_0;4;Logistic Regression;0.13;1.0;0.23;0.0;0.5
+Obesity_onevsrest_1;4;KNN;0.94;0.74;0.83;0.86;0.87
+Obesity_onevsrest_1;4;Random Forest;0.88;0.84;0.86;0.91;0.91
+Obesity_onevsrest_1;4;Decision Tree;0.83;0.87;0.85;0.92;0.92
+Obesity_onevsrest_1;4;XGBoost;0.96;0.94;0.95;0.97;0.97
+Obesity_onevsrest_1;4;AdaBoost;0.58;0.65;0.61;0.77;0.79
+Obesity_onevsrest_1;4;Gradient Boosting;0.98;0.94;0.96;0.97;0.97
+Obesity_onevsrest_1;4;Extra Trees;0.8;0.8;0.8;0.88;0.88
+Obesity_onevsrest_1;4;Neural Network (MLP);0.75;0.8;0.77;0.88;0.88
+Obesity_onevsrest_1;4;Logistic Regression;0.34;0.59;0.43;0.69;0.7
+Obesity_onevsrest_2;4;KNN;0.82;0.9;0.86;0.94;0.94
+Obesity_onevsrest_2;4;Random Forest;1.0;0.61;0.76;0.78;0.81
+Obesity_onevsrest_2;4;Decision Tree;0.78;0.69;0.73;0.82;0.83
+Obesity_onevsrest_2;4;XGBoost;0.94;0.9;0.92;0.95;0.95
+Obesity_onevsrest_2;4;AdaBoost;0.62;0.54;0.58;0.72;0.75
+Obesity_onevsrest_2;4;Gradient Boosting;0.97;0.93;0.95;0.96;0.96
+Obesity_onevsrest_2;4;Extra Trees;0.98;0.76;0.86;0.87;0.88
+Obesity_onevsrest_2;4;Neural Network (MLP);0.29;0.05;0.08;0.22;0.51
+Obesity_onevsrest_2;4;Logistic Regression;0.13;1.0;0.23;0.0;0.5
+Obesity_onevsrest_3;4;KNN;0.9;0.86;0.88;0.92;0.92
+Obesity_onevsrest_3;4;Random Forest;0.99;0.98;0.98;0.99;0.99
+Obesity_onevsrest_3;4;Decision Tree;0.91;0.94;0.93;0.96;0.96
+Obesity_onevsrest_3;4;XGBoost;0.97;0.98;0.97;0.99;0.99
+Obesity_onevsrest_3;4;AdaBoost;0.66;0.57;0.61;0.74;0.76
+Obesity_onevsrest_3;4;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+Obesity_onevsrest_3;4;Extra Trees;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_3;4;Neural Network (MLP);0.7;0.84;0.76;0.89;0.89
+Obesity_onevsrest_3;4;Logistic Regression;0.24;0.44;0.31;0.58;0.61
+Obesity_onevsrest_4;4;KNN;0.93;0.96;0.94;0.97;0.97
+Obesity_onevsrest_4;4;Random Forest;0.99;0.96;0.98;0.98;0.98
+Obesity_onevsrest_4;4;Decision Tree;0.92;0.92;0.92;0.95;0.95
+Obesity_onevsrest_4;4;XGBoost;0.97;0.96;0.97;0.98;0.98
+Obesity_onevsrest_4;4;AdaBoost;0.67;0.65;0.66;0.78;0.79
+Obesity_onevsrest_4;4;Gradient Boosting;0.98;0.96;0.97;0.98;0.98
+Obesity_onevsrest_4;4;Extra Trees;0.99;0.91;0.95;0.96;0.96
+Obesity_onevsrest_4;4;Neural Network (MLP);0.81;0.83;0.82;0.89;0.9
+Obesity_onevsrest_4;4;Logistic Regression;0.17;1.0;0.29;0.0;0.5
+Obesity_onevsrest_5;4;KNN;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_5;4;Random Forest;1.0;0.99;0.99;0.99;0.99
+Obesity_onevsrest_5;4;Decision Tree;0.99;0.99;0.99;0.99;0.99
+Obesity_onevsrest_5;4;XGBoost;1.0;0.93;0.97;0.97;0.97
+Obesity_onevsrest_5;4;AdaBoost;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;4;Gradient Boosting;1.0;0.97;0.98;0.98;0.98
+Obesity_onevsrest_5;4;Extra Trees;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_5;4;Neural Network (MLP);0.95;0.97;0.96;0.98;0.98
+Obesity_onevsrest_5;4;Logistic Regression;0.29;0.97;0.44;0.76;0.79
+Obesity_onevsrest_6;4;KNN;0.91;1.0;0.95;0.99;0.99
+Obesity_onevsrest_6;4;Random Forest;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;4;Decision Tree;0.96;1.0;0.98;1.0;1.0
+Obesity_onevsrest_6;4;XGBoost;0.98;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;4;AdaBoost;0.87;1.0;0.93;0.99;0.99
+Obesity_onevsrest_6;4;Gradient Boosting;0.98;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;4;Extra Trees;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;4;Neural Network (MLP);0.89;1.0;0.94;0.99;0.99
+Obesity_onevsrest_6;4;Logistic Regression;0.94;1.0;0.97;0.99;0.99
+page-blocks-1-3_vs_4;4;KNN;0.67;0.5;0.57;0.7;0.74
+page-blocks-1-3_vs_4;4;Random Forest;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;4;Decision Tree;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;4;XGBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;4;AdaBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;4;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;4;Extra Trees;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;4;Neural Network (MLP);0.54;0.88;0.67;0.91;0.92
+page-blocks-1-3_vs_4;4;Logistic Regression;0.47;1.0;0.64;0.97;0.97
+pima;4;KNN;0.59;0.55;0.57;0.66;0.68
+pima;4;Random Forest;0.66;0.6;0.63;0.71;0.72
+pima;4;Decision Tree;0.62;0.74;0.67;0.75;0.75
+pima;4;XGBoost;0.68;0.62;0.65;0.73;0.73
+pima;4;AdaBoost;0.63;0.71;0.67;0.74;0.74
+pima;4;Gradient Boosting;0.68;0.68;0.68;0.75;0.75
+pima;4;Extra Trees;0.62;0.56;0.59;0.68;0.69
+pima;4;Neural Network (MLP);0.55;0.6;0.57;0.67;0.67
+pima;4;Logistic Regression;0.59;0.54;0.56;0.66;0.67
+transfusion;4;KNN;0.44;0.45;0.45;0.61;0.64
+transfusion;4;Random Forest;0.5;0.42;0.45;0.6;0.64
+transfusion;4;Decision Tree;0.62;0.45;0.52;0.64;0.68
+transfusion;4;XGBoost;0.61;0.47;0.53;0.65;0.69
+transfusion;4;AdaBoost;0.52;0.49;0.5;0.65;0.68
+transfusion;4;Gradient Boosting;0.6;0.47;0.53;0.65;0.69
+transfusion;4;Extra Trees;0.55;0.45;0.49;0.63;0.67
+transfusion;4;Neural Network (MLP);0.38;0.66;0.48;0.66;0.66
+transfusion;4;Logistic Regression;0.24;1.0;0.38;0.0;0.5
+vowel0;4;KNN;1.0;1.0;1.0;1.0;1.0
+vowel0;4;Random Forest;0.84;1.0;0.92;0.99;0.99
+vowel0;4;Decision Tree;0.86;0.89;0.87;0.94;0.94
+vowel0;4;XGBoost;0.89;0.93;0.91;0.96;0.96
+vowel0;4;AdaBoost;0.83;0.93;0.88;0.95;0.95
+vowel0;4;Gradient Boosting;0.84;0.96;0.9;0.97;0.97
+vowel0;4;Extra Trees;0.96;0.96;0.96;0.98;0.98
+vowel0;4;Neural Network (MLP);1.0;0.96;0.98;0.98;0.98
+vowel0;4;Logistic Regression;0.74;0.85;0.79;0.91;0.91
+yeast1;4;KNN;0.5;0.75;0.6;0.72;0.72
+yeast1;4;Random Forest;0.51;0.66;0.58;0.7;0.7
+yeast1;4;Decision Tree;0.5;0.65;0.57;0.69;0.69
+yeast1;4;XGBoost;0.48;0.66;0.56;0.68;0.68
+yeast1;4;AdaBoost;0.46;0.74;0.56;0.69;0.69
+yeast1;4;Gradient Boosting;0.48;0.67;0.56;0.68;0.68
+yeast1;4;Extra Trees;0.51;0.72;0.6;0.72;0.72
+yeast1;4;Neural Network (MLP);0.51;0.65;0.57;0.69;0.7
+yeast1;4;Logistic Regression;0.46;0.72;0.56;0.69;0.69
+yeast3;4;KNN;0.58;0.86;0.69;0.89;0.89
+yeast3;4;Random Forest;0.69;0.82;0.75;0.88;0.89
+yeast3;4;Decision Tree;0.66;0.9;0.76;0.92;0.92
+yeast3;4;XGBoost;0.68;0.84;0.75;0.89;0.89
+yeast3;4;AdaBoost;0.58;0.92;0.71;0.92;0.92
+yeast3;4;Gradient Boosting;0.67;0.88;0.76;0.91;0.91
+yeast3;4;Extra Trees;0.75;0.86;0.8;0.91;0.91
+yeast3;4;Neural Network (MLP);0.63;0.92;0.75;0.93;0.93
+yeast3;4;Logistic Regression;0.52;0.9;0.66;0.9;0.9
+abalone9-18;8;KNN;0.27;0.77;0.4;0.82;0.82
+abalone9-18;8;Random Forest;0.32;0.85;0.47;0.87;0.87
+abalone9-18;8;Decision Tree;0.26;0.85;0.4;0.85;0.85
+abalone9-18;8;XGBoost;0.36;0.69;0.47;0.8;0.81
+abalone9-18;8;AdaBoost;0.27;0.69;0.39;0.78;0.79
+abalone9-18;8;Gradient Boosting;0.33;0.62;0.43;0.75;0.77
+abalone9-18;8;Extra Trees;0.31;0.85;0.45;0.86;0.86
+abalone9-18;8;Neural Network (MLP);0.37;0.85;0.51;0.88;0.88
+abalone9-18;8;Logistic Regression;0.29;0.77;0.42;0.82;0.82
+cleveland-0_vs_4;8;KNN;0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;8;Random Forest;1.0;0.75;0.86;0.87;0.88
+cleveland-0_vs_4;8;Decision Tree;0.5;0.25;0.33;0.49;0.61
+cleveland-0_vs_4;8;XGBoost;0.75;0.75;0.75;0.86;0.86
+cleveland-0_vs_4;8;AdaBoost;1.0;0.75;0.86;0.87;0.88
+cleveland-0_vs_4;8;Gradient Boosting;1.0;0.75;0.86;0.87;0.88
+cleveland-0_vs_4;8;Extra Trees;1.0;0.5;0.67;0.71;0.75
+cleveland-0_vs_4;8;Neural Network (MLP);0.0;0.0;0.0;0.0;0.5
+cleveland-0_vs_4;8;Logistic Regression;0.75;0.75;0.75;0.86;0.86
+dermatology-6;8;KNN;1.0;1.0;1.0;1.0;1.0
+dermatology-6;8;Random Forest;1.0;1.0;1.0;1.0;1.0
+dermatology-6;8;Decision Tree;1.0;1.0;1.0;1.0;1.0
+dermatology-6;8;XGBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;8;AdaBoost;1.0;1.0;1.0;1.0;1.0
+dermatology-6;8;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+dermatology-6;8;Extra Trees;1.0;1.0;1.0;1.0;1.0
+dermatology-6;8;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+dermatology-6;8;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+ecoli-0_vs_1;8;KNN;0.9;1.0;0.95;0.88;0.89
+ecoli-0_vs_1;8;Random Forest;0.93;1.0;0.97;0.93;0.93
+ecoli-0_vs_1;8;Decision Tree;0.96;1.0;0.98;0.96;0.96
+ecoli-0_vs_1;8;XGBoost;0.96;1.0;0.98;0.96;0.96
+ecoli-0_vs_1;8;AdaBoost;0.86;1.0;0.92;0.83;0.85
+ecoli-0_vs_1;8;Gradient Boosting;0.96;1.0;0.98;0.96;0.96
+ecoli-0_vs_1;8;Extra Trees;0.83;1.0;0.91;0.78;0.8
+ecoli-0_vs_1;8;Neural Network (MLP);0.65;1.0;0.79;0.0;0.5
+ecoli-0_vs_1;8;Logistic Regression;0.65;1.0;0.79;0.0;0.5
+ecoli1;8;KNN;0.83;0.87;0.85;0.91;0.91
+ecoli1;8;Random Forest;0.76;0.83;0.79;0.87;0.87
+ecoli1;8;Decision Tree;0.76;0.83;0.79;0.87;0.87
+ecoli1;8;XGBoost;0.83;0.83;0.83;0.89;0.89
+ecoli1;8;AdaBoost;0.81;0.91;0.86;0.92;0.92
+ecoli1;8;Gradient Boosting;0.76;0.83;0.79;0.87;0.87
+ecoli1;8;Extra Trees;0.66;0.91;0.76;0.89;0.89
+ecoli1;8;Neural Network (MLP);0.68;0.83;0.75;0.85;0.86
+ecoli1;8;Logistic Regression;0.63;0.96;0.76;0.89;0.89
+iris0;8;KNN;1.0;1.0;1.0;1.0;1.0
+iris0;8;Random Forest;1.0;1.0;1.0;1.0;1.0
+iris0;8;Decision Tree;1.0;1.0;1.0;1.0;1.0
+iris0;8;XGBoost;0.94;1.0;0.97;0.98;0.98
+iris0;8;AdaBoost;1.0;1.0;1.0;1.0;1.0
+iris0;8;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+iris0;8;Extra Trees;1.0;1.0;1.0;1.0;1.0
+iris0;8;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+iris0;8;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;8;KNN;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;8;Random Forest;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;8;Decision Tree;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;8;XGBoost;0.8;1.0;0.89;1.0;1.0
+kddcup-guess_passwd_vs_satan;8;AdaBoost;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;8;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;8;Extra Trees;1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;8;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+kddcup-guess_passwd_vs_satan;8;Logistic Regression;0.89;1.0;0.94;1.0;1.0
+Migraine_onevsrest_0;8;KNN;0.71;0.97;0.82;0.53;0.63
+Migraine_onevsrest_0;8;Random Forest;0.89;0.99;0.94;0.88;0.88
+Migraine_onevsrest_0;8;Decision Tree;0.79;0.95;0.86;0.73;0.75
+Migraine_onevsrest_0;8;XGBoost;0.89;0.99;0.94;0.88;0.88
+Migraine_onevsrest_0;8;AdaBoost;0.88;0.97;0.92;0.86;0.86
+Migraine_onevsrest_0;8;Gradient Boosting;0.84;0.99;0.91;0.81;0.82
+Migraine_onevsrest_0;8;Extra Trees;0.8;0.99;0.88;0.74;0.77
+Migraine_onevsrest_0;8;Neural Network (MLP);0.89;0.97;0.93;0.87;0.88
+Migraine_onevsrest_0;8;Logistic Regression;0.84;0.97;0.9;0.8;0.82
+Migraine_onevsrest_1;8;KNN;0.8;0.89;0.84;0.92;0.92
+Migraine_onevsrest_1;8;Random Forest;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;8;Decision Tree;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;8;XGBoost;0.9;1.0;0.95;0.99;0.99
+Migraine_onevsrest_1;8;AdaBoost;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;8;Gradient Boosting;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_1;8;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;8;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_1;8;Logistic Regression;0.95;1.0;0.97;0.99;0.99
+Migraine_onevsrest_2;8;KNN;0.35;1.0;0.52;0.94;0.94
+Migraine_onevsrest_2;8;Random Forest;0.58;1.0;0.74;0.98;0.98
+Migraine_onevsrest_2;8;Decision Tree;0.64;1.0;0.78;0.98;0.98
+Migraine_onevsrest_2;8;XGBoost;0.64;1.0;0.78;0.98;0.98
+Migraine_onevsrest_2;8;AdaBoost;0.54;1.0;0.7;0.97;0.97
+Migraine_onevsrest_2;8;Gradient Boosting;0.54;1.0;0.7;0.97;0.97
+Migraine_onevsrest_2;8;Extra Trees;0.44;1.0;0.61;0.96;0.96
+Migraine_onevsrest_2;8;Neural Network (MLP);0.39;1.0;0.56;0.95;0.95
+Migraine_onevsrest_2;8;Logistic Regression;0.23;1.0;0.38;0.89;0.89
+Migraine_onevsrest_3;8;KNN;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;8;Random Forest;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;8;Decision Tree;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;8;XGBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;8;AdaBoost;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;8;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;8;Extra Trees;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;8;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_3;8;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+Migraine_onevsrest_4;8;KNN;0.5;1.0;0.67;0.98;0.98
+Migraine_onevsrest_4;8;Random Forest;0.62;1.0;0.77;0.99;0.99
+Migraine_onevsrest_4;8;Decision Tree;0.45;1.0;0.62;0.97;0.97
+Migraine_onevsrest_4;8;XGBoost;0.42;1.0;0.59;0.97;0.97
+Migraine_onevsrest_4;8;AdaBoost;0.56;1.0;0.71;0.98;0.98
+Migraine_onevsrest_4;8;Gradient Boosting;0.62;1.0;0.77;0.99;0.99
+Migraine_onevsrest_4;8;Extra Trees;0.83;1.0;0.91;1.0;1.0
+Migraine_onevsrest_4;8;Neural Network (MLP);0.71;1.0;0.83;0.99;0.99
+Migraine_onevsrest_4;8;Logistic Regression;0.83;1.0;0.91;1.0;1.0
+Migraine_onevsrest_5;8;KNN;0.24;1.0;0.38;0.94;0.94
+Migraine_onevsrest_5;8;Random Forest;0.44;1.0;0.62;0.98;0.98
+Migraine_onevsrest_5;8;Decision Tree;0.4;1.0;0.57;0.97;0.97
+Migraine_onevsrest_5;8;XGBoost;0.4;1.0;0.57;0.97;0.97
+Migraine_onevsrest_5;8;AdaBoost;0.36;1.0;0.53;0.97;0.97
+Migraine_onevsrest_5;8;Gradient Boosting;0.4;1.0;0.57;0.97;0.97
+Migraine_onevsrest_5;8;Extra Trees;0.36;1.0;0.53;0.97;0.97
+Migraine_onevsrest_5;8;Neural Network (MLP);0.36;1.0;0.53;0.97;0.97
+Migraine_onevsrest_5;8;Logistic Regression;0.27;1.0;0.42;0.95;0.95
+new-thyroid1;8;KNN;1.0;0.82;0.9;0.9;0.91
+new-thyroid1;8;Random Forest;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;8;Decision Tree;0.92;1.0;0.96;0.99;0.99
+new-thyroid1;8;XGBoost;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;8;AdaBoost;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;8;Gradient Boosting;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;8;Extra Trees;1.0;1.0;1.0;1.0;1.0
+new-thyroid1;8;Neural Network (MLP);0.19;1.0;0.32;0.38;0.57
+new-thyroid1;8;Logistic Regression;1.0;1.0;1.0;1.0;1.0
+newthyroid2;8;KNN;1.0;0.82;0.9;0.9;0.91
+newthyroid2;8;Random Forest;1.0;0.82;0.9;0.9;0.91
+newthyroid2;8;Decision Tree;0.9;0.82;0.86;0.9;0.9
+newthyroid2;8;XGBoost;1.0;0.82;0.9;0.9;0.91
+newthyroid2;8;AdaBoost;1.0;0.91;0.95;0.95;0.95
+newthyroid2;8;Gradient Boosting;1.0;0.91;0.95;0.95;0.95
+newthyroid2;8;Extra Trees;1.0;0.91;0.95;0.95;0.95
+newthyroid2;8;Neural Network (MLP);0.19;1.0;0.31;0.33;0.56
+newthyroid2;8;Logistic Regression;0.69;1.0;0.81;0.95;0.95
+Obesity_onevsrest_0;8;KNN;0.7;1.0;0.82;0.97;0.97
+Obesity_onevsrest_0;8;Random Forest;0.9;0.97;0.93;0.98;0.98
+Obesity_onevsrest_0;8;Decision Tree;0.94;1.0;0.97;1.0;1.0
+Obesity_onevsrest_0;8;XGBoost;0.95;1.0;0.98;1.0;1.0
+Obesity_onevsrest_0;8;AdaBoost;0.86;1.0;0.92;0.99;0.99
+Obesity_onevsrest_0;8;Gradient Boosting;0.94;1.0;0.97;1.0;1.0
+Obesity_onevsrest_0;8;Extra Trees;0.92;0.96;0.94;0.97;0.97
+Obesity_onevsrest_0;8;Neural Network (MLP);0.77;0.99;0.87;0.97;0.97
+Obesity_onevsrest_0;8;Logistic Regression;0.13;1.0;0.23;0.0;0.5
+Obesity_onevsrest_1;8;KNN;0.93;0.82;0.88;0.9;0.91
+Obesity_onevsrest_1;8;Random Forest;0.82;0.89;0.85;0.93;0.93
+Obesity_onevsrest_1;8;Decision Tree;0.82;0.73;0.77;0.84;0.85
+Obesity_onevsrest_1;8;XGBoost;0.96;0.96;0.96;0.98;0.98
+Obesity_onevsrest_1;8;AdaBoost;0.59;0.68;0.63;0.79;0.8
+Obesity_onevsrest_1;8;Gradient Boosting;0.99;0.95;0.97;0.98;0.98
+Obesity_onevsrest_1;8;Extra Trees;0.76;0.91;0.83;0.93;0.93
+Obesity_onevsrest_1;8;Neural Network (MLP);0.69;0.79;0.74;0.86;0.87
+Obesity_onevsrest_1;8;Logistic Regression;0.34;0.64;0.45;0.72;0.72
+Obesity_onevsrest_2;8;KNN;0.79;0.93;0.86;0.95;0.95
+Obesity_onevsrest_2;8;Random Forest;0.99;0.8;0.88;0.89;0.9
+Obesity_onevsrest_2;8;Decision Tree;0.84;0.81;0.82;0.89;0.89
+Obesity_onevsrest_2;8;XGBoost;0.89;0.89;0.89;0.94;0.94
+Obesity_onevsrest_2;8;AdaBoost;0.52;0.57;0.54;0.72;0.74
+Obesity_onevsrest_2;8;Gradient Boosting;0.94;0.92;0.93;0.95;0.95
+Obesity_onevsrest_2;8;Extra Trees;0.99;0.86;0.92;0.92;0.93
+Obesity_onevsrest_2;8;Neural Network (MLP);0.13;1.0;0.23;0.0;0.5
+Obesity_onevsrest_2;8;Logistic Regression;0.12;0.25;0.16;0.42;0.48
+Obesity_onevsrest_3;8;KNN;0.83;0.92;0.87;0.94;0.94
+Obesity_onevsrest_3;8;Random Forest;0.94;0.97;0.95;0.98;0.98
+Obesity_onevsrest_3;8;Decision Tree;0.85;0.97;0.9;0.97;0.97
+Obesity_onevsrest_3;8;XGBoost;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_3;8;AdaBoost;0.51;0.61;0.55;0.74;0.76
+Obesity_onevsrest_3;8;Gradient Boosting;0.99;0.99;0.99;0.99;0.99
+Obesity_onevsrest_3;8;Extra Trees;0.9;0.94;0.92;0.96;0.96
+Obesity_onevsrest_3;8;Neural Network (MLP);0.75;0.46;0.57;0.67;0.72
+Obesity_onevsrest_3;8;Logistic Regression;0.24;0.44;0.31;0.58;0.61
+Obesity_onevsrest_4;8;KNN;0.96;0.97;0.97;0.98;0.98
+Obesity_onevsrest_4;8;Random Forest;0.98;0.96;0.97;0.98;0.98
+Obesity_onevsrest_4;8;Decision Tree;0.88;0.95;0.92;0.96;0.96
+Obesity_onevsrest_4;8;XGBoost;1.0;0.98;0.99;0.99;0.99
+Obesity_onevsrest_4;8;AdaBoost;0.63;0.81;0.71;0.86;0.86
+Obesity_onevsrest_4;8;Gradient Boosting;0.99;0.98;0.99;0.99;0.99
+Obesity_onevsrest_4;8;Extra Trees;0.97;0.94;0.96;0.97;0.97
+Obesity_onevsrest_4;8;Neural Network (MLP);0.92;0.76;0.83;0.87;0.87
+Obesity_onevsrest_4;8;Logistic Regression;0.17;1.0;0.29;0.0;0.5
+Obesity_onevsrest_5;8;KNN;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_5;8;Random Forest;1.0;1.0;1.0;1.0;1.0
+Obesity_onevsrest_5;8;Decision Tree;0.99;0.99;0.99;0.99;0.99
+Obesity_onevsrest_5;8;XGBoost;1.0;0.99;0.99;0.99;0.99
+Obesity_onevsrest_5;8;AdaBoost;1.0;1.0;1.0;1.0;1.0
+Obesity_onevsrest_5;8;Gradient Boosting;0.99;0.99;0.99;0.99;0.99
+Obesity_onevsrest_5;8;Extra Trees;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_5;8;Neural Network (MLP);0.99;0.98;0.98;0.99;0.99
+Obesity_onevsrest_5;8;Logistic Regression;0.29;0.97;0.44;0.76;0.79
+Obesity_onevsrest_6;8;KNN;0.92;1.0;0.96;0.99;0.99
+Obesity_onevsrest_6;8;Random Forest;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;8;Decision Tree;0.96;1.0;0.98;1.0;1.0
+Obesity_onevsrest_6;8;XGBoost;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;8;AdaBoost;0.89;1.0;0.94;0.99;0.99
+Obesity_onevsrest_6;8;Gradient Boosting;0.98;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;8;Extra Trees;0.99;1.0;0.99;1.0;1.0
+Obesity_onevsrest_6;8;Neural Network (MLP);0.97;1.0;0.98;1.0;1.0
+Obesity_onevsrest_6;8;Logistic Regression;0.95;1.0;0.97;1.0;1.0
+page-blocks-1-3_vs_4;8;KNN;0.67;0.5;0.57;0.7;0.74
+page-blocks-1-3_vs_4;8;Random Forest;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;8;Decision Tree;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;8;XGBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;8;AdaBoost;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;8;Gradient Boosting;0.89;1.0;0.94;1.0;1.0
+page-blocks-1-3_vs_4;8;Extra Trees;1.0;1.0;1.0;1.0;1.0
+page-blocks-1-3_vs_4;8;Neural Network (MLP);0.67;1.0;0.8;0.98;0.99
+page-blocks-1-3_vs_4;8;Logistic Regression;0.47;1.0;0.64;0.97;0.97
+pima;8;KNN;0.59;0.59;0.59;0.68;0.68
+pima;8;Random Forest;0.66;0.61;0.64;0.71;0.72
+pima;8;Decision Tree;0.64;0.59;0.61;0.7;0.71
+pima;8;XGBoost;0.68;0.66;0.67;0.74;0.75
+pima;8;AdaBoost;0.64;0.7;0.67;0.75;0.75
+pima;8;Gradient Boosting;0.71;0.7;0.7;0.77;0.77
+pima;8;Extra Trees;0.68;0.65;0.66;0.74;0.74
+pima;8;Neural Network (MLP);0.55;0.57;0.56;0.66;0.66
+pima;8;Logistic Regression;0.61;0.57;0.59;0.68;0.69
+transfusion;8;KNN;0.47;0.51;0.49;0.65;0.66
+transfusion;8;Random Forest;0.49;0.49;0.49;0.64;0.67
+transfusion;8;Decision Tree;0.49;0.49;0.49;0.64;0.67
+transfusion;8;XGBoost;0.5;0.51;0.5;0.66;0.68
+transfusion;8;AdaBoost;0.48;0.58;0.53;0.69;0.7
+transfusion;8;Gradient Boosting;0.5;0.51;0.5;0.66;0.68
+transfusion;8;Extra Trees;0.51;0.49;0.5;0.65;0.67
+transfusion;8;Neural Network (MLP);0.56;0.51;0.53;0.67;0.69
+transfusion;8;Logistic Regression;0.24;1.0;0.38;0.0;0.5
+vowel0;8;KNN;1.0;1.0;1.0;1.0;1.0
+vowel0;8;Random Forest;0.87;1.0;0.93;0.99;0.99
+vowel0;8;Decision Tree;0.76;0.96;0.85;0.97;0.97
+vowel0;8;XGBoost;0.93;1.0;0.96;1.0;1.0
+vowel0;8;AdaBoost;0.84;1.0;0.92;0.99;0.99
+vowel0;8;Gradient Boosting;0.87;1.0;0.93;0.99;0.99
+vowel0;8;Extra Trees;0.96;1.0;0.98;1.0;1.0
+vowel0;8;Neural Network (MLP);1.0;1.0;1.0;1.0;1.0
+vowel0;8;Logistic Regression;0.67;0.89;0.76;0.92;0.92
+yeast1;8;KNN;0.51;0.74;0.6;0.72;0.72
+yeast1;8;Random Forest;0.5;0.64;0.56;0.69;0.69
+yeast1;8;Decision Tree;0.46;0.61;0.53;0.66;0.66
+yeast1;8;XGBoost;0.51;0.71;0.59;0.71;0.71
+yeast1;8;AdaBoost;0.48;0.74;0.58;0.7;0.7
+yeast1;8;Gradient Boosting;0.54;0.7;0.61;0.73;0.73
+yeast1;8;Extra Trees;0.47;0.78;0.59;0.71;0.71
+yeast1;8;Neural Network (MLP);0.47;0.71;0.57;0.69;0.69
+yeast1;8;Logistic Regression;0.47;0.73;0.57;0.69;0.7
+yeast3;8;KNN;0.6;0.86;0.71;0.89;0.89
+yeast3;8;Random Forest;0.69;0.82;0.75;0.88;0.89
+yeast3;8;Decision Tree;0.66;0.9;0.76;0.92;0.92
+yeast3;8;XGBoost;0.66;0.84;0.74;0.89;0.89
+yeast3;8;AdaBoost;0.65;0.92;0.76;0.93;0.93
+yeast3;8;Gradient Boosting;0.68;0.88;0.77;0.91;0.91
+yeast3;8;Extra Trees;0.71;0.86;0.78;0.91;0.91
+yeast3;8;Neural Network (MLP);0.63;0.9;0.74;0.92;0.92
+yeast3;8;Logistic Regression;0.52;0.9;0.66;0.9;0.9
