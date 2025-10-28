@@ -108,7 +108,9 @@ def collect_metrics(root_dir, output_csv):
         "classification_results_SMOTECDNN",
         "classification_results_SYRFD_thr2",
         "classification_results_SYRFD_thr4",
-        "classification_results_SYRFD_thr8"
+        "classification_results_SYRFD_thr8",
+        "classification_results_llama",
+        "classification_results_deepseek"
     ]
     for method_folder in method_dirs:
         method_path = os.path.join(root_dir, method_folder)

@@ -333,12 +333,12 @@ datasets = ['abalone9-18', 'cleveland-0_vs_4', 'dermatology-6', 'iris0','ecoli-0
             'page-blocks-1-3_vs_4','pima', 'transfusion','vowel0', 'yeast1', 'yeast3']
 
 
-methodologies = ["casTGAN","SMOTE","SMOTECDNN","SYRFD_thr2","SYRFD_thr4","SYRFD_thr8"]
+methodologies = ["casTGAN","SMOTE","SMOTECDNN","SYRFD_thr2","SYRFD_thr4","SYRFD_thr8","llama","deepseek"]
 
 for method in methodologies:
     for ds in datasets:
         real_csv = f"C:/Users\gianp\Desktop\Codes\github\DataAugmentationRFD/imbalanced_datasets/{ds}.csv"
-        if method not in ["casTGAN","SMOTE","SMOTECDNN"]:
+        if method not in ["casTGAN","SMOTE","SMOTECDNN","llama","deepseek"]:
             tmp = method.split("_thr")
             synthetic_csv = f"C:/Users\gianp\Desktop\Codes\github\DataAugmentationRFD/classification_results_{tmp[0]}_thr{tmp[1]}/new_tuples/{ds}_new_tuples_{tmp[1]}.csv"
         else:
@@ -365,19 +365,20 @@ df_risultati = df_risultati[col_order]
 df_risultati = df_risultati.round(3)
 
 '''
+'''
 # Salva in CSV
-output_csv = f"risultati_metriche_wide.csv"
+output_csv = f"risultati_metriche_wide_final.csv"
 df_risultati.to_csv(output_csv, index=False, sep=";")
 print(f"\n✅ File salvato in formato WIDE: {output_csv}")
 print(df_risultati.head())
 '''
-
+'''
 # ===========================
 # Salvataggio CSV per test statistici
 # ===========================
 # Creiamo una copia del DataFrame wide con solo le metriche che ci interessano
 metriche=["Silhouette","Davies-Bouldin","Compactness_class_1",
-          "KL_mean","JS_mean","Q_multi_attribute_similarity","mDCR"]
+          "KL_mean","JS_mean","Q_multi_attribute_similarity"]
 
 # Se vuoi anche info sul dataset e metodo
 df_test_formatted = df_risultati[["dataset", "metodo"] + metriche].copy()
@@ -388,13 +389,13 @@ for m in metriche:
     df_test_formatted[m] = df_test_formatted[m].round(3).astype(str) + " ± 0.000"
 
 # Salva il CSV pronto per SYRFD
-df_test_formatted.to_csv("metriche_per_dataset.csv", index=False, sep=";")
+df_test_formatted.to_csv("metriche_per_dataset_final.csv", index=False, sep=";")
 
 
 
 
 metriche=["Silhouette","Davies-Bouldin","Compactness_class_1",
-          "KL_mean","JS_mean","Q_multi_attribute_similarity","mDCR"]
+          "KL_mean","JS_mean","Q_multi_attribute_similarity"]
 # Calcola media e std
 summary = df_risultati.groupby("metodo")[metriche].agg(["mean", "std"]).round(3)
 
@@ -411,4 +412,4 @@ summary_final.columns = [m for m, _ in summary_final.columns]
 print(summary_final)
 
 # Salva in CSV con separatore ;
-summary_final.to_csv("statistiche_metriche_per_metodo_mean_std.csv", sep=";")
+summary_final.to_csv("statistiche_metriche_per_metodo_mean_std_final.csv", sep=";")
