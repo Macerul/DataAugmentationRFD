@@ -13,10 +13,9 @@ for filename in os.listdir(base_dir):
         with open(file_path, "r", encoding="utf-8") as f:
             lines = f.readlines()
 
-        # Conta le righe che corrispondono al pattern RFD
         count = sum(1 for line in lines if rfd_pattern.search(line))
         rfd_counts[filename] = count
 
 print("RFD per file:\n")
 for fname, count in sorted(rfd_counts.items()):
-    print(f"{fname}:    {count} RFDcs")
+    print(f"{fname}:{count} RFDcs")
