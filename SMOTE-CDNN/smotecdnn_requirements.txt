@@ -1,0 +1,134 @@
+annotated-types==0.7.0
+anyio==4.11.0
+argon2-cffi==25.1.0
+argon2-cffi-bindings==25.1.0
+arrow==1.4.0
+asttokens==3.0.0
+async-lru==2.0.5
+attrs==25.4.0
+babel==2.17.0
+beautifulsoup4==4.14.2
+bleach==6.2.0
+Bottleneck @ file:///C:/b/abs_816hr2khp1/croot/bottleneck_1731058648110/work
+Brotli @ file:///C:/b/abs_c415aux9ra/croot/brotli-split_1736182803933/work
+certifi==2025.10.5
+cffi==2.0.0
+charset-normalizer==3.4.4
+colorama==0.4.6
+comm==0.2.3
+contourpy @ file:///C:/b/abs_f2u2o_8s9g/croot/contourpy_1732540071787/work
+cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
+debugpy==1.8.17
+decorator==5.2.1
+defusedxml==0.7.1
+distro==1.9.0
+executing==2.2.1
+fastjsonschema==2.21.2
+fonttools @ file:///C:/miniconda3/conda-bld/fonttools_1758791790475/work
+fqdn==1.5.1
+h11==0.16.0
+httpcore==1.0.9
+httpx==0.28.1
+idna==3.11
+imbalanced-learn==0.12.2
+imblearn==0.0
+ipykernel==7.0.1
+ipython==9.6.0
+ipython_pygments_lexers==1.1.1
+ipywidgets==8.1.7
+isoduration==20.11.0
+jedi==0.19.2
+Jinja2==3.1.6
+jiter==0.11.1
+joblib @ file:///C:/miniconda3/conda-bld/joblib_1757926375805/work
+json5==0.12.1
+jsonpointer==3.0.0
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+jupyter==1.1.1
+jupyter-console==6.6.3
+jupyter-events==0.12.0
+jupyter-lsp==2.3.0
+jupyter_client==8.6.3
+jupyter_core==5.9.1
+jupyter_server==2.17.0
+jupyter_server_terminals==0.5.3
+jupyterlab==4.4.10
+jupyterlab_pygments==0.3.0
+jupyterlab_server==2.28.0
+jupyterlab_widgets==3.0.15
+kiwisolver @ file:///C:/b/abs_faf90xet7a/croot/kiwisolver_1737040915779/work
+lark==1.3.0
+MarkupSafe==3.0.3
+matplotlib==3.10.6
+matplotlib-inline==0.2.1
+mistune==3.1.4
+mkl-service==2.4.0
+mkl_fft @ file:///C:/b/abs_64riv3lfyn/croot/mkl_fft_1751310924052/work
+mkl_random @ file:///C:/b/abs_47jvsmau4j/croot/mkl_random_1751310922820/work
+nbclient==0.10.2
+nbconvert==7.16.6
+nbformat==5.10.4
+nest-asyncio==1.6.0
+notebook==7.4.7
+notebook_shim==0.2.4
+numexpr @ file:///C:/b/abs_3buvfgcf6r/croot/numexpr_1755766488094/work
+numpy @ file:///C:/b/abs_81ri0q57xq/croot/numpy_and_numpy_base_1755590863635/work/dist/numpy-1.26.4-cp311-cp311-win_amd64.whl#sha256=af156afd482d0009c90438c87a9974684f1ae8a95663cd70990b263c322310ed
+openai==2.6.1
+overrides==7.7.0
+packaging @ file:///C:/b/abs_f7t3vr2_lo/croot/packaging_1753775377650/work
+pandas @ file:///C:/b/abs_58a1hlvjeo/croot/pandas_1756466410850/work/dist/pandas-2.3.2-cp311-cp311-win_amd64.whl#sha256=1728e1473f9a0b1d06afa0897ce043c8a8c896e44d865d8ca564deaa0f58de58
+pandocfilters==1.5.1
+parso==0.8.5
+pillow @ file:///C:/b/abs_b06nvnir5m/croot/pillow_1752524543576/work
+platformdirs==4.5.0
+prometheus_client==0.23.1
+prompt_toolkit==3.0.52
+psutil==7.1.2
+pure_eval==0.2.3
+pycparser==2.23
+pydantic==2.12.3
+pydantic_core==2.41.4
+Pygments==2.19.2
+pyparsing==3.2.5
+PyQt6==6.9.1
+PyQt6_sip @ file:///C:/miniconda3/conda-bld/pyqt-split_1757511038427/work/pyqt_sip
+python-dateutil @ file:///C:/b/abs_2b3otpv2vk/croot/python-dateutil_1716484934801/work
+python-json-logger==4.0.0
+pytz @ file:///C:/b/abs_f8wdzeix0n/croot/pytz_1752135878094/work
+pywinpty==3.0.2
+PyYAML==6.0.3
+pyzmq==27.1.0
+referencing==0.37.0
+requests==2.32.5
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+rfc3987-syntax==1.1.0
+rpds-py==0.28.0
+scikit-learn @ file:///C:/b/abs_d6_krvz8aa/croot/scikit-learn_1714164798159/work
+scipy==1.16.2
+seaborn @ file:///C:/b/abs_0bv5x0ucxb/croot/seaborn_1749110315600/work
+Send2Trash==1.8.3
+sip @ file:///C:/b/abs_f6ow8vlbb7/croot/sip_1756224172742/work
+six @ file:///C:/b/abs_149wuyuo1o/croot/six_1744271521515/work
+sniffio==1.3.1
+soupsieve==2.8
+stack-data==0.6.3
+terminado==0.18.1
+threadpoolctl==3.6.0
+tinycss2==1.4.0
+tornado @ file:///C:/b/abs_7dzpc171lf/croot/tornado_1748956950306/work
+tqdm==4.67.1
+traitlets==5.14.3
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+tzdata @ file:///croot/python-tzdata_1746123641790/work
+unicodedata2 @ file:///C:/b/abs_dfnftvxi4k/croot/unicodedata2_1736543771112/work
+uri-template==1.3.0
+urllib3==2.5.0
+wcwidth==0.2.14
+webcolors==24.11.1
+webencodings==0.5.1
+websocket-client==1.9.0
+widgetsnbextension==4.0.14
+xgboost @ file:///C:/b/abs_26mspjjprf/croot/xgboost-split_1728569131852/work

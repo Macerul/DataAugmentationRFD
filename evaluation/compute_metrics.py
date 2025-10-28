@@ -3,18 +3,16 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import silhouette_score, davies_bouldin_score, pairwise_distances
 from scipy.stats import entropy
 import numpy as np
-# ===========================
+
+
 # UTILS: data loader
-# ===========================
 import os
 
 def leggi_nomi_csv(cartella):
     """
     Legge tutti i file .csv in una cartella e restituisce i nomi senza estensione.
-
     Args:
         cartella (str): percorso della cartella.
-
     Returns:
         list: lista dei nomi dei file (senza estensione .csv)
     """
@@ -48,10 +46,8 @@ def load_data(real_csv, synthetic_csv, class_column):
 
     return X_real, X_syn, y_real, y_syn, feature_columns
 
-# ===========================
-# Standardization needed
-# ===========================
 
+# Standardization needed
 def silhouette_metric(X_real, X_syn, y_real, y_syn):
     X_all = np.vstack([X_real, X_syn])
     y_all = np.hstack([y_real, y_syn])
@@ -79,9 +75,7 @@ def intra_class_compactness(X_real, X_syn, y_real, y_syn):
         compactness_results[f"Compactness_class_{c}"] = compactness
     return compactness_results
 
-# ===========================
 #  Helper per calcolo bin dinamico
-# ===========================
 def auto_n_bins(x):
     """
     Calcola automaticamente il numero di bin con la regola di Freedman–Diaconis.
@@ -118,9 +112,8 @@ def auto_2d_bin_edges(x, y, min_bins=5, max_bins=200):
     xedges = np.linspace(np.min(x), np.max(x), nx + 1) if np.max(x) > np.min(x) else np.array([np.min(x), np.max(x)+1e-6])
     yedges = np.linspace(np.min(y), np.max(y), ny + 1) if np.max(y) > np.min(y) else np.array([np.min(y), np.max(y)+1e-6])
     return xedges, yedges
-# ===========================
+
 #  KL Divergence
-# ===========================
 def kl_divergence_metric(X_real, X_syn, y_real, y_syn):
     """
     Calcola la Kullback–Leibler Divergence media e per-feature
@@ -144,9 +137,8 @@ def kl_divergence_metric(X_real, X_syn, y_real, y_syn):
     kl_results["KL_mean"] = np.mean(list(kl_results.values()))
     return kl_results
 
-# ===========================
+
 #  Jensen–Shannon Divergence
-# ===========================
 def js_divergence_metric(X_real, X_syn, y_real, y_syn):
     """
     Calcola la Jensen–Shannon Divergence media e per-feature
@@ -169,9 +161,7 @@ def js_divergence_metric(X_real, X_syn, y_real, y_syn):
     js_results["JS_mean"] = np.mean(list(js_results.values()))
     return js_results
 
-# -------------------------
-# Q-function: JS mean over pairs of features -> Q = 1 - JS_mean
-# -------------------------
+# Q-function:
 def q_function_multi_attributes_similarity(X_real, X_syn, use_freedman=True, n_bins_fixed=20, max_pairs=1000, return_per_pair=False):
     """
     Calcola la Q-function (similarità multi-attributes) tra X_real e X_syn.
@@ -251,9 +241,7 @@ def q_function_multi_attributes_similarity(X_real, X_syn, use_freedman=True, n_b
         out["JS_per_pair"] = js_per_pair
     return out
 
-# -------------------------
 # Divergenza sulla sola colonna classe (y_real, y_syn) - JS per la distribuzione delle etichette
-# -------------------------
 def js_class_distribution(y_real, y_syn):
     y_real = np.asarray(y_real)
     y_syn = np.asarray(y_syn)
@@ -268,10 +256,8 @@ def js_class_distribution(y_real, y_syn):
     m = 0.5 * (p + q)
     js = 0.5 * (entropy(p, m) + entropy(q, m))
     return {"JS_class_distribution": float(js)}
-# ===========================
-# no standardization
-# ===========================
 
+# no standardization
 def median_distance_to_closest_record(real_csv, synthetic_csv, distance_metric="euclidean"):
     real_data = pd.read_csv(real_csv)
     synt_data = pd.read_csv(synthetic_csv)
@@ -369,23 +355,16 @@ df_risultati = df_risultati.round(3)
 # Salva in CSV
 output_csv = f"risultati_metriche_wide_final.csv"
 df_risultati.to_csv(output_csv, index=False, sep=";")
-print(f"\n✅ File salvato in formato WIDE: {output_csv}")
 print(df_risultati.head())
 '''
 '''
-# ===========================
-# Salvataggio CSV per test statistici
-# ===========================
-# Creiamo una copia del DataFrame wide con solo le metriche che ci interessano
+
 metriche=["Silhouette","Davies-Bouldin","Compactness_class_1",
           "KL_mean","JS_mean","Q_multi_attribute_similarity"]
 
-# Se vuoi anche info sul dataset e metodo
 df_test_formatted = df_risultati[["dataset", "metodo"] + metriche].copy()
 
 for m in metriche:
-    # Aggiungi colonna in formato "mean ± std"
-    # Qui std può essere calcolato su singolo dataset se hai più ripetizioni, altrimenti metti 0
     df_test_formatted[m] = df_test_formatted[m].round(3).astype(str) + " ± 0.000"
 
 # Salva il CSV pronto per SYRFD

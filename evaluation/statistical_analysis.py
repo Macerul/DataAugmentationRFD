@@ -4,9 +4,7 @@ import seaborn as sns
 from scipy.stats import wilcoxon
 import numpy as np
 
-# ==========================
-# Carica CSV
-# ==========================
+
 csv_file = "metriche_per_dataset.csv"
 df = pd.read_csv(csv_file, sep=";")
 
@@ -23,15 +21,11 @@ for m in metrics:
 # Crea colonna soglia
 df_syrfd['soglia'] = df_syrfd['metodo'].str.extract(r'thr(\d+)').astype(int)
 
-# ==========================
 # Definisci confronti
-# ==========================
 comparisons = [(2, 4), (2, 8), (4, 8)]
 comparison_labels = ["2 vs 4", "2 vs 8", "4 vs 8"]
 
-# ==========================
 # Calcola p-value Wilcoxon
-# ==========================
 p_wilcoxon = pd.DataFrame(index=metrics, columns=comparison_labels)
 
 for metric in metrics:
@@ -51,9 +45,8 @@ for metric, res in p_wilcoxon.iterrows():
     print(f"\n{metric}:")
     for comp in comparison_labels:
         print(f"{comp} -> p={res[comp]:.3f}")
-# ==========================
+
 # Rinomina metriche per grafico
-# ==========================
 metric_labels = {
     "Silhouette": "Silhouette",
     "Davies-Bouldin": "DBI",
@@ -63,9 +56,8 @@ metric_labels = {
 }
 p_wilcoxon.rename(index=metric_labels, inplace=True)
 
-# ==========================
+
 # Plot heatmap Wilcoxon
-# ==========================
 plt.figure(figsize=(8, 5))
 sns.heatmap(
     p_wilcoxon, annot=True, fmt=".3f",
@@ -84,4 +76,4 @@ plt.tight_layout()
 #plt.savefig("wilcoxon_heatmap_SYRFD.pdf", bbox_inches="tight")
 plt.show()
 
-print("✅ Heatmap salvata come 'wilcoxon_heatmap_SYRFD.png'")
+print("Heatmap computed")
