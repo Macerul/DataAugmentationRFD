@@ -1,7 +1,4 @@
 import os
-import re
-
-import pandas
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -13,36 +10,18 @@ from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, Gradien
     ExtraTreesClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.metrics import roc_auc_score, f1_score, confusion_matrix, accuracy_score, precision_score, recall_score, \
     balanced_accuracy_score
 from imblearn.metrics import geometric_mean_score
-from imblearn.over_sampling import SMOTE
 import warnings
 
-
 warnings.filterwarnings('ignore')
-# from rfd_augmentation_parametric import RFDAwareAugmenter
-from rfd_augmentation_parametric import RFDAwareAugmenter
-
-"""
-The G-mean, or geometric mean, is a performance metric in machine learning used for evaluating binary
- classification models, particularly in imbalanced datasets. 
- It provides a balanced view by considering both true positive rate (sensitivity) and 
- true negative rate (specificity). 
- The G-mean is calculated as the square root of the product of sensitivity and specificity. 
-Imbalanced Data:
-It's particularly useful for evaluating classifiers on imbalanced datasets, 
-where one class has significantly more samples than the other.
-"""
-
 
 def load_data(path: str) -> pd.DataFrame:
     """
     Load dataset from a CSV file. Assumes the target column is named 'class'.
     """
     return pd.read_csv(path, sep=',')
-
 
 def plot_confusion_matrix(cm: pd.DataFrame, classes: list, title: str, filename: str):
     """
@@ -57,7 +36,6 @@ def plot_confusion_matrix(cm: pd.DataFrame, classes: list, title: str, filename:
     plt.tight_layout()
     plt.savefig(filename)
     plt.close()
-
 
 def get_models_and_params():
     """
@@ -149,7 +127,6 @@ def get_models_and_params():
 
     return models_params
 
-
 def perform_grid_search(model, param_grid, X_train, y_train, cv=3, scoring='f1'):
     """
     Perform grid search with cross-validation to find the best hyperparameters.
@@ -171,7 +148,6 @@ def perform_grid_search(model, param_grid, X_train, y_train, cv=3, scoring='f1')
     print(f"Best {scoring} score: {grid_search.best_score_:.2f}")
 
     return grid_search.best_estimator_
-
 
 def main():
     # Parameters

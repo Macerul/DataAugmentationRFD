@@ -1,20 +1,16 @@
 import glob
 import os
-import re
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import xgboost as xgb
 from sklearn.model_selection import train_test_split, GridSearchCV, ParameterGrid
 from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import GaussianNB
-from lightgbm import LGBMClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier, \
     ExtraTreesClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.metrics import roc_auc_score, f1_score, confusion_matrix, accuracy_score, precision_score, recall_score, \
     balanced_accuracy_score
 from imblearn.metrics import geometric_mean_score
@@ -22,19 +18,6 @@ from imblearn.over_sampling import SMOTE
 import warnings
 
 warnings.filterwarnings('ignore')
-
-
-
-"""
-The G-mean, or geometric mean, is a performance metric in machine learning used for evaluating binary
- classification models, particularly in imbalanced datasets. 
- It provides a balanced view by considering both true positive rate (sensitivity) and 
- true negative rate (specificity). 
- The G-mean is calculated as the square root of the product of sensitivity and specificity. 
-Imbalanced Data:
-It's particularly useful for evaluating classifiers on imbalanced datasets, 
-where one class has significantly more samples than the other.
-"""
 
 
 def load_data(path: str) -> pd.DataFrame:
