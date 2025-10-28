@@ -19,32 +19,14 @@ from imblearn.over_sampling import SMOTE
 import warnings
 
 warnings.filterwarnings('ignore')
-# from rfd_augmentation_parametric import RFDAwareAugmenter
 from rfd_augmentation_parametric import RFDAwareAugmenter
-
-"""
-The G-mean, or geometric mean, is a performance metric in machine learning used for evaluating binary
- classification models, particularly in imbalanced datasets. 
- It provides a balanced view by considering both true positive rate (sensitivity) and 
- true negative rate (specificity). 
- The G-mean is calculated as the square root of the product of sensitivity and specificity. 
-Imbalanced Data:
-It's particularly useful for evaluating classifiers on imbalanced datasets, 
-where one class has significantly more samples than the other.
-"""
 
 
 def load_data(path: str) -> pd.DataFrame:
-    """
-    Load dataset from a CSV file. Assumes the target column is named 'class'.
-    """
     return pd.read_csv(path)
 
 
 def plot_confusion_matrix(cm: pd.DataFrame, classes: list, title: str, filename: str):
-    """
-    Plot and save the confusion matrix.
-    """
     plt.figure(figsize=(6, 4))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
                 xticklabels=classes, yticklabels=classes)
@@ -57,9 +39,6 @@ def plot_confusion_matrix(cm: pd.DataFrame, classes: list, title: str, filename:
 
 
 def get_models_and_params():
-    """
-    Define models and their corresponding hyperparameter grids for GridSearch.
-    """
     models_params = {
         'KNN': {
             'model': KNeighborsClassifier(),
@@ -104,7 +83,7 @@ def get_models_and_params():
                 'algorithm': ['SAMME']
             }
         },
-        # NUOVI MODELLI AGGIUNTI
+
         'Gradient Boosting': {
             'model': GradientBoostingClassifier(random_state=42),
             'params': {
@@ -148,9 +127,6 @@ def get_models_and_params():
 
 
 def perform_grid_search(model, param_grid, X_train, y_train, cv=3, scoring='f1'):
-    """
-    Perform grid search with cross-validation to find the best hyperparameters.
-    """
     print(f"Performing grid search for {model.__class__.__name__}...")
 
     grid_search = GridSearchCV(
@@ -171,15 +147,8 @@ def perform_grid_search(model, param_grid, X_train, y_train, cv=3, scoring='f1')
 
 
 def main():
-    # Parameters
-    thr = 2
-    '''"kddcup-guess_passwd_vs_satan","Migraine_onevsrest_0","Migraine_onevsrest_1",
-                "Migraine_onevsrest_2","Migraine_onevsrest_3","Migraine_onevsrest_4",
-                "Migraine_onevsrest_5","new-thyroid1","newthyroid2","Obesity_onevsrest_0",
-                "Obesity_onevsrest_1",'''
-
-    # grandi: "abalone19",
-    datasets = ["abalone19"]
+    thr = 2 # similarity threshold
+    datasets = ["iris0"] # Enter the names of the datasets
     for ds in datasets:
         data_path = f'imbalanced_datasets/{ds}.csv'
         RFD_FILE = f'discovered_rfds/discovered_rfds_processed/RFD{thr}_E0.0_{ds}_min.txt'
@@ -203,42 +172,35 @@ def main():
             random_state=random_state
         )
 
-        print('Training data shape:', X_train.shape)
-        print('Training positive samples shape:', list(y_train).count(1))
-        print('Training negative samples shape:', list(y_train).count(0))
-
         counts = y_train.value_counts()
         max_count = counts.max()
         min_count = counts.min()
 
         required_train_samples = max_count - min_count
         print('Required training positive samples:', required_train_samples)
-        # print('Test data shape:', X_test.shape)
-        # print('Test positive samples shape:', y_test.value_counts())
 
         # CONFIGURE AUGMENTER PARAMETERS
         augmenter = RFDAwareAugmenter(
             imbalance_dataset_path=data_path,
             rfd_file_path=RFD_FILE,
             oversampling=required_train_samples,
-            threshold=thr,  # RFD similarity threshold
+            threshold=thr,  # RFDcs similarity threshold
             max_iter=5,  # Maximum attempts per tuple generation
-            selected_rfds=None  # Use None for all RFDs, or specify list of rfds to be considered
+            selected_rfds=None  # Use None for to process all RFDcs, or specify list of rfds to be considered
         )
 
-        # Run augmentation with
         X_train_new_pos = augmenter.augment_dataset()
-        print('Shape df delle nuove tuple aggiunte:', X_train_new_pos.shape)
+        print('Shape df new tuples:', X_train_new_pos.shape)
 
         y_train_new_pos = X_train_new_pos[target_col]
         print(y_train_new_pos.head())
-        print('Shape df delle nuove tuple aggiunte (target column):', y_train_new_pos.shape)
+        print('Shape df new tuples (target column):', y_train_new_pos.shape)
 
         X_train_new_pos.drop(target_col, axis=1, inplace=True)
         print(X_train_new_pos.head())
-        print('Shape df delle nuove tuple aggiunte:', X_train_new_pos.shape)
+        print('Shape df new tuples:', X_train_new_pos.shape)
 
-        # TRAIN DATA RISULTANTI DOPO AVER APPLICATO LA STRATEGIA DI DATA AUGMENTATION
+        # RESULTING TRAIN DATA AFTER AUGMENTATION
         X_train_augmented = pd.concat([X_train, X_train_new_pos], ignore_index=True)
         y_train_augmented = pd.concat([y_train, y_train_new_pos], ignore_index=True)
 
@@ -248,7 +210,6 @@ def main():
         # original_train = pd.DataFrame(X_train, columns=X.columns)
         # original_train["class"] = y_train.values
 
-        # Get models and hyperparameters
         models_params = get_models_and_params()
 
         metrics = []
@@ -263,7 +224,6 @@ def main():
         for name, model_config in models_params.items():
             print(f"\n{'=' * 20} {name} {'=' * 20}")
 
-            # Perform grid search
             best_model = perform_grid_search(
                 model=model_config['model'],
                 param_grid=model_config['params'],
@@ -275,15 +235,14 @@ def main():
 
             best_models[name] = best_model
 
-            # Train with best parameters
             print(f"Training {name} with best parameters...")
             best_model.fit(X_train_augmented, y_train_augmented)
 
-            # Predict
+
             y_pred = best_model.predict(X_test)
             y_proba = best_model.predict_proba(X_test)[:, 1]
 
-            # Compute metrics
+
             auc = roc_auc_score(y_test, y_proba)
             f1 = f1_score(y_test, y_pred)
             gmean = geometric_mean_score(y_test, y_pred)
@@ -294,7 +253,7 @@ def main():
 
             print(f"Results - AUC: {auc:.2f}")
 
-            # Save confusion matrix
+
             cm = confusion_matrix(y_test, y_pred)
             plot_confusion_matrix(
                 cm,
@@ -314,7 +273,7 @@ def main():
                 'Accuracy': "%.2f" % acc
             })
 
-        # Save results
+
         results_df = pd.DataFrame(metrics)
         results_csv = f'{dname}_classification_results_aug_gridsearch_{thr}.csv'
         results_df.to_csv(os.path.join(cm_dir, results_csv), index=False)
@@ -325,7 +284,6 @@ def main():
         print(f"Results saved to {results_csv}")
         print(results_df.to_string(index=False))
 
-        # Save best models parameters
         best_params_df = []
         for name, model in best_models.items():
             params = model.get_params()
@@ -339,7 +297,6 @@ def main():
         best_params_results.to_csv(os.path.join(cm_dir, params_csv), index=False)
         print(f"\nBest parameters saved to {params_csv}")
 
-        # Find best performing model
         results_df_numeric = results_df.copy()
         for col in ['AUC', 'F1-score', 'Precision', 'Recall', 'G-mean', 'Balanced-Accuracy', 'Accuracy']:
             results_df_numeric[col] = results_df_numeric[col].astype(float)
