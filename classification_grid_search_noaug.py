@@ -187,9 +187,6 @@ def main():
             random_state=random_state
         )
 
-        print('Training data shape:', X_train.shape)
-        print('Training positive samples shape:', list(y_train).count(1))
-        print('Training negative samples shape:', list(y_train).count(0))
 
         counts = y_train.value_counts()
         max_count = counts.max()
@@ -197,10 +194,8 @@ def main():
 
         required_train_samples = max_count - min_count
         print('Required training positive samples:', required_train_samples)
-        # print('Test data shape:', X_test.shape)
-        # print('Test positive samples shape:', y_test.value_counts())
 
-        nuovetuple = pd.read_csv(f"C:/Users\gianp\Desktop\Codes\github\DataAugmentationRFD\classification_results_SYRFD_thr{thr}/new_tuples/{ds}_new_tuples_{thr}.csv")
+        nuovetuple = pd.read_csv(f"classification_results_SYRFD_thr{thr}/new_tuples/{ds}_new_tuples_{thr}.csv")
 
         # Run augmentation with
         X_train_new_pos = nuovetuple.sample(required_train_samples)
