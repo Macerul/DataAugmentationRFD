@@ -19,7 +19,8 @@ from imblearn.over_sampling import SMOTE
 import warnings
 
 warnings.filterwarnings('ignore')
-from rfd_augmentation_parametric import RFDAwareAugmenter
+#from rfd_augmentation_parametric import RFDAwareAugmenter
+from SyRFD_optimized import SyRFD
 
 
 def load_data(path: str) -> pd.DataFrame:
@@ -180,12 +181,12 @@ def main():
         print('Required training positive samples:', required_train_samples)
 
         # CONFIGURE AUGMENTER PARAMETERS
-        augmenter = RFDAwareAugmenter(
+        augmenter = SyRFD(
             imbalance_dataset_path=data_path,
             rfd_file_path=RFD_FILE,
             oversampling=required_train_samples,
             threshold=thr,  # RFDcs similarity threshold
-            max_iter=5,  # Maximum attempts per tuple generation
+            max_iter=3,  # Maximum attempts per tuple generation
             selected_rfds=None  # Use None for to process all RFDcs, or specify list of rfds to be considered
         )
 

@@ -690,8 +690,8 @@ class SyRFD:
             f.write(f"  Oversampling: {self.oversampling_quantity}\n")
             f.write(f"  Max Iterations: {self.max_iter}\n")
             f.write(f"----------------------------------------\n")
-            f.write(f"Time elapsed (total): {elapsed_time:.4f} seconds\n")
-            f.write(f"Peak memory consumption: {peak_memory_mb:.4f} MB\n")
+            f.write(f"Time elapsed (total): {elapsed_time:.2f} seconds\n")
+            f.write(f"Peak memory consumption: {peak_memory_mb:.2f} MB\n")
             f.write(f"Generated tuples: {generated_count}\n")
             if not success:
                 f.write(f"Status: Failed to generate valid tuples\n")
