@@ -1,6 +1,8 @@
 import os
 import re
 import pandas as pd
+import matplotlib
+matplotlib.use('Agg')  # non-GUI backend
 import matplotlib.pyplot as plt
 import seaborn as sns
 import xgboost as xgb
@@ -149,7 +151,7 @@ def perform_grid_search(model, param_grid, X_train, y_train, cv=3, scoring='f1')
 
 def main():
     thr = 2 # similarity threshold
-    datasets = ["iris0"] # Enter the names of the datasets
+    datasets = ["dermatology-6"] # Enter the names of the datasets
     for ds in datasets:
         data_path = f'imbalanced_datasets/{ds}.csv'
         RFD_FILE = f'discovered_rfds/discovered_rfds_processed/RFD{thr}_E0.0_{ds}_min.txt'
@@ -204,7 +206,7 @@ def main():
         # RESULTING TRAIN DATA AFTER AUGMENTATION
         X_train_augmented = pd.concat([X_train, X_train_new_pos], ignore_index=True)
         y_train_augmented = pd.concat([y_train, y_train_new_pos], ignore_index=True)
-
+'''
         ############ SMOTE ###########
         # smote = SMOTE(random_state=42)
         # X_train_resampled, y_train_resampled = smote._fit_resample(X_train, y_train)
@@ -311,6 +313,6 @@ def main():
         print(f"Best F1-score: {results_df.iloc[best_f1_idx]['Model']} ({results_df.iloc[best_f1_idx]['F1-score']})")
         print(f"Best AUC: {results_df.iloc[best_auc_idx]['Model']} ({results_df.iloc[best_auc_idx]['AUC']})")
 
-
+'''
 if __name__ == '__main__':
     main()
