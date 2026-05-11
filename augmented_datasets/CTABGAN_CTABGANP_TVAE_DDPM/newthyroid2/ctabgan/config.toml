@@ -1,0 +1,11 @@
+parent_dir = "C:\\Users\\daisl\\Desktop\\syrfd\\tab-ddpm-main\\exp_imbalanced\\newthyroid2\\ctabgan"
+real_data_path = "C:\\Users\\daisl\\Desktop\\syrfd\\tab-ddpm-main\\data_imbalanced\\newthyroid2"
+device = "cpu"
+seed = 0
+
+[train_params]
+batch_size = 128
+
+[sample]
+num_samples = 128
+seed = 0

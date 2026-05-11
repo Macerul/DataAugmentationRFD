@@ -1,0 +1,11 @@
+parent_dir = "C:\\Users\\daisl\\Desktop\\syrfd\\tab-ddpm-main\\exp_imbalanced\\iris0\\tvae"
+real_data_path = "C:\\Users\\daisl\\Desktop\\syrfd\\tab-ddpm-main\\data_imbalanced\\iris0"
+device = "cpu"
+seed = 0
+
+[train_params]
+batch_size = 89
+
+[sample]
+num_samples = 89
+seed = 0

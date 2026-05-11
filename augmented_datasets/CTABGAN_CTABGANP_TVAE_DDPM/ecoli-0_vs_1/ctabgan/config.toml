@@ -1,0 +1,11 @@
+parent_dir = "C:\\Users\\daisl\\Desktop\\syrfd\\tab-ddpm-main\\exp_imbalanced\\ecoli-0_vs_1\\ctabgan"
+real_data_path = "C:\\Users\\daisl\\Desktop\\syrfd\\tab-ddpm-main\\data_imbalanced\\ecoli-0_vs_1"
+device = "cpu"
+seed = 0
+
+[train_params]
+batch_size = 131
+
+[sample]
+num_samples = 131
+seed = 0

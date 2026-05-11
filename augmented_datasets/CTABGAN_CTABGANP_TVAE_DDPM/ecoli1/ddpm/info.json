@@ -1,0 +1,16 @@
+{
+    "task_type": "binclass",
+    "n_classes": 2,
+    "num_num_features": 7,
+    "num_cat_features": 0,
+    "feature_names": [
+        "Attr0",
+        "Attr1",
+        "Attr2",
+        "Attr3",
+        "Attr4",
+        "Attr5",
+        "Attr6"
+    ],
+    "target_name": "class"
+}

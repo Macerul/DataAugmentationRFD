@@ -1,0 +1,11 @@
+parent_dir = "C:\\Users\\daisl\\Desktop\\syrfd\\tab-ddpm-main\\exp_imbalanced\\Migraine_onevsrest_1\\tvae"
+real_data_path = "C:\\Users\\daisl\\Desktop\\syrfd\\tab-ddpm-main\\data_imbalanced\\Migraine_onevsrest_1"
+device = "cpu"
+seed = 0
+
+[train_params]
+batch_size = 226
+
+[sample]
+num_samples = 226
+seed = 0
