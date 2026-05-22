@@ -1,12 +1,13 @@
 import itertools
 import string
-
+import math
+import matplotlib.patches as mpatches
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv("aggregated2.csv", sep=";")
+df = pd.read_csv("aggregated.csv", sep=";")
 
 
 metrics = ["Precision", "Recall", "F1-Score", "G mean", "Balanced Accuracy"]
@@ -904,6 +905,307 @@ def scatter_precision_recall_per_dataset():
     plt.show()
 
 
+def boxplot_metrics_per_dataset():
+    CSV_FILE = 'aggregated.csv'
+    OUTPUT_PDF = 'classification_results_boxplot_total.pdf'
+    PLOTS_PER_ROW = 12  # subplots per row  (3 metrics × N datasets ÷ row)
+    METRICS = ['F1-Score', 'G mean', 'Balanced Accuracy']
+    METRICS_LABEL = {'F1-Score': 'F1', 'G mean': 'G-mean', 'Balanced Accuracy': 'BA.'}
+
+    DATASET_NAMES = {
+        'iris0': '$D_{1}$',
+        'cleveland-0_vs_4': '$D_{2}$',
+        'new-thyroid1': '$D_{3}$',
+        'newthyroid2': '$D_{4}$',
+        'ecoli-0_vs_1': '$D_{5}$',
+        'ecoli1': '$D_{6}$',
+        'dermatology-6': '$D_{7}$',
+        'Migraine_onevsrest_0': '$D_{8}$',
+        'Migraine_onevsrest_1': '$D_{9}$',
+        'Migraine_onevsrest_2': '$D_{10}$',
+        'Migraine_onevsrest_3': '$D_{11}$',
+        'Migraine_onevsrest_4': '$D_{12}$',
+        'Migraine_onevsrest_5': '$D_{13}$',
+        'abalone9-18': '$D_{14}$',
+        'transfusion': '$D_{15}$',
+        'pima': '$D_{16}$',
+        'vowel0': '$D_{17}$',
+        'yeast1': '$D_{18}$',
+        'yeast3': '$D_{19}$',
+        'kddcup-guess_passwd_vs_satan': '$D_{20}$',
+        'Obesity_onevsrest_0': '$D_{21}$',
+        'Obesity_onevsrest_1': '$D_{22}$',
+        'Obesity_onevsrest_2': '$D_{23}$',
+        'Obesity_onevsrest_3': '$D_{24}$',
+        'Obesity_onevsrest_4': '$D_{25}$',
+        'Obesity_onevsrest_5': '$D_{26}$',
+        'Obesity_onevsrest_6': '$D_{27}$',
+        'page-blocks-1-3_vs_4': '$D_{28}$',
+    }
+
+    # ── Method display names ──────────────────────────────────────────────────────
+    # Standard methods: keyed by the value in the "method" column of the CSV.
+    # LLM+strategy rows have method = model name (e.g. "gemma3_12b") and a
+    # separate "strategy" column; they are grouped / labelled below.
+
+    METHOD_NAMES = {
+        # classic baselines
+        'smote': 'SMOTE',
+        'SMOTE': 'SMOTE',
+        'SMOTECDNN': 'SMOTE-CDNN',
+        'casTGAN': 'casTGAN',
+        # deep generative
+        'ddpm': 'DDPM',
+        'tabdiff': 'TabDiff',
+        'tvae': 'TVAE',
+        'GOGGLE': 'GOGGLE',
+        # LLM single-run (original)
+        'deepseek': 'DeepSeek',
+        'llama': 'LLaMA 3',
+        # SYRFD
+        '2': 'SyRFD $\\phi$=2',
+        '4': 'SyRFD $\\phi$=4',
+        '8': 'SyRFD $\\phi$=8',
+    }
+
+    # LLM models that have strategy sub-folders.
+    # Each (model, strategy) pair will appear as a separate box labelled
+    # "{short_model}\n{short_strategy}".
+    LLM_MODELS = {
+        'devstral-small-2_24b-cloud': 'Devstral',
+        'gemma3_12b': 'Gemma3-12B',
+        'gemma4_31b_cloud': 'Gemma4-31B',
+        'gpt-oss_20b-cloud': 'GPT-OSS',
+    }
+
+    STRATEGY_SHORT = {
+        'confidence': 'conf.',
+        'decision_tree': 'dec.tree',
+        'distribution_guidance': 'distr.',
+        'ensemble': 'ensemble',
+        'hierarchical': 'hierarch.',
+        'react': 'react',
+        'schema_constraints': 'schema',
+        'self_consistency': 'self-cons.',
+    }
+
+    # ── Colour palette for classifiers (model column) ────────────────────────────
+    CLASSIFIER_COLORS = [
+        '#777777', '#770088', '#0000b1', '#029fcf',
+        '#00a353', '#16f316', '#e1f309', '#ffa915', '#cc0000',
+    ]
+
+    CLASSIFIER_MARKERS = [
+        '$\\bigtriangledown$', 'X', '$\\bigtriangleup$', '$\\bigoplus$',
+        '.', '*', 'd', '$\\spadesuit$', '$\\imath$',
+    ]
+
+    # ──────────────────────────────────────────────────────────────────────────────
+    # HELPERS
+    # ──────────────────────────────────────────────────────────────────────────────
+
+    def build_method_label(row):
+        """
+        Returns the display label for a row.
+        - For standard methods: looks up METHOD_NAMES by 'method' column.
+        - For LLM rows (non-null 'strategy'): combines model short name + strategy.
+        """
+        method = row['method']
+        strategy = row.get('strategy')
+
+        if pd.notna(strategy) and strategy:
+            model_short = LLM_MODELS.get(method, method)
+            strategy_short = STRATEGY_SHORT.get(strategy, strategy)
+            return f"{model_short}\n{strategy_short}"
+
+        return METHOD_NAMES.get(method, method)
+
+    def ordered_method_labels():
+        """
+        Returns the full ordered list of method labels to use as x-axis categories,
+        so the boxes always appear in a consistent order.
+        """
+        standard = [
+            'SMOTE', 'SMOTE-CDNN', 'casTGAN',
+            'DDPM', 'TabDiff', 'TVAE', 'GOGGLE',
+            'DeepSeek', 'LLaMA 3',
+        ]
+        # LLM strategies — one label per (model, strategy) combination
+        llm = []
+        for model_key, model_short in LLM_MODELS.items():
+            for strat_key, strat_short in STRATEGY_SHORT.items():
+                llm.append(f"{model_short}\n{strat_short}")
+
+        syrfd = ['SyRFD $\\phi$=2', 'SyRFD $\\phi$=4', 'SyRFD $\\phi$=8']
+        return standard + llm + syrfd
+
+    # ── Load & prepare data ──────────────────────────────────────────────────
+    df = pd.read_csv(CSV_FILE, sep=';')
+    df.columns = [c.strip() for c in df.columns]
+
+    # Build unified display label for each row
+    df['method_label'] = df.apply(build_method_label, axis=1)
+    df['dataset_label'] = df['dataset'].map(lambda x: DATASET_NAMES.get(x, x))
+
+    # Classifier colour / marker maps
+    classifiers = df['model'].dropna().unique()
+    clf_color = {c: CLASSIFIER_COLORS[i % len(CLASSIFIER_COLORS)] for i, c in enumerate(classifiers)}
+    clf_marker = {c: CLASSIFIER_MARKERS[i % len(CLASSIFIER_MARKERS)] for i, c in enumerate(classifiers)}
+
+    # Consistent method order (only keep labels actually present in data)
+    all_labels = ordered_method_labels()
+    present_labels = [l for l in all_labels if l in df['method_label'].values]
+
+    # Dataset order from DATASET_NAMES
+    ordered_ds = [DATASET_NAMES[d] for d in DATASET_NAMES if DATASET_NAMES[d] in df['dataset_label'].values]
+
+    # ── Figure layout ────────────────────────────────────────────────────────
+    total_plots = len(ordered_ds) * len(METRICS)
+    n_rows = math.ceil(total_plots / PLOTS_PER_ROW)
+    n_cols = PLOTS_PER_ROW
+
+    # Width scales with number of methods so boxes stay readable
+    n_methods = len(present_labels)
+    # Tighter subplots: each subplot slightly wider when many methods
+    subplot_w = max(1.2, 0.12 * n_methods)
+    subplot_h = 1.5
+
+    fig, axes = plt.subplots(
+        n_rows, n_cols,
+        figsize=(n_cols * subplot_w, n_rows * subplot_h),
+        sharex=False, sharey=True,
+    )
+    axes_flat = axes.flatten()
+
+    # Grey gradient for box edges (one shade per method group)
+    grey_shades = ['#d0d0d0'] * 9 + \
+                  ['#909090'] * (len(LLM_MODELS) * len(STRATEGY_SHORT)) + \
+                  ['#404040'] * 3
+    method_edgecolor = {lbl: grey_shades[i % len(grey_shades)]
+                        for i, lbl in enumerate(present_labels)}
+
+    # ── Plot loop ────────────────────────────────────────────────────────────
+    plot_idx = 0
+
+    for ds_label in ordered_ds:
+        df_ds = df[df['dataset_label'] == ds_label]
+
+        for metric in METRICS:
+            ax = axes_flat[plot_idx]
+            plot_idx += 1
+
+            # Re-index to consistent order
+            df_plot = df_ds[df_ds['method_label'].isin(present_labels)].copy()
+            df_plot['method_label'] = pd.Categorical(
+                df_plot['method_label'], categories=present_labels, ordered=True
+            )
+            df_plot = df_plot.sort_values('method_label')
+
+            # ── Boxplot ──────────────────────────────────────────────────────
+            sns.boxplot(
+                x='method_label', y=metric, data=df_plot, ax=ax,
+                order=present_labels,
+                width=0.65,
+                boxprops=dict(facecolor='none', edgecolor='#aaaaaa', linewidth=0.6),
+                whiskerprops=dict(color='#aaaaaa', linewidth=0.6),
+                capprops=dict(color='#aaaaaa', linewidth=0.6),
+                medianprops=dict(color='#444444', linewidth=1.0),
+                flierprops=dict(marker='.', color='#aaaaaa', markersize=2, alpha=0.7),
+            )
+
+            # Recolour box edges per method group
+            for i, patch in enumerate(ax.patches):
+                if i < len(present_labels):
+                    lbl = present_labels[i]
+                    patch.set_edgecolor(method_edgecolor.get(lbl, '#aaaaaa'))
+
+            # ── Scatter overlay (classifier points) ──────────────────────────
+            for k, lbl in enumerate(present_labels):
+                df_sub = df_plot[df_plot['method_label'] == lbl]
+                for _, row in df_sub.iterrows():
+                    clf = row['model']
+                    ax.scatter(
+                        k, row[metric],
+                        marker=clf_marker.get(clf, 'o'),
+                        facecolors='none',
+                        edgecolors=clf_color.get(clf, '#333333'),
+                        linewidth=0.5, alpha=0.55,
+                        s=12, zorder=5,
+                    )
+
+            # ── Watermark label ───────────────────────────────────────────────
+            ax.text(
+                0.5, 0.18,
+                f"{ds_label} – {METRICS_LABEL[metric]}",
+                transform=ax.transAxes,
+                fontsize=7, color='#bbbbbb',
+                ha='center', va='center', zorder=1,
+            )
+
+            # ── Axes formatting ───────────────────────────────────────────────
+            ax.set_yticks([0.0, 0.25, 0.5, 0.75, 1.0])
+            ax.set_ylim(-0.05, 1.05)
+
+            # x-tick labels: show only on last row of each column
+            is_last_row = (plot_idx > (n_rows - 1) * n_cols)
+            if is_last_row:
+                ax.set_xticklabels(
+                    present_labels, rotation=90, fontsize=5, ha='right',
+                )
+            else:
+                ax.set_xticklabels([])
+                ax.tick_params(axis='x', length=0)
+
+            # y-tick labels: only on first column of each row
+            if plot_idx % PLOTS_PER_ROW == 1:
+                ax.tick_params(axis='y', labelsize=6, left=True)
+            else:
+                ax.tick_params(axis='y', labelleft=False, left=False)
+
+            ax.set_xlabel('')
+            ax.set_ylabel('')
+            ax.spines[['top', 'right']].set_visible(False)
+
+    # Remove unused axes
+    for i in range(plot_idx, len(axes_flat)):
+        fig.delaxes(axes_flat[i])
+
+    # ── Legend (classifiers) ─────────────────────────────────────────────────
+    handles = [
+        plt.Line2D(
+            [0], [0],
+            marker=clf_marker.get(c, 'o'),
+            color='w',
+            label=c,
+            markerfacecolor='none',
+            markeredgecolor=clf_color.get(c, '#333333'),
+            markersize=6, linewidth=0,
+        )
+        for c in classifiers
+    ]
+    fig.legend(
+        handles=handles,
+        loc='lower center',
+        ncol=min(len(classifiers), 6),
+        title='Classifier',
+        title_fontsize=7,
+        fontsize=6,
+        bbox_to_anchor=(0.5, -0.01),
+        frameon=False,
+    )
+
+    # ── Save ─────────────────────────────────────────────────────────────────
+    plt.tight_layout()
+    plt.subplots_adjust(wspace=0.02, hspace=0.08)
+    plt.savefig(OUTPUT_PDF, bbox_inches='tight')
+    print(f"Saved: {OUTPUT_PDF}")
+
+
+
+'''
+VERSIONE PRECEDENTE BOXPLOT
+'''
+'''
 def boxplot_metrics_per_dataset(df=None, figsize_per_subplot=(4,3)):
     import pandas as pd
     import matplotlib.pyplot as plt
@@ -1079,29 +1381,32 @@ def boxplot_metrics_per_dataset(df=None, figsize_per_subplot=(4,3)):
     # Rimuove assi vuoti se ce ne sono
     for i in range(plot_idx, len(axes_flat)):
         fig.delaxes(axes_flat[i])
-    '''
-    handles = [
-        plt.Line2D([0], [0],
-                   marker=model_markers[m],
-                   color='w',
-                   label=m,
-                   markerfacecolor='none',
-                   markeredgecolor=model_colors[m],  # bordo colorato
-                   markersize=8,
-                   linewidth=0)
-        for m in models
-    ]
-    fig.legend(handles=handles,
-               loc='upper center',
-               ncol=3,  # legenda su una riga
-               title="Model",
-               bbox_to_anchor=(0.5, 1.05),
-               frameon=False)
-    '''
+
+ #   handles = [
+ #       plt.Line2D([0], [0],
+ #                  marker=model_markers[m],
+ #                  color='w',
+ #                  label=m,
+ #                  markerfacecolor='none',
+ #                  markeredgecolor=model_colors[m],  # bordo colorato
+ #                  markersize=8,
+ #                  linewidth=0)
+ #       for m in models
+ #   ]
+ #   fig.legend(handles=handles,
+ #              loc='upper center',
+ #              ncol=3,  # legenda su una riga
+ #              title="Model",
+ #              bbox_to_anchor=(0.5, 1.05),
+ #              frameon=False)
+
     plt.tight_layout()
     plt.subplots_adjust(wspace=0, hspace=0)
     plt.savefig(f'./classification_results_boxplot_total.pdf', bbox_inches='tight')
     #plt.show()
+'''
+
+
 
 #plot_syrfd_heatmap("./statistiche_metriche_per_metodo_mean_std.csv")
 #barplot()
