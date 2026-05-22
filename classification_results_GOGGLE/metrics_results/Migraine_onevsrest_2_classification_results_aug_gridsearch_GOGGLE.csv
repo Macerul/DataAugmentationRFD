@@ -1,0 +1,10 @@
+Model,AUC,F1-score,Precision,Recall,G-mean,Balanced-Accuracy,Accuracy
+KNN,0.81,0.00,0.00,0.00,0.00,0.50,0.94
+Random Forest,0.95,0.00,0.00,0.00,0.00,0.50,0.94
+Decision Tree,0.77,0.36,0.50,0.29,0.53,0.63,0.94
+XGBoost,0.97,0.44,1.00,0.29,0.53,0.64,0.96
+AdaBoost,0.73,0.00,0.00,0.00,0.00,0.50,0.94
+Gradient Boosting,0.95,0.25,1.00,0.14,0.38,0.57,0.95
+Extra Trees,0.93,0.00,0.00,0.00,0.00,0.50,0.94
+Neural Network (MLP),0.95,0.50,0.60,0.43,0.65,0.70,0.95
+Logistic Regression,0.83,0.00,0.00,0.00,0.00,0.50,0.94
