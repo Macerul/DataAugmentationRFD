@@ -833,7 +833,7 @@ def _get_synthetic_csv(base_path, method, ds, strategy=None):
         thr = method.split("_thr")[1]
         return (
             f"{base_path}/classification_results_SYRFD_thr{thr}/"
-            f"new_tuples/cleaned/{ds}_new_tuples_{thr}.csv"
+            f"new_tuples/{ds}_new_tuples_{thr}.csv"
         )
 
     elif strategy is not None:
