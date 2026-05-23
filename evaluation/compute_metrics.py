@@ -754,8 +754,7 @@ def evaluate_all_metrics(real_csv, synthetic_csv, class_column):
     # [NEW-DIV] Feature Entropy (H_real, H_syn, ratio)
     results.update(feature_entropy(X_real, X_syn))
 
-    # [NEW-DIV] Davies-Bouldin solo su X_syn
-    results.update(davies_bouldin_diversity(X_real, X_syn, y_real, y_syn))
+
 
     # [NEW-DIV] Coverage Diversity (griglia ipercubi)
     results.update(coverage_diversity(X_real, X_syn, n_bins=5))
@@ -785,7 +784,7 @@ METHODS_STANDARD = [
     "casTGAN", "ddpm", "SMOTE", "SMOTECDNN",
     "SYRFD_thr2", "SYRFD_thr4", "SYRFD_thr8",
     "GOGGLE", "tabdiff", "tvae",
-    "llama", "deepseek",
+    "llama", "deepseek", "ctabgan", "ctabganp"
 ]
 
 # LLM con strategie multiple: ogni strategia ha la propria cartella
@@ -834,7 +833,7 @@ def _get_synthetic_csv(base_path, method, ds, strategy=None):
         thr = method.split("_thr")[1]
         return (
             f"{base_path}/classification_results_SYRFD_thr{thr}/"
-            f"new_tuples/{ds}_new_tuples_{thr}.csv"
+            f"new_tuples/cleaned/{ds}_new_tuples_{thr}.csv"
         )
 
     elif strategy is not None:
