@@ -85,6 +85,13 @@ classification_grid_search_noaug.py
 
 ```
 
+## Distributional evaluation
+
+```bash
+python check_distribution.py --original ./imbalanced_datasets/iris0.csv --augmented ./augmented_datasets/syrfd8/iris0.csv --alpha 0.05 --output ./distribution_analysis/report_test.csv --plots --plot-dir ./distribution_analysis/plots
+python check_distribution.py --original ./imbalanced_datasets/iris0.csv --augmented ./augmented_datasets/syrfd4/iris0.csv --alpha 0.05 --output ./distribution_analysis/report_test.csv --plots --plot-dir ./distribution_analysis/plots
+```
+
 ## How to cite
 
 Cite the following article: 

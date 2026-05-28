@@ -1,0 +1,457 @@
+════════════════════════════════════════════════════════════════════════
+  AUGMENTATION DISTRIBUTION TEST
+  Confronto distribuzione feature: originale vs aumentato
+════════════════════════════════════════════════════════════════════════
+
+  Dataset originale : 149 righe × 5 colonne  (./imbalanced_datasets/iris0.csv)
+  Dataset aumentato : 185 righe × 5 colonne  (./augmented_datasets/syrfd8/iris0.csv)
+  Livello α         : 0.05
+  Top candidati fit : 3
+  Log               : /Users/stefanocirillo/Desktop/Università/Paper_dasottomettere/Syrfd/DataAugmentationRFD/distribution_analysis/iris0__syrfd8__20260528_102432.log
+  Report CSV        : /Users/stefanocirillo/Desktop/Università/Paper_dasottomettere/Syrfd/DataAugmentationRFD/report_test.csv
+
+  Feature analizzate: 5
+
+  Plot salvati in: /Users/stefanocirillo/Desktop/Università/Paper_dasottomettere/Syrfd/DataAugmentationRFD/plots
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr0  [NUMERIC]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N                       149.0000        185.0000      +36.0000
+  Media                     5.8483          5.6765       -0.1718
+  Dev.Std                   0.8286          0.8254       -0.0032
+  Mediana                   5.8000          5.5000       -0.3000
+  Skewness                  0.3031          0.6152       +0.3121
+  Kurtosis                 -0.5536         -0.4354       +0.1182
+  Min                       4.3000          4.3000       +0.0000
+  Max                       7.9000          7.9000       +0.0000
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Kolmogorov-Smirnov]
+    Confronta le CDF empiriche dei due campioni. H₀: le distribuzioni
+    sono identiche.
+    H₀  : Le due distribuzioni sono identiche
+    D = 0.135824
+    p = 0.084465       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ La forma globale non mostra variazioni significative.
+────────────────────────────────────────────────────────────────────────
+  [Anderson-Darling k-sample]
+    Versione k-sample del test Anderson-Darling; più potente di KS sulle
+    code. H₀: i campioni provengono dalla stessa distribuzione.
+    H₀  : I campioni provengono dalla stessa distribuzione
+    AD = 1.830688
+    p = 0.057124       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Nessuna differenza rilevante nelle code.
+────────────────────────────────────────────────────────────────────────
+  [Mann-Whitney U]
+    Test non parametrico sul rango. H₀: P(X > Y) = P(Y > X)  (stochastic
+    ordering).
+    H₀  : Le due distribuzioni hanno lo stesso stochastic ordering
+    U = 15570.000000
+    p = 0.041500  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Shift mediana: 5.8000 → 5.5000  (Δ=-0.3000).
+────────────────────────────────────────────────────────────────────────
+  [Levene (varianze)]
+    Testa l'omoscedasticità tramite le deviazioni dalla mediana. H₀: le
+    varianze dei due gruppi sono uguali.
+    H₀  : Le varianze dei due campioni sono uguali
+    W = 0.002699
+    p = 0.958601       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Nessuna variazione significativa nella dispersione.
+
+  ▸ Test diagnostici  (singolo campione — NON influenzano 'Alterata?')
+    Shapiro-Wilk testa la normalità di ciascun campione separatamente,
+    non il confronto tra i due. Un rifiuto indica non-normalità, non variazione.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (orig)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.976828
+    p = 0.012715  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Il campione originale NON segue una distribuzione normale.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (aug)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.944057
+    p = 0.000001  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Il campione aumentato NON segue una distribuzione normale.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    #1  Beta
+         Parametri stimati : a=1.8047, b=2.6710, loc=4.2492, scale=3.9678
+         KS goodness-of-fit: D=0.05352,  p=0.76632  (non rifiutata ✓)
+         Nota parametri    : a=α, b=β  (valori in [0,1])
+    #2  Weibull
+         Parametri stimati : c=2.1798, loc=4.1463, scale=1.9219
+         KS goodness-of-fit: D=0.07332,  p=0.38126  (non rifiutata ✓)
+    #3  Triangolare
+         Parametri stimati : c=0.2290, loc=4.2090, scale=3.8907
+         KS goodness-of-fit: D=0.07864,  p=0.29962  (non rifiutata ✓)
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.beta(a=1.8047, b=2.6710)
+       # Nota: i dati non sono in [0,1]; rescala con *3.9678+4.2492
+
+    Alternativa scipy:
+    scipy.stats.beta.rvs(1.8047, 2.6710, 4.2492, 3.9678, size=N)
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr1  [NUMERIC]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N                       149.0000        185.0000      +36.0000
+  Media                     3.0510          3.0894       +0.0384
+  Dev.Std                   0.4335          0.4125       -0.0210
+  Mediana                   3.0000          3.0300       +0.0300
+  Skewness                  0.3501          0.2370       -0.1131
+  Kurtosis                  0.3187          0.4798       +0.1611
+  Min                       2.0000          2.0000       +0.0000
+  Max                       4.4000          4.4000       +0.0000
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Kolmogorov-Smirnov]
+    Confronta le CDF empiriche dei due campioni. H₀: le distribuzioni
+    sono identiche.
+    H₀  : Le due distribuzioni sono identiche
+    D = 0.081371
+    p = 0.606822       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ La forma globale non mostra variazioni significative.
+────────────────────────────────────────────────────────────────────────
+  [Anderson-Darling k-sample]
+    Versione k-sample del test Anderson-Darling; più potente di KS sulle
+    code. H₀: i campioni provengono dalla stessa distribuzione.
+    H₀  : I campioni provengono dalla stessa distribuzione
+    AD = -0.197464
+    p = 0.250000       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Nessuna differenza rilevante nelle code.
+────────────────────────────────────────────────────────────────────────
+  [Mann-Whitney U]
+    Test non parametrico sul rango. H₀: P(X > Y) = P(Y > X)  (stochastic
+    ordering).
+    H₀  : Le due distribuzioni hanno lo stesso stochastic ordering
+    U = 12838.000000
+    p = 0.280124       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Nessuna variazione significativa nella posizione centrale.
+────────────────────────────────────────────────────────────────────────
+  [Levene (varianze)]
+    Testa l'omoscedasticità tramite le deviazioni dalla mediana. H₀: le
+    varianze dei due gruppi sono uguali.
+    H₀  : Le varianze dei due campioni sono uguali
+    W = 0.270239
+    p = 0.603518       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Nessuna variazione significativa nella dispersione.
+
+  ▸ Test diagnostici  (singolo campione — NON influenzano 'Alterata?')
+    Shapiro-Wilk testa la normalità di ciascun campione separatamente,
+    non il confronto tra i due. Un rifiuto indica non-normalità, non variazione.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (orig)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.982776
+    p = 0.059082       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Il campione originale è compatibile con la normalità.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (aug)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.983942
+    p = 0.032382  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Il campione aumentato NON segue una distribuzione normale.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    #1  Weibull
+         Parametri stimati : c=2.9049, loc=1.8786, scale=1.3128
+         KS goodness-of-fit: D=0.08822,  p=0.18520  (non rifiutata ✓)
+         Nota parametri    : a=shape (c in scipy)
+    #2  Gamma
+         Parametri stimati : a=39.9497, loc=0.3224, scale=0.0683
+         KS goodness-of-fit: D=0.09112,  p=0.15829  (non rifiutata ✓)
+    #3  Chi-quadro
+         Parametri stimati : df=79.8996, loc=0.3224, scale=0.0342
+         KS goodness-of-fit: D=0.09112,  p=0.15829  (non rifiutata ✓)
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.weibull(a=2.9049)  # shape=c=2.9049
+
+    Alternativa scipy:
+    scipy.stats.weibull_min.rvs(2.9049, 1.8786, 1.3128, size=N)
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr2  [NUMERIC]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N                       149.0000        185.0000      +36.0000
+  Media                     3.7745          3.3208       -0.4537
+  Dev.Std                   1.7597          1.8303       +0.0706
+  Mediana                   4.4000          3.8000       -0.6000
+  Skewness                 -0.2895          0.1488       +0.4383
+  Kurtosis                 -1.3850         -1.5998       -0.2148
+  Min                       1.0000          1.0000       +0.0000
+  Max                       6.9000          6.9000       +0.0000
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Kolmogorov-Smirnov]
+    Confronta le CDF empiriche dei due campioni. H₀: le distribuzioni
+    sono identiche.
+    H₀  : Le due distribuzioni sono identiche
+    D = 0.133212
+    p = 0.095111       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ La forma globale non mostra variazioni significative.
+────────────────────────────────────────────────────────────────────────
+  [Anderson-Darling k-sample]
+    Versione k-sample del test Anderson-Darling; più potente di KS sulle
+    code. H₀: i campioni provengono dalla stessa distribuzione.
+    H₀  : I campioni provengono dalla stessa distribuzione
+    AD = 2.289131
+    p = 0.037240  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le code della distribuzione risultano alterate (test più potente di KS sulle code).
+────────────────────────────────────────────────────────────────────────
+  [Mann-Whitney U]
+    Test non parametrico sul rango. H₀: P(X > Y) = P(Y > X)  (stochastic
+    ordering).
+    H₀  : Le due distribuzioni hanno lo stesso stochastic ordering
+    U = 15691.500000
+    p = 0.029431  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Shift mediana: 4.4000 → 3.8000  (Δ=-0.6000).
+────────────────────────────────────────────────────────────────────────
+  [Levene (varianze)]
+    Testa l'omoscedasticità tramite le deviazioni dalla mediana. H₀: le
+    varianze dei due gruppi sono uguali.
+    H₀  : Le varianze dei due campioni sono uguali
+    W = 4.481923
+    p = 0.034999  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Varianza alterata: std 1.7597 → 1.8303.
+
+  ▸ Test diagnostici  (singolo campione — NON influenzano 'Alterata?')
+    Shapiro-Wilk testa la normalità di ciascun campione separatamente,
+    non il confronto tra i due. Un rifiuto indica non-normalità, non variazione.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (orig)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.877444
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Il campione originale NON segue una distribuzione normale.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (aug)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.842827
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Il campione aumentato NON segue una distribuzione normale.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    #1  Beta
+         Parametri stimati : a=0.6408, b=0.5956, loc=0.3396, scale=6.5604
+         KS goodness-of-fit: D=0.17498,  p=0.00018  (rifiutata ✗)
+         Nota parametri    : a=α, b=β  (valori in [0,1])
+    #2  Gamma
+         Parametri stimati : a=283.5898, loc=-26.2644, scale=0.1059
+         KS goodness-of-fit: D=0.19357,  p=0.00002  (rifiutata ✗)
+    #3  Uniforme Continua
+         Parametri stimati : loc=1.0000, scale=5.9000
+         KS goodness-of-fit: D=0.19679,  p=0.00002  (rifiutata ✗)
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.beta(a=0.6408, b=0.5956)
+       # Nota: i dati non sono in [0,1]; rescala con *6.5604+0.3396
+
+    Alternativa scipy:
+    scipy.stats.beta.rvs(0.6408, 0.5956, 0.3396, 6.5604, size=N)
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr3  [NUMERIC]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N                       149.0000        185.0000      +36.0000
+  Media                     1.2054          1.0148       -0.1906
+  Dev.Std                   0.7613          0.7862       +0.0249
+  Mediana                   1.3000          1.1000       -0.2000
+  Skewness                 -0.1178          0.2769       +0.3947
+  Kurtosis                 -1.3280         -1.4284       -0.1004
+  Min                       0.1000          0.1000       +0.0000
+  Max                       2.5000          2.5000       +0.0000
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Kolmogorov-Smirnov]
+    Confronta le CDF empiriche dei due campioni. H₀: le distribuzioni
+    sono identiche.
+    H₀  : Le due distribuzioni sono identiche
+    D = 0.136949
+    p = 0.080179       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ La forma globale non mostra variazioni significative.
+────────────────────────────────────────────────────────────────────────
+  [Anderson-Darling k-sample]
+    Versione k-sample del test Anderson-Darling; più potente di KS sulle
+    code. H₀: i campioni provengono dalla stessa distribuzione.
+    H₀  : I campioni provengono dalla stessa distribuzione
+    AD = 2.239590
+    p = 0.038988  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le code della distribuzione risultano alterate (test più potente di KS sulle code).
+────────────────────────────────────────────────────────────────────────
+  [Mann-Whitney U]
+    Test non parametrico sul rango. H₀: P(X > Y) = P(Y > X)  (stochastic
+    ordering).
+    H₀  : Le due distribuzioni hanno lo stesso stochastic ordering
+    U = 15622.500000
+    p = 0.034818  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Shift mediana: 1.3000 → 1.1000  (Δ=-0.2000).
+────────────────────────────────────────────────────────────────────────
+  [Levene (varianze)]
+    Testa l'omoscedasticità tramite le deviazioni dalla mediana. H₀: le
+    varianze dei due gruppi sono uguali.
+    H₀  : Le varianze dei due campioni sono uguali
+    W = 3.188895
+    p = 0.075053       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Nessuna variazione significativa nella dispersione.
+
+  ▸ Test diagnostici  (singolo campione — NON influenzano 'Alterata?')
+    Shapiro-Wilk testa la normalità di ciascun campione separatamente,
+    non il confronto tra i due. Un rifiuto indica non-normalità, non variazione.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (orig)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.904074
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Il campione originale NON segue una distribuzione normale.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (aug)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.859895
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Il campione aumentato NON segue una distribuzione normale.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    #1  Beta
+         Parametri stimati : a=0.8476, b=0.7792, loc=-0.1314, scale=2.6314
+         KS goodness-of-fit: D=0.10503,  p=0.06940  (non rifiutata ✓)
+         Nota parametri    : a=α, b=β  (valori in [0,1])
+    #2  Cauchy
+         Parametri stimati : loc=1.3802, scale=0.5117
+         KS goodness-of-fit: D=0.16230,  p=0.00068  (rifiutata ✗)
+    #3  Gamma
+         Parametri stimati : a=571.4297, loc=-16.9898, scale=0.0318
+         KS goodness-of-fit: D=0.17041,  p=0.00030  (rifiutata ✗)
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.beta(a=0.8476, b=0.7792)
+       # Nota: i dati non sono in [0,1]; rescala con *2.6314+-0.1314
+
+    Alternativa scipy:
+    scipy.stats.beta.rvs(0.8476, 0.7792, -0.1314, 2.6314, size=N)
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: class  [BINARY]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 149
+  N aug   : 185
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 5.328455  df=1
+    p = 0.020980  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Bernoulli  (p=0.3289 per '1')
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.6711    67.11%  ████████████████████
+    1                         0.3289    32.89%  █████████
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice([0, 1], p=[0.6711, 0.3289])
+       # oppure, se codificata 0/1:
+       numpy.random.binomial(n=1, p=0.3289)
+       # oppure: random.choices([0, 1], weights=[0.6711, 0.3289])[0]
+
+
+══════════════════════════════════════════════════════════════════════════════════════════════════════════════
+  RIEPILOGO FINALE
+══════════════════════════════════════════════════════════════════════════════════════════════════════════════
+  Feature analizzate         : 5
+  Feature con dist. alterata : 4
+  Feature stabili            : 1
+  (Verdetto basato su: AD, Chi2, KS, Levene, MannWhitney)
+
+  Feature                 Tipo          Best fit                Generatore consigliato                  Alterata?
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Attr0                   numeric       Beta                    numpy.random.beta(a=1.8047, b=2.6710)   ✗ SÌ
+  Attr1                   numeric       Weibull                 numpy.random.weibull(a=2.9049)  # shap  ✓ no
+  Attr2                   numeric       Beta                    numpy.random.beta(a=0.6408, b=0.5956)   ✗ SÌ
+  Attr3                   numeric       Beta                    numpy.random.beta(a=0.8476, b=0.7792)   ✗ SÌ
+  class                   binary        Bernoulli empirica      numpy.random.choice([0, 1], p=[0.6711,  ✗ SÌ
+
+  Feature con variazione significativa:
+    • Attr0  →  test falliti: MannWhitney
+    • Attr2  →  test falliti: AD, Levene, MannWhitney
+    • Attr3  →  test falliti: AD, MannWhitney
+    • class  →  test falliti: Chi2
+
+  ℹ  Feature non-normali (Shapiro-Wilk, solo diagnostico):
+     Queste feature non sono gaussiane → utile per scegliere il generatore.
+    • Attr0  (orig, aug)
+    • Attr1  (aug)
+    • Attr2  (orig, aug)
+    • Attr3  (orig, aug)
+══════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
+  Report CSV salvato in : /Users/stefanocirillo/Desktop/Università/Paper_dasottomettere/Syrfd/DataAugmentationRFD/report_test.csv
+  Log salvato in        : /Users/stefanocirillo/Desktop/Università/Paper_dasottomettere/Syrfd/DataAugmentationRFD/distribution_analysis/iris0__syrfd8__20260528_102432.log
+

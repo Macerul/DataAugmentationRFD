@@ -1,0 +1,1512 @@
+════════════════════════════════════════════════════════════════════════
+  AUGMENTATION DISTRIBUTION TEST
+  Confronto distribuzione feature: originale vs aumentato
+════════════════════════════════════════════════════════════════════════
+
+  Dataset originale : 357 righe × 35 colonne  (./imbalanced_datasets/dermatology-6.csv)
+  Dataset aumentato : 578 righe × 35 colonne  (./augmented_datasets/syrfd8/dermatology-6.csv)
+  Livello α         : 0.05
+  Top candidati fit : 3
+  Log               : /Users/stefanocirillo/Desktop/Università/Paper_dasottomettere/Syrfd/DataAugmentationRFD/distribution_analysis/dermatology-6__syrfd8__20260528_101645.log
+  Report CSV        : /Users/stefanocirillo/Desktop/Università/Paper_dasottomettere/Syrfd/DataAugmentationRFD/report_test.csv
+
+  Feature analizzate: 35
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr0  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 6.534708  df=3
+    p = 0.088304       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Le proporzioni categoriche sono rimaste stabili.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    2                         0.5854    58.54%  █████████████████
+    3                         0.2521    25.21%  ███████
+    1                         0.1513    15.13%  ████
+    0                         0.0112     1.12%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [2, 3, 1, 0],
+        p=[0.5854, 0.2521, 0.1513, 0.0112]
+    )
+       # oppure: random.choices([2, 3, 1, 0], weights=[0.5854, 0.2521, 0.1513, 0.0112])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr1  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 14.674822  df=3
+    p = 0.002117  **   →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    2                         0.5378    53.78%  ████████████████
+    1                         0.2941    29.41%  ████████
+    3                         0.1457    14.57%  ████
+    0                         0.0224     2.24%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [2, 1, 3, 0],
+        p=[0.5378, 0.2941, 0.1457, 0.0224]
+    )
+       # oppure: random.choices([2, 1, 3, 0], weights=[0.5378, 0.2941, 0.1457, 0.0224])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr10  [BINARY]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 23.046652  df=1
+    p = 0.000002  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Bernoulli  (p=0.1232 per '1')
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8768    87.68%  ██████████████████████████
+    1                         0.1232    12.32%  ███
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice([0, 1], p=[0.8768, 0.1232])
+       # oppure, se codificata 0/1:
+       numpy.random.binomial(n=1, p=0.1232)
+       # oppure: random.choices([0, 1], weights=[0.8768, 0.1232])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr11  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 9.579898  df=3
+    p = 0.022496  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8067    80.67%  ████████████████████████
+    2                         0.1289    12.89%  ███
+    3                         0.0448     4.48%  █
+    1                         0.0196     1.96%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.8067, 0.1289, 0.0448, 0.0196]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.8067, 0.1289, 0.0448, 0.0196])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr12  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 5.461222  df=2
+    p = 0.065179       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Le proporzioni categoriche sono rimaste stabili.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (3 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8824    88.24%  ██████████████████████████
+    1                         0.0924     9.24%  ██
+    2                         0.0252     2.52%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 1, 2],
+        p=[0.8824, 0.0924, 0.0252]
+    )
+       # oppure: random.choices([0, 1, 2], weights=[0.8824, 0.0924, 0.0252])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr13  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 8.427633  df=3
+    p = 0.037953  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.6387    63.87%  ███████████████████
+    1                         0.1933    19.33%  █████
+    2                         0.1485    14.85%  ████
+    3                         0.0196     1.96%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 1, 2, 3],
+        p=[0.6387, 0.1933, 0.1485, 0.0196]
+    )
+       # oppure: random.choices([0, 1, 2, 3], weights=[0.6387, 0.1933, 0.1485, 0.0196])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr14  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 6.626034  df=3
+    p = 0.084822       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Le proporzioni categoriche sono rimaste stabili.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8599    85.99%  █████████████████████████
+    3                         0.0588     5.88%  █
+    2                         0.0588     5.88%  █
+    1                         0.0224     2.24%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 3, 2, 1],
+        p=[0.8599, 0.0588, 0.0588, 0.0224]
+    )
+       # oppure: random.choices([0, 3, 2, 1], weights=[0.8599, 0.0588, 0.0588, 0.0224])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr15  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 22.200597  df=5
+    p = 0.000480  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    2                         0.3501    35.01%  ██████████
+    0                         0.3277    32.77%  █████████
+    3                         0.1709    17.09%  █████
+    1                         0.1513    15.13%  ████
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [2, 0, 3, 1],
+        p=[0.3501, 0.3277, 0.1709, 0.1513]
+    )
+       # oppure: random.choices([2, 0, 3, 1], weights=[0.3501, 0.3277, 0.1709, 0.1513])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr16  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 22.753467  df=3
+    p = 0.000045  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    2                         0.5826    58.26%  █████████████████
+    3                         0.1989    19.89%  █████
+    1                         0.1933    19.33%  █████
+    0                         0.0252     2.52%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [2, 3, 1, 0],
+        p=[0.5826, 0.1989, 0.1933, 0.0252]
+    )
+       # oppure: random.choices([2, 3, 1, 0], weights=[0.5826, 0.1989, 0.1933, 0.0252])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr17  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 45.582366  df=6
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.6331    63.31%  ██████████████████
+    1                         0.2353    23.53%  ███████
+    2                         0.1176    11.76%  ███
+    3                         0.0140     1.40%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 1, 2, 3],
+        p=[0.6331, 0.2353, 0.1176, 0.0140]
+    )
+       # oppure: random.choices([0, 1, 2, 3], weights=[0.6331, 0.2353, 0.1176, 0.0140])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr18  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 18.244019  df=3
+    p = 0.000392  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    2                         0.3585    35.85%  ██████████
+    1                         0.3221    32.21%  █████████
+    0                         0.2353    23.53%  ███████
+    3                         0.0840     8.40%  ██
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [2, 1, 0, 3],
+        p=[0.3585, 0.3221, 0.2353, 0.0840]
+    )
+       # oppure: random.choices([2, 1, 0, 3], weights=[0.3585, 0.3221, 0.2353, 0.0840])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr19  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 20.045320  df=3
+    p = 0.000166  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.6919    69.19%  ████████████████████
+    2                         0.1653    16.53%  ████
+    3                         0.0952     9.52%  ██
+    1                         0.0476     4.76%  █
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.6919, 0.1653, 0.0952, 0.0476]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.6919, 0.1653, 0.0952, 0.0476])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr2  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 21.299151  df=4
+    p = 0.000276  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    2                         0.4678    46.78%  ██████████████
+    1                         0.2521    25.21%  ███████
+    0                         0.1513    15.13%  ████
+    3                         0.1289    12.89%  ███
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [2, 1, 0, 3],
+        p=[0.4678, 0.2521, 0.1513, 0.1289]
+    )
+       # oppure: random.choices([2, 1, 0, 3], weights=[0.4678, 0.2521, 0.1513, 0.1289])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr20  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 26.705151  df=3
+    p = 0.000007  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.5434    54.34%  ████████████████
+    2                         0.2605    26.05%  ███████
+    3                         0.1345    13.45%  ████
+    1                         0.0616     6.16%  █
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.5434, 0.2605, 0.1345, 0.0616]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.5434, 0.2605, 0.1345, 0.0616])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr21  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 16.821993  df=3
+    p = 0.000769  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.6947    69.47%  ████████████████████
+    2                         0.1653    16.53%  ████
+    3                         0.0868     8.68%  ██
+    1                         0.0532     5.32%  █
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.6947, 0.1653, 0.0868, 0.0532]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.6947, 0.1653, 0.0868, 0.0532])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr22  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 4.185996  df=3
+    p = 0.242068       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Le proporzioni categoriche sono rimaste stabili.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8067    80.67%  ████████████████████████
+    1                         0.1036    10.36%  ███
+    2                         0.0728     7.28%  ██
+    3                         0.0168     1.68%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 1, 2, 3],
+        p=[0.8067, 0.1036, 0.0728, 0.0168]
+    )
+       # oppure: random.choices([0, 1, 2, 3], weights=[0.8067, 0.1036, 0.0728, 0.0168])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr23  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 11.250613  df=3
+    p = 0.010445  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.7787    77.87%  ███████████████████████
+    1                         0.1008    10.08%  ███
+    2                         0.0924     9.24%  ██
+    3                         0.0280     2.80%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 1, 2, 3],
+        p=[0.7787, 0.1008, 0.0924, 0.0280]
+    )
+       # oppure: random.choices([0, 1, 2, 3], weights=[0.7787, 0.1008, 0.0924, 0.0280])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr24  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 8.590963  df=3
+    p = 0.035254  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8039    80.39%  ████████████████████████
+    2                         0.1204    12.04%  ███
+    3                         0.0420     4.20%  █
+    1                         0.0336     3.36%  █
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.8039, 0.1204, 0.0420, 0.0336]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.8039, 0.1204, 0.0420, 0.0336])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr25  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 13.739510  df=3
+    p = 0.003282  **   →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.7395    73.95%  ██████████████████████
+    2                         0.1373    13.73%  ████
+    1                         0.0840     8.40%  ██
+    3                         0.0392     3.92%  █
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 1, 3],
+        p=[0.7395, 0.1373, 0.0840, 0.0392]
+    )
+       # oppure: random.choices([0, 2, 1, 3], weights=[0.7395, 0.1373, 0.0840, 0.0392])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr26  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 9.907299  df=3
+    p = 0.019371  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8011    80.11%  ████████████████████████
+    2                         0.1176    11.76%  ███
+    3                         0.0728     7.28%  ██
+    1                         0.0084     0.84%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.8011, 0.1176, 0.0728, 0.0084]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.8011, 0.1176, 0.0728, 0.0084])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr27  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 28.672912  df=12
+    p = 0.004405  **   →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.5462    54.62%  ████████████████
+    2                         0.2605    26.05%  ███████
+    3                         0.1148    11.48%  ███
+    1                         0.0784     7.84%  ██
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.5462, 0.2605, 0.1148, 0.0784]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.5462, 0.2605, 0.1148, 0.0784])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr28  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 9.907299  df=3
+    p = 0.019371  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8011    80.11%  ████████████████████████
+    2                         0.1092    10.92%  ███
+    3                         0.0756     7.56%  ██
+    1                         0.0140     1.40%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.8011, 0.1092, 0.0756, 0.0140]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.8011, 0.1092, 0.0756, 0.0140])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr29  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 126.878198  df=5
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.9384    93.84%  ████████████████████████████
+    1                         0.0280     2.80%  
+    2                         0.0224     2.24%  
+    3                         0.0112     1.12%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 1, 2, 3],
+        p=[0.9384, 0.0280, 0.0224, 0.0112]
+    )
+       # oppure: random.choices([0, 1, 2, 3], weights=[0.9384, 0.0280, 0.0224, 0.0112])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr3  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 21.377782  df=3
+    p = 0.000088  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.3249    32.49%  █████████
+    2                         0.2717    27.17%  ████████
+    3                         0.2017    20.17%  ██████
+    1                         0.2017    20.17%  ██████
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.3249, 0.2717, 0.2017, 0.2017]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.3249, 0.2717, 0.2017, 0.2017])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr30  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 141.708299  df=3
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.9412    94.12%  ████████████████████████████
+    2                         0.0364     3.64%  █
+    1                         0.0112     1.12%  
+    3                         0.0112     1.12%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 1, 3],
+        p=[0.9412, 0.0364, 0.0112, 0.0112]
+    )
+       # oppure: random.choices([0, 2, 1, 3], weights=[0.9412, 0.0364, 0.0112, 0.0112])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr31  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 23.869490  df=4
+    p = 0.000085  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    2                         0.5742    57.42%  █████████████████
+    1                         0.2353    23.53%  ███████
+    3                         0.1653    16.53%  ████
+    0                         0.0252     2.52%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [2, 1, 3, 0],
+        p=[0.5742, 0.2353, 0.1653, 0.0252]
+    )
+       # oppure: random.choices([2, 1, 3, 0], weights=[0.5742, 0.2353, 0.1653, 0.0252])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr32  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 18.630045  df=3
+    p = 0.000326  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.7871    78.71%  ███████████████████████
+    3                         0.1429    14.29%  ████
+    2                         0.0616     6.16%  █
+    1                         0.0084     0.84%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 3, 2, 1],
+        p=[0.7871, 0.1429, 0.0616, 0.0084]
+    )
+       # oppure: random.choices([0, 3, 2, 1], weights=[0.7871, 0.1429, 0.0616, 0.0084])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr33  [NUMERIC]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N                       357.0000        578.0000     +221.0000
+  Media                    36.2437         26.5117       -9.7320
+  Dev.Std                  15.3139         18.0221       +2.7082
+  Mediana                  35.0000         26.0000       -9.0000
+  Skewness                  0.0789          0.4219       +0.3430
+  Kurtosis                 -0.7002         -0.8438       -0.1436
+  Min                       0.0000         -2.0000       -2.0000
+  Max                      75.0000         75.0000       +0.0000
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Kolmogorov-Smirnov]
+    Confronta le CDF empiriche dei due campioni. H₀: le distribuzioni
+    sono identiche.
+    H₀  : Le due distribuzioni sono identiche
+    D = 0.297413
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ La forma globale della distribuzione è cambiata dopo l'augmentation.
+────────────────────────────────────────────────────────────────────────
+  [Anderson-Darling k-sample]
+    Versione k-sample del test Anderson-Darling; più potente di KS sulle
+    code. H₀: i campioni provengono dalla stessa distribuzione.
+    H₀  : I campioni provengono dalla stessa distribuzione
+    AD = 50.469742
+    p = 0.001000  **   →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le code della distribuzione risultano alterate (test più potente di KS sulle code).
+────────────────────────────────────────────────────────────────────────
+  [Mann-Whitney U]
+    Test non parametrico sul rango. H₀: P(X > Y) = P(Y > X)  (stochastic
+    ordering).
+    H₀  : Le due distribuzioni hanno lo stesso stochastic ordering
+    U = 136502.000000
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Shift mediana: 35.0000 → 26.0000  (Δ=-9.0000).
+────────────────────────────────────────────────────────────────────────
+  [Levene (varianze)]
+    Testa l'omoscedasticità tramite le deviazioni dalla mediana. H₀: le
+    varianze dei due gruppi sono uguali.
+    H₀  : Le varianze dei due campioni sono uguali
+    W = 18.354494
+    p = 0.000020  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Varianza alterata: std 15.3139 → 18.0221.
+
+  ▸ Test diagnostici  (singolo campione — NON influenzano 'Alterata?')
+    Shapiro-Wilk testa la normalità di ciascun campione separatamente,
+    non il confronto tra i due. Un rifiuto indica non-normalità, non variazione.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (orig)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.986652
+    p = 0.002257  **   →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Il campione originale NON segue una distribuzione normale.
+────────────────────────────────────────────────────────────────────────
+  [Shapiro-Wilk (aug)]
+    Testa la normalità del singolo campione (applicato a ciascuno
+    separatamente). H₀: il campione proviene da una distribuzione
+    normale.
+    H₀  : Il campione è normalmente distribuito
+    W = 0.947031
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Il campione aumentato NON segue una distribuzione normale.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    #1  Triangolare
+         Parametri stimati : c=0.4539, loc=-0.7969, scale=76.6653
+         KS goodness-of-fit: D=0.04421,  p=0.47447  (non rifiutata ✓)
+         Nota parametri    : c=(mode-left)/(right-left)
+    #2  Beta
+         Parametri stimati : a=2.9028, b=3.2238, loc=-2.3959, scale=81.5743
+         KS goodness-of-fit: D=0.04920,  p=0.34206  (non rifiutata ✓)
+    #3  Weibull
+         Parametri stimati : c=2.9334, loc=-4.4918, scale=45.7158
+         KS goodness-of-fit: D=0.06178,  p=0.12571  (non rifiutata ✓)
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.triangular(left=-0.7969, mode=34.0000, right=75.8684)
+
+    Alternativa scipy:
+    scipy.stats.triang.rvs(0.4539, -0.7969, 76.6653, size=N)
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr4  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 23.651399  df=3
+    p = 0.000030  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.6078    60.78%  ██████████████████
+    1                         0.1961    19.61%  █████
+    2                         0.1457    14.57%  ████
+    3                         0.0504     5.04%  █
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 1, 2, 3],
+        p=[0.6078, 0.1961, 0.1457, 0.0504]
+    )
+       # oppure: random.choices([0, 1, 2, 3], weights=[0.6078, 0.1961, 0.1457, 0.0504])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr5  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 9.417427  df=3
+    p = 0.024226  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8095    80.95%  ████████████████████████
+    2                         0.1148    11.48%  ███
+    3                         0.0728     7.28%  ██
+    1                         0.0028     0.28%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.8095, 0.1148, 0.0728, 0.0028]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.8095, 0.1148, 0.0728, 0.0028])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr6  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 130.106562  df=6
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.9076    90.76%  ███████████████████████████
+    2                         0.0448     4.48%  █
+    1                         0.0308     3.08%  
+    3                         0.0168     1.68%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 1, 3],
+        p=[0.9076, 0.0448, 0.0308, 0.0168]
+    )
+       # oppure: random.choices([0, 2, 1, 3], weights=[0.9076, 0.0448, 0.0308, 0.0168])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr7  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 9.094912  df=3
+    p = 0.028055  *    →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.8151    81.51%  ████████████████████████
+    2                         0.1232    12.32%  ███
+    3                         0.0364     3.64%  █
+    1                         0.0252     2.52%  
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 3, 1],
+        p=[0.8151, 0.1232, 0.0364, 0.0252]
+    )
+       # oppure: random.choices([0, 2, 3, 1], weights=[0.8151, 0.1232, 0.0364, 0.0252])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr8  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 63.477762  df=7
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.6863    68.63%  ████████████████████
+    2                         0.1793    17.93%  █████
+    1                         0.0700     7.00%  ██
+    3                         0.0644     6.44%  █
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 1, 3],
+        p=[0.6863, 0.1793, 0.0700, 0.0644]
+    )
+       # oppure: random.choices([0, 2, 1, 3], weights=[0.6863, 0.1793, 0.0700, 0.0644])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: Attr9  [CATEGORICAL]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 9.221434  df=5
+    p = 0.100551       →  H₀ non rifiutata  ✓  (p ≥ α=0.05)
+    ↳ Le proporzioni categoriche sono rimaste stabili.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Categorica  (4 classi)
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.7143    71.43%  █████████████████████
+    2                         0.1569    15.69%  ████
+    1                         0.0840     8.40%  ██
+    3                         0.0448     4.48%  █
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice(
+        [0, 2, 1, 3],
+        p=[0.7143, 0.1569, 0.0840, 0.0448]
+    )
+       # oppure: random.choices([0, 2, 1, 3], weights=[0.7143, 0.1569, 0.0840, 0.0448])[0]
+
+════════════════════════════════════════════════════════════════════════
+  FEATURE: class  [BINARY]
+════════════════════════════════════════════════════════════════════════
+  ▸ Statistiche descrittive
+  Metrica                Originale       Aumentato             Δ
+········································································
+  N orig  : 357
+  N aug   : 578
+
+  ▸ Test statistici di confronto  (orig vs aug)
+    Contribuiscono al verdetto 'Alterata?'
+────────────────────────────────────────────────────────────────────────
+  [Chi-quadro di Pearson]
+    Confronta le distribuzioni di frequenza relativa delle categorie.
+    H₀: la distribuzione delle categorie è invariata.
+    H₀  : Le distribuzioni di categoria sono identiche
+    χ² = 141.088005  df=1
+    p = 0.000000  ***  →  H₀ RIFIUTATA  ✗  (p < α=0.05)
+    ↳ Le proporzioni delle categorie sono cambiate dopo l'augmentation.
+
+  ▸ Distribuzione teorica più adatta (fitting sul dataset originale)
+────────────────────────────────────────────────────────────────────────
+    Distribuzione : Bernoulli  (p=0.0560 per '1')
+
+    Categoria             Freq. rel.   Freq. %
+··················································
+    0                         0.9440    94.40%  ████████████████████████████
+    1                         0.0560     5.60%  █
+
+  ▸ Generatore random consigliato
+────────────────────────────────────────────────────────────────────────
+    numpy.random.choice([0, 1], p=[0.9440, 0.0560])
+       # oppure, se codificata 0/1:
+       numpy.random.binomial(n=1, p=0.0560)
+       # oppure: random.choices([0, 1], weights=[0.9440, 0.0560])[0]
+
+
+══════════════════════════════════════════════════════════════════════════════════════════════════════════════
+  RIEPILOGO FINALE
+══════════════════════════════════════════════════════════════════════════════════════════════════════════════
+  Feature analizzate         : 35
+  Feature con dist. alterata : 30
+  Feature stabili            : 5
+  (Verdetto basato su: AD, Chi2, KS, Levene, MannWhitney)
+
+  Feature                 Tipo          Best fit                Generatore consigliato                  Alterata?
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Attr0                   categorical   Categorica empirica     numpy.random.choice([2, 3, 1, 0], p=[0  ✓ no
+  Attr1                   categorical   Categorica empirica     numpy.random.choice([2, 1, 3, 0], p=[0  ✗ SÌ
+  Attr10                  binary        Bernoulli empirica      numpy.random.choice([0, 1], p=[0.8768,  ✗ SÌ
+  Attr11                  categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr12                  categorical   Categorica empirica     numpy.random.choice([0, 1, 2], p=[0.88  ✓ no
+  Attr13                  categorical   Categorica empirica     numpy.random.choice([0, 1, 2, 3], p=[0  ✗ SÌ
+  Attr14                  categorical   Categorica empirica     numpy.random.choice([0, 3, 2, 1], p=[0  ✓ no
+  Attr15                  categorical   Categorica empirica     numpy.random.choice([2, 0, 3, 1], p=[0  ✗ SÌ
+  Attr16                  categorical   Categorica empirica     numpy.random.choice([2, 3, 1, 0], p=[0  ✗ SÌ
+  Attr17                  categorical   Categorica empirica     numpy.random.choice([0, 1, 2, 3], p=[0  ✗ SÌ
+  Attr18                  categorical   Categorica empirica     numpy.random.choice([2, 1, 0, 3], p=[0  ✗ SÌ
+  Attr19                  categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr2                   categorical   Categorica empirica     numpy.random.choice([2, 1, 0, 3], p=[0  ✗ SÌ
+  Attr20                  categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr21                  categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr22                  categorical   Categorica empirica     numpy.random.choice([0, 1, 2, 3], p=[0  ✓ no
+  Attr23                  categorical   Categorica empirica     numpy.random.choice([0, 1, 2, 3], p=[0  ✗ SÌ
+  Attr24                  categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr25                  categorical   Categorica empirica     numpy.random.choice([0, 2, 1, 3], p=[0  ✗ SÌ
+  Attr26                  categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr27                  categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr28                  categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr29                  categorical   Categorica empirica     numpy.random.choice([0, 1, 2, 3], p=[0  ✗ SÌ
+  Attr3                   categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr30                  categorical   Categorica empirica     numpy.random.choice([0, 2, 1, 3], p=[0  ✗ SÌ
+  Attr31                  categorical   Categorica empirica     numpy.random.choice([2, 1, 3, 0], p=[0  ✗ SÌ
+  Attr32                  categorical   Categorica empirica     numpy.random.choice([0, 3, 2, 1], p=[0  ✗ SÌ
+  Attr33                  numeric       Triangolare             numpy.random.triangular(left=-0.7969,   ✗ SÌ
+  Attr4                   categorical   Categorica empirica     numpy.random.choice([0, 1, 2, 3], p=[0  ✗ SÌ
+  Attr5                   categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr6                   categorical   Categorica empirica     numpy.random.choice([0, 2, 1, 3], p=[0  ✗ SÌ
+  Attr7                   categorical   Categorica empirica     numpy.random.choice([0, 2, 3, 1], p=[0  ✗ SÌ
+  Attr8                   categorical   Categorica empirica     numpy.random.choice([0, 2, 1, 3], p=[0  ✗ SÌ
+  Attr9                   categorical   Categorica empirica     numpy.random.choice([0, 2, 1, 3], p=[0  ✓ no
+  class                   binary        Bernoulli empirica      numpy.random.choice([0, 1], p=[0.9440,  ✗ SÌ
+
+  Feature con variazione significativa:
+    • Attr1  →  test falliti: Chi2
+    • Attr10  →  test falliti: Chi2
+    • Attr11  →  test falliti: Chi2
+    • Attr13  →  test falliti: Chi2
+    • Attr15  →  test falliti: Chi2
+    • Attr16  →  test falliti: Chi2
+    • Attr17  →  test falliti: Chi2
+    • Attr18  →  test falliti: Chi2
+    • Attr19  →  test falliti: Chi2
+    • Attr2  →  test falliti: Chi2
+    • Attr20  →  test falliti: Chi2
+    • Attr21  →  test falliti: Chi2
+    • Attr23  →  test falliti: Chi2
+    • Attr24  →  test falliti: Chi2
+    • Attr25  →  test falliti: Chi2
+    • Attr26  →  test falliti: Chi2
+    • Attr27  →  test falliti: Chi2
+    • Attr28  →  test falliti: Chi2
+    • Attr29  →  test falliti: Chi2
+    • Attr3  →  test falliti: Chi2
+    • Attr30  →  test falliti: Chi2
+    • Attr31  →  test falliti: Chi2
+    • Attr32  →  test falliti: Chi2
+    • Attr33  →  test falliti: MannWhitney, Levene, KS, AD
+    • Attr4  →  test falliti: Chi2
+    • Attr5  →  test falliti: Chi2
+    • Attr6  →  test falliti: Chi2
+    • Attr7  →  test falliti: Chi2
+    • Attr8  →  test falliti: Chi2
+    • class  →  test falliti: Chi2
+
+  ℹ  Feature non-normali (Shapiro-Wilk, solo diagnostico):
+     Queste feature non sono gaussiane → utile per scegliere il generatore.
+    • Attr33  (orig, aug)
+══════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
+  Report CSV salvato in : /Users/stefanocirillo/Desktop/Università/Paper_dasottomettere/Syrfd/DataAugmentationRFD/report_test.csv
+  Log salvato in        : /Users/stefanocirillo/Desktop/Università/Paper_dasottomettere/Syrfd/DataAugmentationRFD/distribution_analysis/dermatology-6__syrfd8__20260528_101645.log
+
