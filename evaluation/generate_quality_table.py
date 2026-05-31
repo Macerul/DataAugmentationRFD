@@ -55,11 +55,11 @@ def _get_synthetic_csv(base_path, method, ds, strategy=None):
     if method.startswith("SYRFD_thr"):
         thr = method.split("_thr")[1]
         return (
-            f"{base_path}/classification_results_SYRFD_thr{thr}/"
+            f"{base_path}/classification_results/classification_results_SYRFD_thr{thr}/"
             f"new_tuples/{ds}_new_tuples_{thr}.csv"
         )
     elif strategy is not None:
-        folder = f"{base_path}/classification_results_{method}/{strategy}/new_tuples"
+        folder = f"{base_path}/classification_results/classification_results_{method}/{strategy}/new_tuples"
         candidates = [
             f"{folder}/{ds}_cot_{strategy}.csv",
             f"{folder}/{ds}_{strategy}.csv",

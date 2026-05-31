@@ -23,7 +23,7 @@ import warnings
 warnings.filterwarnings('ignore')
 #from rfd_augmentation_parametric import RFDAwareAugmenter
 from SyRFD_optimized import SyRFD
-
+#from syrfd_aware import SyRFDAware
 
 def load_data(path: str) -> pd.DataFrame:
     return pd.read_csv(path)
@@ -151,7 +151,7 @@ def perform_grid_search(model, param_grid, X_train, y_train, cv=3, scoring='f1')
 
 def main():
     thr = 2 # similarity threshold
-    datasets = ["dermatology-6"] # Enter the names of the datasets
+    datasets = ["cleveland-0_vs_4"] # Enter the names of the datasets
     for ds in datasets:
         data_path = f'imbalanced_datasets/{ds}.csv'
         RFD_FILE = f'discovered_rfds/discovered_rfds_processed/RFD{thr}_E0.0_{ds}_min.txt'

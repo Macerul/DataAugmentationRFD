@@ -1,0 +1,146 @@
+============================================================
+  SyRFDAware  Distribution Configuration Log
+============================================================
+  Dataset   : cleveland-0_vs_4
+  Threshold : 2
+  Alpha     : 0.05
+  Timestamp : 20260529_175204
+  Features  : 13
+============================================================
+
+Feature   : Attr0
+  Type    : categorical
+  Dist    : Categorica (12 classi)
+  KS p    : N/A
+  Note    : categories=[58.0, 60.0, 65.0, 50.0, 63.0, 57.0, 55.0, 77.0, 64.0, 38.0, 61.0, 70.0], probs=[0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+  Call    : numpy.random.choice([58.0, 60.0, 65.0, 50.0, 63.0, 57.0, 55.0, 77.0, 64.0, 38.0, 61.0, 70.0], p=[0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769])
+  Cats    : [58.0, 60.0, 65.0, 50.0, 63.0, 57.0, 55.0, 77.0, 64.0, 38.0, 61.0, 70.0]
+  Probs   : [0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+
+Feature   : Attr2
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[4.0, 3.0, 1.0], probs=[0.8462, 0.0769, 0.0769]
+  Call    : numpy.random.choice([4.0, 3.0, 1.0], p=[0.8462, 0.0769, 0.0769])
+  Cats    : [4.0, 3.0, 1.0]
+  Probs   : [0.8462, 0.0769, 0.0769]
+
+Feature   : Attr3
+  Type    : categorical
+  Dist    : Categorica (10 classi)
+  KS p    : N/A
+  Note    : categories=[150.0, 145.0, 130.0, 112.0, 165.0, 160.0, 125.0, 120.0, 138.0, 114.0], probs=[0.2308, 0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+  Call    : numpy.random.choice([150.0, 145.0, 130.0, 112.0, 165.0, 160.0, 125.0, 120.0, 138.0, 114.0], p=[0.2308, 0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769])
+  Cats    : [150.0, 145.0, 130.0, 112.0, 165.0, 160.0, 125.0, 120.0, 138.0, 114.0]
+  Probs   : [0.2308, 0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+
+Feature   : Attr4
+  Type    : categorical
+  Dist    : Categorica (12 classi)
+  KS p    : N/A
+  Note    : categories=[289.0, 206.0, 225.0, 230.0, 243.0, 407.0, 304.0, 212.0, 231.0, 166.0, 318.0, 174.0], probs=[0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+  Call    : numpy.random.choice([289.0, 206.0, 225.0, 230.0, 243.0, 407.0, 304.0, 212.0, 231.0, 166.0, 318.0, 174.0], p=[0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769])
+  Cats    : [289.0, 206.0, 225.0, 230.0, 243.0, 407.0, 304.0, 212.0, 231.0, 166.0, 318.0, 174.0]
+  Probs   : [0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+
+Feature   : Attr6
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[2.0, 0.0, 1.0], probs=[0.7692, 0.1538, 0.0769]
+  Call    : numpy.random.choice([2.0, 0.0, 1.0], p=[0.7692, 0.1538, 0.0769])
+  Cats    : [2.0, 0.0, 1.0]
+  Probs   : [0.7692, 0.1538, 0.0769]
+
+Feature   : Attr7
+  Type    : categorical
+  Dist    : Categorica (11 classi)
+  KS p    : N/A
+  Note    : categories=[132.0, 125.0, 114.0, 165.0, 128.0, 154.0, 124.0, 145.0, 162.0, 182.0, 140.0], probs=[0.1538, 0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+  Call    : numpy.random.choice([132.0, 125.0, 114.0, 165.0, 128.0, 154.0, 124.0, 145.0, 162.0, 182.0, 140.0], p=[0.1538, 0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769])
+  Cats    : [132.0, 125.0, 114.0, 165.0, 128.0, 154.0, 124.0, 145.0, 162.0, 182.0, 140.0]
+  Probs   : [0.1538, 0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+
+Feature   : Attr9
+  Type    : categorical
+  Dist    : Categorica (11 classi)
+  KS p    : N/A
+  Note    : categories=[1.0, 2.6, 2.4, 2.5, 4.0, 0.8, 0.0, 2.0, 3.8, 3.6, 4.4], probs=[0.1538, 0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+  Call    : numpy.random.choice([1.0, 2.6, 2.4, 2.5, 4.0, 0.8, 0.0, 2.0, 3.8, 3.6, 4.4], p=[0.1538, 0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769])
+  Cats    : [1.0, 2.6, 2.4, 2.5, 4.0, 0.8, 0.0, 2.0, 3.8, 3.6, 4.4]
+  Probs   : [0.1538, 0.1538, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769]
+
+Feature   : Attr10
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[2.0, 3.0, 1.0], probs=[0.7692, 0.1538, 0.0769]
+  Call    : numpy.random.choice([2.0, 3.0, 1.0], p=[0.7692, 0.1538, 0.0769])
+  Cats    : [2.0, 3.0, 1.0]
+  Probs   : [0.7692, 0.1538, 0.0769]
+
+Feature   : Attr11
+  Type    : categorical
+  Dist    : Categorica (4 classi)
+  KS p    : N/A
+  Note    : categories=[3, 1, 0, 2], probs=[0.3846, 0.2308, 0.2308, 0.1538]
+  Call    : numpy.random.choice([3, 1, 0, 2], p=[0.3846, 0.2308, 0.2308, 0.1538])
+  Cats    : [3.0, 1.0, 0.0, 2.0]
+  Probs   : [0.3846, 0.2308, 0.2308, 0.1538]
+
+Feature   : Attr12
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[2, 0, 1], probs=[0.6923, 0.1538, 0.1538]
+  Call    : numpy.random.choice([2, 0, 1], p=[0.6923, 0.1538, 0.1538])
+  Cats    : [2.0, 0.0, 1.0]
+  Probs   : [0.6923, 0.1538, 0.1538]
+
+Feature   : Attr1
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[1.0, 0.0], probs=[0.8462, 0.1538]
+  Call    : numpy.random.choice([1.0, 0.0], p=[0.8462, 0.1538])
+  Cats    : [1.0, 0.0]
+  Probs   : [0.8462, 0.1538]
+
+Feature   : Attr5
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[0.0, 1.0], probs=[0.9231, 0.0769]
+  Call    : numpy.random.choice([0.0, 1.0], p=[0.9231, 0.0769])
+  Cats    : [0.0, 1.0]
+  Probs   : [0.9231, 0.0769]
+
+Feature   : Attr8
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[0.0, 1.0], probs=[0.5385, 0.4615]
+  Call    : numpy.random.choice([0.0, 1.0], p=[0.5385, 0.4615])
+  Cats    : [0.0, 1.0]
+  Probs   : [0.5385, 0.4615]
+
+============================================================
+  SUMMARY TABLE
+------------------------------------------------------------
+  Feature             Distribution                    KS p-value
+------------------------------------------------------------
+  Attr0               Categorica (12 classi)                 N/A
+  Attr2               Categorica (3 classi)                  N/A
+  Attr3               Categorica (10 classi)                 N/A
+  Attr4               Categorica (12 classi)                 N/A
+  Attr6               Categorica (3 classi)                  N/A
+  Attr7               Categorica (11 classi)                 N/A
+  Attr9               Categorica (11 classi)                 N/A
+  Attr10              Categorica (3 classi)                  N/A
+  Attr11              Categorica (4 classi)                  N/A
+  Attr12              Categorica (3 classi)                  N/A
+  Attr1               Categorica (2 classi)                  N/A
+  Attr5               Categorica (2 classi)                  N/A
+  Attr8               Categorica (2 classi)                  N/A
+============================================================

@@ -1,0 +1,11 @@
+=== Augmentation Performance Log ===
+Configuration:
+  Dataset: cleveland-0_vs_4
+  Threshold: 2
+  Oversampling: 105
+  Max Iterations: 3
+  Strategy: dual (LHS-far / RHS-constrained)
+----------------------------------------
+Time elapsed (total): 48.89 seconds
+Peak memory consumption: 3.61 MB
+Generated tuples: 32

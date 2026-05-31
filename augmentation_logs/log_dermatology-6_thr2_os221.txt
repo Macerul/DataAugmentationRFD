@@ -1,0 +1,11 @@
+=== Augmentation Performance Log ===
+Configuration:
+  Dataset: dermatology-6
+  Threshold: 2
+  Oversampling: 221
+  Max Iterations: 3
+  Strategy: dual (LHS-far / RHS-constrained)
+----------------------------------------
+Time elapsed (total): 754.87 seconds
+Peak memory consumption: 38.91 MB
+Generated tuples: 221

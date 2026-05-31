@@ -1,0 +1,356 @@
+============================================================
+  SyRFDAware  Distribution Configuration Log
+============================================================
+  Dataset   : dermatology-6
+  Threshold : 2
+  Alpha     : 0.05
+  Timestamp : 20260529_171830
+  Features  : 34
+============================================================
+
+Feature   : Attr0
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[2, 3, 1], probs=[0.75, 0.15, 0.1]
+  Call    : numpy.random.choice([2, 3, 1], p=[0.75, 0.15, 0.1])
+  Cats    : [2.0, 3.0, 1.0]
+  Probs   : [0.75, 0.15, 0.1]
+
+Feature   : Attr1
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[2, 1], probs=[0.75, 0.25]
+  Call    : numpy.random.choice([2, 1], p=[0.75, 0.25])
+  Cats    : [2.0, 1.0]
+  Probs   : [0.75, 0.25]
+
+Feature   : Attr2
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[1, 2, 0], probs=[0.45, 0.3, 0.25]
+  Call    : numpy.random.choice([1, 2, 0], p=[0.45, 0.3, 0.25])
+  Cats    : [1.0, 2.0, 0.0]
+  Probs   : [0.45, 0.3, 0.25]
+
+Feature   : Attr3
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[0, 1, 2], probs=[0.55, 0.4, 0.05]
+  Call    : numpy.random.choice([0, 1, 2], p=[0.55, 0.4, 0.05])
+  Cats    : [0.0, 1.0, 2.0]
+  Probs   : [0.55, 0.4, 0.05]
+
+Feature   : Attr6
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[2, 3, 1], probs=[0.6, 0.3, 0.1]
+  Call    : numpy.random.choice([2, 3, 1], p=[0.6, 0.3, 0.1])
+  Cats    : [2.0, 3.0, 1.0]
+  Probs   : [0.6, 0.3, 0.1]
+
+Feature   : Attr8
+  Type    : categorical
+  Dist    : Categorica (4 classi)
+  KS p    : N/A
+  Note    : categories=[2, 1, 3, 0], probs=[0.45, 0.35, 0.15, 0.05]
+  Call    : numpy.random.choice([2, 1, 3, 0], p=[0.45, 0.35, 0.15, 0.05])
+  Cats    : [2.0, 1.0, 3.0, 0.0]
+  Probs   : [0.45, 0.35, 0.15, 0.05]
+
+Feature   : Attr9
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[0, 2, 1], probs=[0.7, 0.2, 0.1]
+  Call    : numpy.random.choice([0, 2, 1], p=[0.7, 0.2, 0.1])
+  Cats    : [0.0, 2.0, 1.0]
+  Probs   : [0.7, 0.2, 0.1]
+
+Feature   : Attr15
+  Type    : categorical
+  Dist    : Categorica (4 classi)
+  KS p    : N/A
+  Note    : categories=[1, 2, 0, 3], probs=[0.4, 0.4, 0.1, 0.1]
+  Call    : numpy.random.choice([1, 2, 0, 3], p=[0.4, 0.4, 0.1, 0.1])
+  Cats    : [1.0, 2.0, 0.0, 3.0]
+  Probs   : [0.4, 0.4, 0.1, 0.1]
+
+Feature   : Attr16
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[2, 1, 3], probs=[0.55, 0.4, 0.05]
+  Call    : numpy.random.choice([2, 1, 3], p=[0.55, 0.4, 0.05])
+  Cats    : [2.0, 1.0, 3.0]
+  Probs   : [0.55, 0.4, 0.05]
+
+Feature   : Attr17
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[1, 0, 2], probs=[0.6, 0.3, 0.1]
+  Call    : numpy.random.choice([1, 0, 2], p=[0.6, 0.3, 0.1])
+  Cats    : [1.0, 0.0, 2.0]
+  Probs   : [0.6, 0.3, 0.1]
+
+Feature   : Attr18
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[1, 2, 0], probs=[0.55, 0.35, 0.1]
+  Call    : numpy.random.choice([1, 2, 0], p=[0.55, 0.35, 0.1])
+  Cats    : [1.0, 2.0, 0.0]
+  Probs   : [0.55, 0.35, 0.1]
+
+Feature   : Attr27
+  Type    : categorical
+  Dist    : Categorica (4 classi)
+  KS p    : N/A
+  Note    : categories=[0, 1, 2, 3], probs=[0.3, 0.3, 0.3, 0.1]
+  Call    : numpy.random.choice([0, 1, 2, 3], p=[0.3, 0.3, 0.3, 0.1])
+  Cats    : [0.0, 1.0, 2.0, 3.0]
+  Probs   : [0.3, 0.3, 0.3, 0.1]
+
+Feature   : Attr29
+  Type    : categorical
+  Dist    : Categorica (4 classi)
+  KS p    : N/A
+  Note    : categories=[2, 1, 3, 0], probs=[0.4, 0.35, 0.2, 0.05]
+  Call    : numpy.random.choice([2, 1, 3, 0], p=[0.4, 0.35, 0.2, 0.05])
+  Cats    : [2.0, 1.0, 3.0, 0.0]
+  Probs   : [0.4, 0.35, 0.2, 0.05]
+
+Feature   : Attr30
+  Type    : categorical
+  Dist    : Categorica (3 classi)
+  KS p    : N/A
+  Note    : categories=[2, 3, 1], probs=[0.65, 0.2, 0.15]
+  Call    : numpy.random.choice([2, 3, 1], p=[0.65, 0.2, 0.15])
+  Cats    : [2.0, 3.0, 1.0]
+  Probs   : [0.65, 0.2, 0.15]
+
+Feature   : Attr31
+  Type    : categorical
+  Dist    : Categorica (4 classi)
+  KS p    : N/A
+  Note    : categories=[2, 1, 0, 3], probs=[0.55, 0.35, 0.05, 0.05]
+  Call    : numpy.random.choice([2, 1, 0, 3], p=[0.55, 0.35, 0.05, 0.05])
+  Cats    : [2.0, 1.0, 0.0, 3.0]
+  Probs   : [0.55, 0.35, 0.05, 0.05]
+
+Feature   : Attr33
+  Type    : categorical
+  Dist    : Categorica (8 classi)
+  KS p    : N/A
+  Note    : categories=[8, 10, 7, 12, 13, 9, 16, 22], probs=[0.25, 0.2, 0.2, 0.1, 0.1, 0.05, 0.05, 0.05]
+  Call    : numpy.random.choice([8, 10, 7, 12, 13, 9, 16, 22], p=[0.25, 0.2, 0.2, 0.1, 0.1, 0.05, 0.05, 0.05])
+  Cats    : [8.0, 10.0, 7.0, 12.0, 13.0, 9.0, 16.0, 22.0]
+  Probs   : [0.25, 0.2, 0.2, 0.1, 0.1, 0.05, 0.05, 0.05]
+
+Feature   : Attr4
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr5
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr7
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr10
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[0, 1], probs=[0.5, 0.5]
+  Call    : numpy.random.choice([0, 1], p=[0.5, 0.5])
+  Cats    : [0.0, 1.0]
+  Probs   : [0.5, 0.5]
+
+Feature   : Attr11
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr12
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr13
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[0, 1], probs=[0.85, 0.15]
+  Call    : numpy.random.choice([0, 1], p=[0.85, 0.15])
+  Cats    : [0.0, 1.0]
+  Probs   : [0.85, 0.15]
+
+Feature   : Attr14
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr19
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[0, 1], probs=[0.9, 0.1]
+  Call    : numpy.random.choice([0, 1], p=[0.9, 0.1])
+  Cats    : [0.0, 1.0]
+  Probs   : [0.9, 0.1]
+
+Feature   : Attr20
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[0, 1], probs=[0.9, 0.1]
+  Call    : numpy.random.choice([0, 1], p=[0.9, 0.1])
+  Cats    : [0.0, 1.0]
+  Probs   : [0.9, 0.1]
+
+Feature   : Attr21
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr22
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[0, 1], probs=[0.95, 0.05]
+  Call    : numpy.random.choice([0, 1], p=[0.95, 0.05])
+  Cats    : [0.0, 1.0]
+  Probs   : [0.95, 0.05]
+
+Feature   : Attr23
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr24
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[0, 1], probs=[0.95, 0.05]
+  Call    : numpy.random.choice([0, 1], p=[0.95, 0.05])
+  Cats    : [0.0, 1.0]
+  Probs   : [0.95, 0.05]
+
+Feature   : Attr25
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr26
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr28
+  Type    : categorical
+  Dist    : Categorica (1 classi)
+  KS p    : N/A
+  Note    : categories=[0], probs=[1.0]
+  Call    : numpy.random.choice([0], p=[1.0])
+  Cats    : [0.0]
+  Probs   : [1.0]
+
+Feature   : Attr32
+  Type    : categorical
+  Dist    : Categorica (2 classi)
+  KS p    : N/A
+  Note    : categories=[0, 1], probs=[0.95, 0.05]
+  Call    : numpy.random.choice([0, 1], p=[0.95, 0.05])
+  Cats    : [0.0, 1.0]
+  Probs   : [0.95, 0.05]
+
+============================================================
+  SUMMARY TABLE
+------------------------------------------------------------
+  Feature             Distribution                    KS p-value
+------------------------------------------------------------
+  Attr0               Categorica (3 classi)                  N/A
+  Attr1               Categorica (2 classi)                  N/A
+  Attr2               Categorica (3 classi)                  N/A
+  Attr3               Categorica (3 classi)                  N/A
+  Attr6               Categorica (3 classi)                  N/A
+  Attr8               Categorica (4 classi)                  N/A
+  Attr9               Categorica (3 classi)                  N/A
+  Attr15              Categorica (4 classi)                  N/A
+  Attr16              Categorica (3 classi)                  N/A
+  Attr17              Categorica (3 classi)                  N/A
+  Attr18              Categorica (3 classi)                  N/A
+  Attr27              Categorica (4 classi)                  N/A
+  Attr29              Categorica (4 classi)                  N/A
+  Attr30              Categorica (3 classi)                  N/A
+  Attr31              Categorica (4 classi)                  N/A
+  Attr33              Categorica (8 classi)                  N/A
+  Attr4               Categorica (1 classi)                  N/A
+  Attr5               Categorica (1 classi)                  N/A
+  Attr7               Categorica (1 classi)                  N/A
+  Attr10              Categorica (2 classi)                  N/A
+  Attr11              Categorica (1 classi)                  N/A
+  Attr12              Categorica (1 classi)                  N/A
+  Attr13              Categorica (2 classi)                  N/A
+  Attr14              Categorica (1 classi)                  N/A
+  Attr19              Categorica (2 classi)                  N/A
+  Attr20              Categorica (2 classi)                  N/A
+  Attr21              Categorica (1 classi)                  N/A
+  Attr22              Categorica (2 classi)                  N/A
+  Attr23              Categorica (1 classi)                  N/A
+  Attr24              Categorica (2 classi)                  N/A
+  Attr25              Categorica (1 classi)                  N/A
+  Attr26              Categorica (1 classi)                  N/A
+  Attr28              Categorica (1 classi)                  N/A
+  Attr32              Categorica (2 classi)                  N/A
+============================================================
